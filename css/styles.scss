@@ -1,0 +1,216 @@
+///////////////////// RESPONSIVE SIZES FOR REFERENCE  \\\\\\\\\\\\\\\\\\\\\\\\\
+// xs: 0
+// sm: 576px
+// md: 768px
+// lg: 992px
+// xl: 1200px
+// @include media-breakpoint-up(sm) {}
+// @include media-breakpoint-up(md) {}
+// @include media-breakpoint-up(lg) {}
+// @include media-breakpoint-up(xl) {}
+//
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/grid";
+
+///////////////////////// VARIABLE OVERRIDES  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+/////////////////////// CUSTOM MIXINS  \\\\\\\\\\\\\\\\\\\\\\\
+@mixin easeOut {
+    transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-backface-visibility: hidden;
+}
+
+
+
+//colors
+$red: #AA0000;
+$green-dark: #00AA00;
+$green-light: #55FF55;
+$blue-dark: #0000AA;
+$blue-medium: #5555FF;
+$blue-baby: #55FFFF;
+$gray: #AAAAAA;
+$brown: #AA5500;
+$pink: #FF5555;
+
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4vw;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+
+    @include media-breakpoint-up(md) {
+
+        font-size: 23px;
+
+    }
+
+
+    @include media-breakpoint-up(lg) {
+
+        font-size: 21px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.5em;
+        font-size: 2em;
+    }
+}
+
+.page-wrapper {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin: 30px;
+    border: 7px solid $red;
+    border-radius: 12px;
+    background-color: $red;
+
+    @include media-breakpoint-up(md) {
+        margin-left: 200px;
+        margin-right: 200px;
+
+    }
+}
+
+.eagle-eye {
+    border-radius: 15px;
+    // background-image:url("/images/screenshotmap.png");
+    // background-size: cover;
+    // background-size: contain;
+    // height: 275px;
+    // background-position: 50% 0%;
+    // background-repeat: no-repeat;
+    // z-index: 2;
+    // position: relative;
+}
+
+#main-content {
+    background-color: #000000;
+    height: 100%;
+    border-radius: 17px;
+
+    img {
+        border-radius: 17px;
+    }
+}
+
+#side-nav-list {
+    background-color: #000000;
+    background-color: $red;
+    height: 100%;
+    border-radius: 17px;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-top: 10px solid $red;
+
+    @include media-breakpoint-up(md) {
+        border: none;
+    }
+
+    .sidemenu-magic {
+        white-space: nowrap;
+        padding-right: 0px;
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 10px;
+
+        span.magic {
+            text-align: right;
+            width: 50%;
+            display: inline-block;
+            position: relative;
+            z-index: 5;
+
+        }
+    }
+
+    h2 {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .column-1 {
+        // border: 10px solid $red;
+        border-bottom: 5px solid $red;
+        border-radius: 17px;
+        background-color: #000;
+    }
+
+    .column-2 {
+        // border: 10px solid $red;
+        border-top: 5px solid $red;
+        border-radius: 17px;
+        height: 100%;
+        background-color: #000;
+    }
+
+}
+
+#options-row {
+    background-color: $red;
+    white-space: nowrap;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 15px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 34px;
+    }
+
+    .row {
+        div {
+            border: 10px solid $red;
+            border-radius: 17px;
+            background-color: #000000;
+            overflow: hidden;
+            padding-top: 5px;
+            padding-bottom: 2px
+        }
+    }
+}
+
+
+#character-section {
+    background-color: $red;
+
+    .row {
+        border: 10px solid $red;
+        border-radius: 17px;
+        background-color: #000000;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .name {
+        text-align: left;
+        width: 50%;
+        display: inline-block;
+        white-space: nowrap;
+        position: relative;
+        z-index: 5;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .health {
+        text-align: right;
+        width: 50%;
+        display: inline-block;
+        position: relative;
+        z-index: 5;
+    }
+}
