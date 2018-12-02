@@ -767,13 +767,38 @@ body {
   border: 7px solid #AA0000;
   border-radius: 12px;
   background-color: #AA0000; }
+  @media (min-width: 576px) {
+    .page-wrapper {
+      margin-left: 30px;
+      margin-right: 30px; } }
   @media (min-width: 768px) {
     .page-wrapper {
-      margin-left: 200px;
-      margin-right: 200px; } }
+      margin-left: 100px;
+      margin-right: 100px; } }
+  @media (min-width: 992px) {
+    .page-wrapper {
+      margin-left: 100px;
+      margin-right: 100px; } }
+  @media (min-width: 1200px) {
+    .page-wrapper {
+      margin-left: 100px;
+      margin-right: 100px; } }
 
 .eagle-eye {
-  border-radius: 15px; }
+  border-radius: 15px;
+  background-image: url("/images/map.png");
+  background-size: cover;
+  background-size: contain;
+  background-size: auto;
+  height: 275px;
+  background-position: 48% 70%;
+  background-repeat: no-repeat;
+  z-index: 2;
+  position: relative; }
+  .eagle-eye .fa {
+    position: absolute;
+    top: 50%;
+    right: 50%; }
 
 #main-content {
   background-color: #000000;
@@ -790,7 +815,7 @@ body {
   padding-left: 15px;
   padding-right: 10px;
   border-top: 10px solid #AA0000; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     #side-nav-list {
       border: none; } }
   #side-nav-list .sidemenu-magic {
@@ -808,10 +833,17 @@ body {
   #side-nav-list h2 {
     text-align: center;
     padding-top: 10px; }
+    @media (min-width: 992px) {
+      #side-nav-list h2 {
+        font-size: 22px; } }
+    @media (min-width: 1200px) {
+      #side-nav-list h2 {
+        font-size: 30px; } }
   #side-nav-list .column-1 {
     border-bottom: 5px solid #AA0000;
     border-radius: 17px;
-    background-color: #000; }
+    background-color: #000;
+    padding-bottom: 15px; }
   #side-nav-list .column-2 {
     border-top: 5px solid #AA0000;
     border-radius: 17px;
@@ -826,7 +858,7 @@ body {
       font-size: 15px; } }
   @media (min-width: 1200px) {
     #options-row {
-      font-size: 34px; } }
+      font-size: 30px; } }
   #options-row .row div {
     border: 10px solid #AA0000;
     border-radius: 17px;
