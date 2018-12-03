@@ -763,20 +763,18 @@ body {
 .page-wrapper {
   max-width: 1580px;
   margin: 0 auto;
-  border: 7px solid #AA0000;
+  border: 1px solid #AA0000;
   border-radius: 12px;
   background-color: #AA0000; }
+  @media (min-width: 768px) {
+    .page-wrapper {
+      border: 7px solid #AA0000; } }
 
 #main-content {
   background-color: #000000;
   height: 100%;
   border-radius: 17px;
-  max-height: 600px;
-  overflow: scroll;
-  font-size: 16px;
-  overflow-x: hidden; }
-  #main-content img {
-    border-radius: 17px; }
+  font-size: 12px; }
   #main-content::-webkit-scrollbar {
     width: 35px; }
   #main-content::-webkit-scrollbar-track {
@@ -793,6 +791,49 @@ body {
     background-color: #AAAAAA; }
   #main-content::-webkit-scrollbar-thumb:hover {
     background-color: #AAAAAA; }
+  @media (min-width: 768px) {
+    #main-content {
+      max-height: 600px;
+      font-size: 16px;
+      overflow: scroll;
+      overflow-x: hidden; } }
+  #main-content img {
+    border-radius: 17px; }
+  #main-content h1 {
+    font-size: 23px;
+    margin-bottom: 25px; }
+    @media (min-width: 768px) {
+      #main-content h1 {
+        font-size: 40px; } }
+  #main-content h3 {
+    font-size: 19px;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      #main-content h3 {
+        font-size: 28px; } }
+  #main-content h4 {
+    font-size: 16px; }
+    @media (min-width: 768px) {
+      #main-content h4 {
+        font-size: 24px; } }
+  #main-content ul {
+    padding-inline-start: 15px; }
+    @media (min-width: 768px) {
+      #main-content ul {
+        padding-inline-start: 40px; } }
+    #main-content ul li {
+      margin-bottom: 10px; }
+  #main-content .page-content {
+    word-break: break-word;
+    padding: 10px;
+    padding-right: 5px; }
+    @media (min-width: 768px) {
+      #main-content .page-content {
+        padding: 15px; } }
+  #main-content hr {
+    background-color: #AA0000; }
+  #main-content .icon {
+    margin-right: 10px; }
 
 .direction.north:before {
   content: 'N'; }
