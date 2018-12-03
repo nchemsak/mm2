@@ -770,9 +770,29 @@ body {
 #main-content {
   background-color: #000000;
   height: 100%;
-  border-radius: 17px; }
+  border-radius: 17px;
+  max-height: 600px;
+  overflow: scroll;
+  font-size: 16px;
+  overflow-x: hidden; }
   #main-content img {
     border-radius: 17px; }
+  #main-content::-webkit-scrollbar {
+    width: 35px; }
+  #main-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: red;
+    background-color: #330000; }
+  #main-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    color: red;
+    background-color: pink;
+    background-color: #660000;
+    background-color: #AAAAAA; }
+  #main-content::-webkit-scrollbar-thumb:hover {
+    background-color: #AAAAAA; }
 
 .direction.north:before {
   content: 'N'; }

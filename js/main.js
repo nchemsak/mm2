@@ -35,19 +35,20 @@ var counter = 70;
 var direction = "north";
 
 
+function toggleOptions() {
+    $('.toggle').toggleClass('options-menu-off options-menu-on');
+}
+
 
 $(document).keydown(function(e) {
     var event = e.which;
+
 
     if (event === 79) {
         $('.toggle').toggleClass('options-menu-off options-menu-on');
     }
 
     // Change direction and arrow direction with arrow presses
-
-
-
-
 
     // NORTH
     else if (event === 38) {
@@ -167,7 +168,7 @@ $(document).keydown(function(e) {
 
 //         console.log(long, lad);
 
-//     // } else { 
+//     // } else {
 //     //     x.innerHTML = "Geolocation is not supported by this browser.";
 //     // }
 // }
@@ -175,18 +176,3 @@ $(document).keydown(function(e) {
 // window.onload = function() {
 //     getLocation();
 // };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
