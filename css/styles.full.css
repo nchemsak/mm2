@@ -761,44 +761,11 @@ body {
       font-size: 2em; } }
 
 .page-wrapper {
-  margin-left: 30px;
-  margin-right: 30px;
-  margin: 30px;
+  max-width: 1580px;
+  margin: 0 auto;
   border: 7px solid #AA0000;
   border-radius: 12px;
   background-color: #AA0000; }
-  @media (min-width: 576px) {
-    .page-wrapper {
-      margin-left: 30px;
-      margin-right: 30px; } }
-  @media (min-width: 768px) {
-    .page-wrapper {
-      margin-left: 100px;
-      margin-right: 100px; } }
-  @media (min-width: 992px) {
-    .page-wrapper {
-      margin-left: 100px;
-      margin-right: 100px; } }
-  @media (min-width: 1200px) {
-    .page-wrapper {
-      margin-left: 100px;
-      margin-right: 100px; } }
-
-.eagle-eye {
-  border-radius: 15px;
-  background-image: url("/images/map.png");
-  background-size: cover;
-  background-size: contain;
-  background-size: auto;
-  height: 275px;
-  background-position: 48% 70%;
-  background-repeat: no-repeat;
-  z-index: 2;
-  position: relative; }
-  .eagle-eye .fa {
-    position: absolute;
-    top: 50%;
-    right: 50%; }
 
 #main-content {
   background-color: #000000;
@@ -806,6 +773,15 @@ body {
   border-radius: 17px; }
   #main-content img {
     border-radius: 17px; }
+
+.direction.north:before {
+  content: 'N'; }
+.direction.south:before {
+  content: 'S'; }
+.direction.east:before {
+  content: 'E'; }
+.direction.west:before {
+  content: 'W'; }
 
 #side-nav-list {
   background-color: #000000;
@@ -818,6 +794,40 @@ body {
   @media (min-width: 992px) {
     #side-nav-list {
       border: none; } }
+  #side-nav-list.options-menu-off .side-nav-list-heading:before {
+    content: 'Eagle Eye'; }
+  #side-nav-list.options-menu-off .eagle-eye {
+    border-radius: 15px;
+    background-image: url("/images/map-edit.png");
+    background-size: cover;
+    background-size: contain;
+    background-size: auto;
+    height: 275px;
+    background-position: 48% 71%;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative; }
+    #side-nav-list.options-menu-off .eagle-eye .fa {
+      position: absolute;
+      top: 50%;
+      right: 50%; }
+  #side-nav-list.options-menu-on .side-nav-list-heading:before {
+    content: 'Options'; }
+  #side-nav-list.options-menu-on .eagle-eye {
+    border-radius: 15px;
+    background-image: url("/images/screenshot1.png");
+    background-size: cover;
+    background-size: contain;
+    height: 275px;
+    background-position: 48% 70%;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative; }
+    #side-nav-list.options-menu-on .eagle-eye .fa {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      display: none; }
   #side-nav-list .sidemenu-magic {
     white-space: nowrap;
     padding-right: 0px;
@@ -877,7 +887,7 @@ body {
     padding-bottom: 5px; }
   #character-section .name {
     text-align: left;
-    width: 50%;
+    width: 70%;
     display: inline-block;
     white-space: nowrap;
     position: relative;
@@ -888,7 +898,7 @@ body {
         text-decoration: none; }
   #character-section .health {
     text-align: right;
-    width: 50%;
+    width: 30%;
     display: inline-block;
     position: relative;
     z-index: 5; }

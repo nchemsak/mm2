@@ -24,21 +24,38 @@
                     <section id="main-content"><img src="/images/mm2.png" class="img-fluid" /></section>
                 </div>
                 <div class="col-xs-12 col-lg-4">
-                    <section id="side-nav-list">
+                    <section id="side-nav-list" class="toggle options-menu-off">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-1">
-                                    <h2>Eagle-Eye</h2>
+                                <a href="#"><h2 class="side-nav-list-heading"></h2></a>
                                 <div class="eagle-eye">
                                     <i class="fa fa-arrow-up"></i>
                                     <!-- <img src="/images/screenshotmap.png" class="img-fluid eagle-eye" /> -->
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-2">
-                                <ul class="sidemenu-magic">
-                                    <li>Light<span class="magic">0</span></li>
+                                <!-- <ul class="sidemenu-magic">
+                                    <li>Health<span class="magic">191</span></li>
                                     <li>Magic<span class="magic">0</span></li>
-                                    <li>Force<span class="magic">0</span></li>
-                                </ul>
+                                    <li>Temp<span class="magic">0</span></li>
+                                    <li>Weather<span class="magic">Rain</span></li>
+                                </ul> -->
+                                <div class="row">
+                                    <div class="col-6">Health</div>
+                                    <div class="col-6 text-right">191</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">Magic</div>
+                                    <div class="col-6 text-right">0</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">Temp</div>
+                                    <div class="col-6 text-right">0</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">Weather</div>
+                                    <div class="col-6 text-right">Rain</div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -46,24 +63,47 @@
             </div>
             <div id="options-row">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">'O' Options</div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">'<a href="#">O</a>' Options</div>
                     <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Day= 332</div>
                     <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Year= 2018</div>
-                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Face= N</div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Face= <span class="direction north"></span></div>
                 </div>
             </div>
             <section id="character-section">
                 <div class="row">
-                    <div class="col-xs-12 col-lg-6"><span class="name">1) <a href="#">Flailer</a></span><span class="health">/191</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">1) <a href="#">Character</a></span><span class="health">/191</span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">2) <a href="#">Nick</a></span><span class="health">/122</span></div>
-                    <div class="col-xs-12 col-lg-6"><span class="name">3) <a href="#">Lacey</a></span><span class="health">/138</span></div>
-                    <div class="col-xs-12 col-lg-6"><span class="name">4) <a href="#">Sir Felgar</a></span><span class="health">/121</span></div>
-                    <div class="col-xs-12 col-lg-6"><span class="name">5) <a href="#">Sir Hyron</a></span><span class="health">/72</span></div>
-                    <div class="col-xs-12 col-lg-6"><span class="name">6) <a href="#">Cassandra</a></span><span class="health">/68</span></div>
-                    <div class="col-xs-12 col-lg-6"><span class="name">7) <a href="#">Gene Eric</a></span><span class="health">/98</span></div>
-                    <div class="col-xs-12 col-lg-6"><span class="name">8) <a href="#">Madden</a></span><span class="health">/92</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">3) <a href="#">Art</a></span><span class="health">/138</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">4) <a href="#">Spell Book</a></span><span class="health">/121</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">5) <a href="#">Fermentation</a></span><span class="health">/72</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">6) <a href="#">Music</a></span><span class="health">/68</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">7) <a href="#">Coding</a></span><span class="health">/98</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">8) <a href="#">Contact</a></span><span class="health">/92</span></div>
                 </div>
             </section>
+        </div>
+    </div>
+
+
+
+
+
+<div id="weather"></div>
+<button class="js-geolocation" style="display: none;">Use Your Location</button>
+
+
+
+    <div class="container">
+        <div class="title">Weather App</div>
+        <div class="weather-info">
+            <div id="location" class="info"></div>
+            <div id="temperature" class="info">
+                <span id="temperature-num"></span>
+                <span>°</span>
+                <span id="temperature-scale">C</span>
+            </div>
+            <div id="weather-condition" class="info"></div>
+            <div id="weather-icon" class="info"></div>
         </div>
     </div>
     <!-- ############################# SCRIPTS ################################# -->
