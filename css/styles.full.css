@@ -805,6 +805,11 @@ body {
       bottom: 0px;
       width: 950px;
       height: 565px; }
+    #main-content .header-image blockquote {
+      position: absolute;
+      width: 50%;
+      top: 125px;
+      left: 20px; }
   #main-content img {
     border-radius: 17px; }
   #main-content h1 {
@@ -817,6 +822,12 @@ body {
     @media (min-width: 768px) {
       #main-content h1 {
         font-size: 40px; } }
+    #main-content h1.homepage-h1 {
+      position: absolute;
+      color: white;
+      top: 30px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.5); }
   #main-content h3 {
     font-size: 19px;
     margin-bottom: 15px;

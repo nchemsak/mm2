@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nick Chemsak">
+    <title>MM2</title>
+    <!-- STYLESHEETS -->
+    <!-- <link rel="stylesheet" href="lib/bootstrap-4.0.0/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-lg-8">
+                    <section id="main-content" class="scroll">
+                        <div class="header-image">
+                            <img src="/images/mm2.png" class="img-fluid" />
+                            <img class="weather-overlay" src="images/icons/salt.gif" />
+                        </div>
+                            <div class="page-content">
+                                <a href="#">
+                                    <h1>
+                                        <img class="icon" src="images/icons/cabbage.png" />Web Audio API
+                                    </h1>
+                                </a>
+                                <div id="character">
+                                    <h3 id="traits"><img class="icon" src="images/icons/map.ico" />Kick Drum created with oscillators</h3>
+                                    https://dev.opera.com/articles/drum-sounds-webaudio/
+                                    First, create an instance of the AudioContext and store it in a variable:
+                                    <pre>var context = new AudioContext();</pre>
+                                    The sound starts at a higher frequency (attack) and then rapidly falls away to a lower frequency.  While this is happening, the volume of the sound also decreases.
+                                    <pre>function Kick(context) {
+    this.context = context;
+}</pre>
+                                    <pre>Kick.prototype.setup = function() {
+    this.osc = this.context.createOscillator();
+    this.gain = this.context.createGain();
+    this.osc.connect(this.gain);
+    this.gain.connect(this.context.destination);
+};
+</pre>
+                                    <pre>Kick.prototype.trigger = function(time) {
+    this.setup();
+};
+</pre>
+                                    this.osc.frequency.setValueAtTime(150, time);
+                                    The “envelope” of the sound:
+                                    <pre>this.gain.gain.setValueAtTime(1, time);</pre>
+                                    Drop the FREQUENCY of the oscillator rapidly after the initial attack.
+                                    <pre>this.osc.frequency.exponentialRampToValueAtTime(0.01, time + 0.5);</pre>
+                                    Decrease the GAIN to close to zero over the next 0.5 seconds
+                                    <pre>this.gain.gain.exponentialRampToValueAtTime(0.01, time + 0.5);</pre>
+                                    &nbsp;
+                                    <pre>this.osc.start(time);
+
+this.osc.stop(time + 0.5);</pre>
+                                    };
+                                    // var kick = new Kick(context);
+                                    <hr />
+                                    <h3 id="materials"><img class="icon" src="images/icons/map.ico" />Experience</h3>
+                                    <div class="row materials-list">
+                                        <div class="col-12 col-md-3"><img class="icon" src="images/icons/bottle2.ico" /><img class="icon" src="images/icons/bottle2.ico" /></div>
+                                            <div class="col-12 col-md-9">2 canning/mason jars w/ lids</div>
+                                            <div class="col-12 col-md-3"><img class="icon cabbage" src="images/icons/cabbage.png" /><img class="icon cabbage" src="images/icons/cabbage.png" /><img class="icon cabbage" src="images/icons/cabbage.png" /></div>
+                                                <div class="col-12 col-md-9">3 medium heads <strong>organic</strong> cabbage</div>
+                                                <div class="col-12 col-md-3"><img class="icon" src="images/icons/magicpowder.ico" /><img class="icon" src="images/icons/magicpowder2.ico" /></div>
+                                                    <div class="col-12 col-md-9">1&#189; tablespoon sea salt <small>*with <strong>NO</strong> iodine</small></li>
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <h3><img class="icon" src="images/icons/map.ico" />Projects</h3>
+                                                <h4><img class="icon" src="images/icons/Wooden-Sword-Blue.ico" />Shred Cabbage</h4>
+                                                <ul>
+                                                    <li>Rise outer cabbage leaves</li>
+                                                    <li>Remove outer layers of cabbage, set leaves aside.</li>
+                                                    <li>Shred/chop all 3 cabbage heads in thin, long strips.</li>
+                                                </ul>
+                                                <h4><img class="icon salt" src="images/icons/salt.gif" />Salt Cabbage</h4>
+                                                <ul>
+                                                    <li>Put cabbage into large bowl, pour all salt and mix in.</li>
+                                                    <li>Massage cabbage with <strong>clean</strong> hands for approx 5min+.</li>
+                                                    <li>The cabbage will begin to release water into the bowl. Squeeze cabbage, trying to get out as much water as possible.</li>
+                                                </ul>
+                                                <h4><img class="icon" src="images/icons/green-potion.ico" />Fill Jars</h4>
+                                                <ul>
+                                                    <li>Pressing down as you go, fill each jar with cabbage approximately 3/4 full.</li>
+                                                    <li>Evenly pour the water released over the cabbage in the jars.</li>
+                                                    <li>Put one of the large outer leaves you set aside earlier to cover the top of the cabbage in the jar, pressing down.</li>
+                                                    <li>Note: You want to make sure that all of the shredded cabbage is below the larger leaf, which is also under the liquid</li>
+                                                </ul>
+                                                <h4><img class="icon" src="images/icons/jar-red.ico" />Fermentation</h4>
+                                                <ul>
+                                                    <li>Put the lid on the jar, hand tight.</li>
+                                                    <li>Put the jar somewhere to ferment at room temperature. I put mine in a kitchen cabinet.</li>
+                                                    <li>Wait. <img class="icon" src="images/icons/Timer.ico" /> The cabbage will begin to ferment, and you'll likely see bubbles forming in the next 24 hours.</li>
+                                                    <li>How long to let it ferment is a personal taste preference. Different bacteria strains take over at different times during the process. I tend to wait (14 - 20 days).</li>
+                                                </ul>
+                                                <hr />
+                                                <h3><img class="icon" src="images/icons/map.ico" />Technologies</h3>
+                                                <ul>
+                                                    <li>All you need are simple, clean canning jars. There are crocks and special jars you can buy, but simple jars are all you need.</li>
+                                                    <li>ORGANIC Cabbage and NON-IODIZED salt are essential. Proper fermentation will be stunted otherwise.</li>
+                                                    <li>During fermentation, pressure will build inside the jar, pushing the lid up. You may need to "burp" your jars as they ferment, which is essentially opening the lid and releasing pressure. However, by opening the lid, you are introducing oxygen into the jar, which is an enemy of fermentation. I typically do not bother burping the jars, unless the pressure seems extremely excessive. When you burp the the jars, expect liquid to come out from under the lid as well, so you may want to do this inside a bowl to catch the liquid.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </section>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                    <section id="side-nav-list" class="toggle options-menu-off">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-1">
+                                <a href="#" onclick="toggleOptions(); return false;"><h2 class="side-nav-list-heading"></h2></a>
+                                <!--                                 <div class="eagle-eye">
+                                    <i class="fa fa-arrow-up"></i>
+
+                                </div> -->
+                                <section class="eagle-eye">
+                                    <img class="bee1 toggle show-bee" src="images/icons/bee1.ico">
+                                    <img class="bee2 toggle show-bee" src="images/icons/bee2.ico">
+</section>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-2">
+                                <div class="row">
+                                    <div class="col-6">Health</div>
+                                    <div class="col-6 text-right">191</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">Magic</div>
+                                    <div class="col-6 text-right">0</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">Temp</div>
+                                    <div class="col-6 text-right">28&deg;F</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">Weather</div>
+                                    <div class="col-6 text-right">Snow</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div id="options-row">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">'<a href="#" onclick="toggleOptions(); return false;">O</a>' Options</div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Day= 332</div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Year= 2018</div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Face= <span class="direction north"></span></div>
+                </div>
+            </div>
+            <section id="character-section">
+                <div class="row">
+                                        <div class="col-xs-12 col-lg-6"><span class="name">1) <a href="character.html">Character</a></span><span class="health">/191</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">2) <a href="sequencer.html">Sequencer</a></span><span class="health">/122</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">3) <a href="art.html">Art</a></span><span class="health">/138</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">4) <a href="recipe-book.html">Recipe Book</a></span><span class="health">/121</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">5) <a href="news.html">News</a></span><span class="health">/72</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">6) <a href="music.html">Music</a></span><span class="health">/68</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">7) <a href="coding.html">Coding</a></span><span class="health">/98</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">8) <a href="contact.html">Contact</a></span><span class="health">/92</span></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="weather"></div>
+    <button class="js-geolocation" style="display: none;">Use Your Location</button>
+    <div class="container">
+        <div class="title">Weather App</div>
+        <div class="weather-info">
+            <div id="location" class="info"></div>
+            <div id="temperature" class="info">
+                <span id="temperature-num"></span>
+                <span>°</span>
+                <span id="temperature-scale">C</span>
+            </div>
+            <div id="weather-condition" class="info"></div>
+            <div id="weather-icon" class="info"></div>
+        </div>
+    </div>
+    <!-- ############################# SCRIPTS ################################# -->
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/popper.min.js"></script>
+    <!-- <script src="lib/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script> -->
+    <script href="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/parallax.min.js"></script>
+    <script src="lib/waves.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+        ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>

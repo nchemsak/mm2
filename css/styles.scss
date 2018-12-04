@@ -116,6 +116,14 @@ body {
             width: 950px;
             height: 565px;
         }
+
+        blockquote {
+            position: absolute;
+            width: 50%;
+            top: 125px;
+            left: 20px;
+
+        }
     }
 
     img {
@@ -132,6 +140,13 @@ body {
 
         @include media-breakpoint-up(md) {
             font-size: 40px;
+        }
+        &.homepage-h1 {
+            position: absolute;
+            color: white;
+            top: 30px;
+            left: 20px;
+            background-color: rgba(0,0,0, 0.5);
         }
     }
 
