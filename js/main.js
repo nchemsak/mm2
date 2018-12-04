@@ -1,36 +1,8 @@
 // EYE JS
 "use strict";
 
-// $(document).ready(function() {
-
-//     // image info
-//     // width: 1850px / 5 = 370 columns
-//     // height: 1000px / 5 = 200 rows
-//     // 74000 to divs
-
-
-// });
-
-
-
-
-
-// $(document).ready(function() {
-//     for (var i = 1; i <= 1; i++) {
-//         // $('#target').append('<div class="dot-rows" id="dot-row-' + i + '">');
-//         for (var j = 1; j <= 18500; j++) {
-//             $('#target').append('<div class="all-dots" id="dot-' + j + '"></div>')
-
-//             // if (j % 370 === 0) {
-//             //     $('#target').append('<br />')
-//             // }
-//         }
-//         // $('#target').append('</ div>' );
-//     }
-// });
-// $(document).ready(function() {
-
-var counter = 70;
+var counterNorth = 70;
+var counterEast = 48;
 // Open SIDE OPTIONS MENU when letter 'O' is pressed on keyboard
 var direction = "north";
 
@@ -57,12 +29,13 @@ $(document).keydown(function(e) {
     else if (event === 38) {
 
         $(".fa").attr("class", "fa fa-arrow-up");
-        if (counter <= -7) {
-            $(".eagle-eye").css("background-position", "48%" + -7 + "%");
-
+        if (counterNorth <= -7) {
+            // $(".eagle-eye").css("background-position", "48%" + -7 + "%");
+            $(".eagle-eye").css("background-position", counterEast + "%" + -7 + "%");
         } else {
-            counter = counter - 7;
-            $(".eagle-eye").css("background-position", "48%" + counter + "%");
+            counterNorth = counterNorth - 7;
+            // $(".eagle-eye").css("background-position", "48%" + counterNorth + "%");
+            $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
         }
 
         $(".direction").attr("class", "direction north");
@@ -71,6 +44,22 @@ $(document).keydown(function(e) {
     } else if (event === 39) {
         $(".fa").attr("class", "fa fa-arrow-right");
         var direction = "east";
+
+        if (counterEast <= -7) {
+            $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
+
+
+            $(".bee1").addClass("bee-flip");
+            $(".bee2").addClass("bee-flip");
+
+
+        } else {
+            counterEast = counterEast + 7;
+            $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
+                      $(".bee1").addClass("bee-flip");
+            $(".bee2").addClass("bee-flip");
+
+        }
 
 
         $(".direction").attr("class", "direction east");
@@ -83,20 +72,49 @@ $(document).keydown(function(e) {
 
 
         if (direction === "south") {
-            counter = counter + 7;
+            counterNorth = counterNorth + 7;
 
-            $(".eagle-eye").css("background-position", "48%" + counter + "%");
+            $(".eagle-eye").css("background-position", "48%" + counterNorth + "%");
         } else { var direction = "south"; }
+
         var direction = "south";
 
         $(".direction").attr("class", "direction south");
 
 
 
+        if (counterNorth <= +7) {
+            // $(".eagle-eye").css("background-position", "48%" + -7 + "%");
+            $(".eagle-eye").css("background-position", counterEast + "%" + -7 + "%");
+        } else {
+            counterNorth = counterNorth + 7;
+            // $(".eagle-eye").css("background-position", "48%" + counterNorth + "%");
+            $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
+        }
+
         // WEST
     } else if (event === 37) {
         $(".fa").attr("class", "fa fa-arrow-left");
+
         var direction = "west";
+
+
+
+        if (counterEast <= -7) {
+            $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
+
+        } else {
+            counterEast = counterEast - 7;
+            $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
+                             $(".bee1").removeClass("bee-flip");
+            $(".bee2").removeClass("bee-flip");
+        }
+
+
+
+
+
+
         $(".direction").attr("class", "direction west");
     }
 

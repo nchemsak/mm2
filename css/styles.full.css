@@ -797,6 +797,14 @@ body {
       font-size: 16px;
       overflow: scroll;
       overflow-x: hidden; } }
+  #main-content .header-image {
+    position: relative;
+    overflow: hidden; }
+    #main-content .header-image .weather-overlay {
+      position: absolute;
+      bottom: 0px;
+      width: 950px;
+      height: 565px; }
   #main-content img {
     border-radius: 17px; }
   #main-content h1 {
@@ -836,15 +844,20 @@ body {
     @media (min-width: 768px) {
       #main-content .page-content {
         padding: 15px; } }
+    #main-content .page-content #materials {
+      margin-bottom: 40px; }
   #main-content hr {
     margin-top: 25px;
     margin-bottom: 35px;
     background-color: #AA0000; }
   #main-content .icon {
     margin-right: 10px;
-    vertical-align: 0px; }
+    vertical-align: 0px;
+    margin-bottom: 5px; }
     #main-content .icon.cabbage {
       width: 32px; }
+    #main-content .icon.salt {
+      width: 50px; }
 
 .direction.north:before {
   content: 'N'; }
@@ -917,6 +930,13 @@ body {
     animation-iteration-count: infinite; }
   #side-nav-list .hide-bee {
     display: none; }
+  #side-nav-list .bee-flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH"; }
 @keyframes flutter {
   0%,
         100% {

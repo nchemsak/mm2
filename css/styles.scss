@@ -122,6 +122,18 @@ body {
         overflow-x: hidden;
     }
 
+    .header-image {
+        position: relative;
+        overflow: hidden;
+        .weather-overlay {
+            position: absolute;
+            bottom: 0px;
+            width: 950px;
+            height: 565px;
+            // overflow: hidden;
+        }
+    }
+
     img {
         border-radius: 17px;
     }
@@ -152,7 +164,7 @@ body {
 
     h4 {
 
-     
+
         font-size: 16px;
         margin-top: 40px;
 
@@ -175,7 +187,6 @@ body {
 
     .page-content {
         word-break: break-word;
-
         padding: 10px;
         padding-right: 5px;
 
@@ -184,29 +195,29 @@ body {
         }
 
 
-.materials-list {
-
-
-}
-
-
+        #materials {
+            margin-bottom: 40px;
+        }
     }
 
     hr {
-margin-top: 25px;
-margin-bottom: 35px;
+        margin-top: 25px;
+        margin-bottom: 35px;
         background-color: $red;
     }
 
     .icon {
-        // width: 20px;
-        // height: auto;
         margin-right: 10px;
-        // margin-left: 10px;
-     vertical-align: 0px;
-     &.cabbage {
-        width: 32px;
-     }
+        vertical-align: 0px;
+        margin-bottom: 5px;
+
+        &.cabbage {
+            width: 32px;
+        }
+
+        &.salt {
+            width: 50px;
+        }
     }
 }
 
@@ -332,6 +343,9 @@ margin-bottom: 35px;
         animation: blink1 1s, flutter 3s;
         animation-iteration-count: infinite;
 
+
+
+
     }
 
     .bee2 {
@@ -342,6 +356,9 @@ margin-bottom: 35px;
 
         animation-iteration-count: infinite;
 
+
+
+
     }
 
 
@@ -350,7 +367,14 @@ margin-bottom: 35px;
     }
 
 
-
+.bee-flip {
+         -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
 
     @keyframes flutter {
 
