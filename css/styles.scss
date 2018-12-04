@@ -129,6 +129,10 @@ body {
     h1 {
         font-size: 23px;
         margin-bottom: 25px;
+        border: 1px solid white;
+        padding: 10px;
+        background-color: white;
+        color: black;
 
         @include media-breakpoint-up(md) {
             font-size: 40px;
@@ -138,6 +142,7 @@ body {
     h3 {
         font-size: 19px;
         margin-bottom: 15px;
+        text-align: center;
 
         @include media-breakpoint-up(md) {
             font-size: 28px;
@@ -146,7 +151,10 @@ body {
 
 
     h4 {
+
+     
         font-size: 16px;
+        margin-top: 40px;
 
         @include media-breakpoint-up(md) {
             font-size: 24px;
@@ -174,10 +182,19 @@ body {
         @include media-breakpoint-up(md) {
             padding: 15px;
         }
+
+
+.materials-list {
+
+
+}
+
+
     }
 
     hr {
-
+margin-top: 25px;
+margin-bottom: 35px;
         background-color: $red;
     }
 
@@ -185,6 +202,11 @@ body {
         // width: 20px;
         // height: auto;
         margin-right: 10px;
+        // margin-left: 10px;
+     vertical-align: 0px;
+     &.cabbage {
+        width: 32px;
+     }
     }
 }
 
@@ -299,119 +321,97 @@ body {
 
     section.eagle-eye img {
         position: absolute;
-        position: absolute;
-        // top: 50%;
-        // right: 50%;
+        right: 50%;
+        -webkit-filter: drop-shadow(3px 22px 8px #000);
+        filter: drop-shadow(3px 22px 8px #000);
     }
 
     .bee1 {
-  //       animation-name: fade;
-  //       animation-timing-function: linear;
-  //       animation-iteration-count: infinite;
-  //       animation-duration: 0.25s;
-  //       animation-direction: alternate;
-
-  // animation: blink 1s;
-  //   animation-iteration-count: infinite;
-
         position: absolute;
-        // top: 50%;
-        // right: 50%;
-
-
-          animation: flutter 1s;
-          animation: blink1 1s;
-    animation-iteration-count: infinite;
-
-
-
-  //       display: block;
-  // animation: MoveUpDown 1s linear infinite;
-
-
-
+        // animation: flutter 1s;
+        animation: blink1 1s, flutter 3s;
+        animation-iteration-count: infinite;
 
     }
 
     .bee2 {
         position: absolute;
-        // top: 50%;
-        // right: 50%;
-        // animation: blink 0.66s;
-        // animation-iteration-count: infinite;
+        // animation: flutter 1s;
+        animation: blink2 1s, flutter 3s;
 
 
-                  animation: flutter 1s;
-                  animation: blink2 1s;
-    animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
 
     }
 
 
-
-
-
-  //   .show-bee {
-  //       display: block;
-  // animation: MoveUpDown 1s linear infinite;
-  // position: absolute;
-  //   }
-
-
-
-
-
-   .hide-bee {
+    .hide-bee {
         display: none;
     }
 
 
 
 
-@keyframes flutter {
+    @keyframes flutter {
 
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 10px;
-  }
-}
+        0%,
+        100% {
+            bottom: 40%;
+        }
 
-
-
-@keyframes blink1 {
-    0% {
-        opacity: 1;
-    }
-    49% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
+        50% {
+            bottom: 44%;
+        }
     }
 
-}
+
+    // @keyframes flutter {
+    //   0%, 100% {
+    //     bottom: 50%;
+    //   }
+    //   50% {
+    //     bottom: 100%;
+    //   }
+    // }
+
+    @keyframes blink1 {
+        0% {
+            opacity: 1;
+        }
+
+        49% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+
+    }
 
 
-@keyframes blink2 {
-    0% {
-        opacity: 0;
-    }
-    49% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
+    @keyframes blink2 {
+        0% {
+            opacity: 0;
+        }
 
-}
+        49% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+    }
 
 
 

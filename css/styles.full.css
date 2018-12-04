@@ -801,18 +801,24 @@ body {
     border-radius: 17px; }
   #main-content h1 {
     font-size: 23px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: white;
+    color: black; }
     @media (min-width: 768px) {
       #main-content h1 {
         font-size: 40px; } }
   #main-content h3 {
     font-size: 19px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    text-align: center; }
     @media (min-width: 768px) {
       #main-content h3 {
         font-size: 28px; } }
   #main-content h4 {
-    font-size: 16px; }
+    font-size: 16px;
+    margin-top: 40px; }
     @media (min-width: 768px) {
       #main-content h4 {
         font-size: 24px; } }
@@ -831,9 +837,14 @@ body {
       #main-content .page-content {
         padding: 15px; } }
   #main-content hr {
+    margin-top: 25px;
+    margin-bottom: 35px;
     background-color: #AA0000; }
   #main-content .icon {
-    margin-right: 10px; }
+    margin-right: 10px;
+    vertical-align: 0px; }
+    #main-content .icon.cabbage {
+      width: 32px; }
 
 .direction.north:before {
   content: 'N'; }
@@ -893,24 +904,25 @@ body {
     position: relative; }
   #side-nav-list section.eagle-eye img {
     position: absolute;
-    position: absolute; }
+    right: 50%;
+    -webkit-filter: drop-shadow(3px 22px 8px #000);
+    filter: drop-shadow(3px 22px 8px #000); }
   #side-nav-list .bee1 {
     position: absolute;
-    animation: flutter 1s;
-    animation: blink1 1s;
+    animation: blink1 1s, flutter 3s;
     animation-iteration-count: infinite; }
   #side-nav-list .bee2 {
     position: absolute;
-    animation: flutter 1s;
-    animation: blink2 1s;
+    animation: blink2 1s, flutter 3s;
     animation-iteration-count: infinite; }
   #side-nav-list .hide-bee {
     display: none; }
 @keyframes flutter {
-  0%, 100% {
-    bottom: 0; }
+  0%,
+        100% {
+    bottom: 40%; }
   50% {
-    bottom: 10px; } }
+    bottom: 44%; } }
 @keyframes blink1 {
   0% {
     opacity: 1; }
