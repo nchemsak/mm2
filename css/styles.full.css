@@ -889,6 +889,46 @@ body {
       top: 50%;
       right: 50%;
       display: none; }
+  #side-nav-list section.eagle-eye {
+    position: relative; }
+  #side-nav-list section.eagle-eye img {
+    position: absolute;
+    position: absolute; }
+  #side-nav-list .bee1 {
+    position: absolute;
+    animation: flutter 1s;
+    animation: blink1 1s;
+    animation-iteration-count: infinite; }
+  #side-nav-list .bee2 {
+    position: absolute;
+    animation: flutter 1s;
+    animation: blink2 1s;
+    animation-iteration-count: infinite; }
+  #side-nav-list .hide-bee {
+    display: none; }
+@keyframes flutter {
+  0%, 100% {
+    bottom: 0; }
+  50% {
+    bottom: 10px; } }
+@keyframes blink1 {
+  0% {
+    opacity: 1; }
+  49% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+@keyframes blink2 {
+  0% {
+    opacity: 0; }
+  49% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
   #side-nav-list .sidemenu-magic {
     white-space: nowrap;
     padding-right: 0px;

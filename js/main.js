@@ -36,7 +36,11 @@ var direction = "north";
 
 
 function toggleOptions() {
-    $('.toggle').toggleClass('options-menu-off options-menu-on');
+    // Open SIDE OPTIONS MENU when letter 'O' is pressed on keyboard
+
+    $('.toggle').toggleClass('show-bee hide-bee');
+        $('.toggle').toggleClass('show-bee hide-bee');
+
 }
 
 
