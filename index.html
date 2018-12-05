@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
-<body>
+<body id="homepage">
     <div class="page-wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -24,11 +24,20 @@
                     <section id="main-content" class="scroll">
                         <div class="header-image">
                             <img src="/images/mm2.png" class="img-fluid" />
-                            <img class="weather-overlay" src="images/icons/salt.gif" />
+                            <!-- <img class="weather-overlay" src="images/icons/salt.gif" /> -->
                             <h1 class="homepage-h1">Ephemeral Wave</h1>
+
+
+
+<div class="scroll-up">
+<p>"You didn’t come into this world. You came out of it, 
+like a wave from the ocean. <br />You are not a stranger here."</p>
+</div>
+
+<!-- 
                             <blockquote>"You didn’t come into this world. You came out of it,
 
-like a wave from the ocean. You are not a stranger here."</blockquote>
+like a wave from the ocean. You are not a stranger here."</blockquote> -->
                         </div>
                             <div class="page-content">
 
@@ -102,21 +111,7 @@ like a wave from the ocean. You are not a stranger here."</blockquote>
             </section>
         </div>
     </div>
-    <div id="weather"></div>
-    <button class="js-geolocation" style="display: none;">Use Your Location</button>
-    <div class="container">
-        <div class="title">Weather App</div>
-        <div class="weather-info">
-            <div id="location" class="info"></div>
-            <div id="temperature" class="info">
-                <span id="temperature-num"></span>
-                <span>°</span>
-                <span id="temperature-scale">C</span>
-            </div>
-            <div id="weather-condition" class="info"></div>
-            <div id="weather-icon" class="info"></div>
-        </div>
-    </div>
+
     <!-- ############################# SCRIPTS ################################# -->
     <script src="lib/jquery-3.2.1.min.js"></script>
     <script src="lib/popper.min.js"></script>

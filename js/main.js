@@ -17,8 +17,6 @@ function toggleOptions() {
 
 $(document).keydown(function(e) {
     var event = e.which;
-
-
     if (event === 79) {
         $('.toggle').toggleClass('options-menu-off options-menu-on');
     }
@@ -27,13 +25,10 @@ $(document).keydown(function(e) {
 
 
 
-
-
-
     // NORTH
     else if (event === 38) {
 
-        // $(".fa").attr("class", "fa fa-arrow-up");
+        // $(".fa").attr("class", "fa fa-arrow-up"); 
         if (counterNorth <= -7) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + "%");
         } else {
@@ -61,7 +56,7 @@ $(document).keydown(function(e) {
         } else {
             counterEast = counterEast + 7;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
-                      $(".bee1").addClass("bee-flip");
+            $(".bee1").addClass("bee-flip");
             $(".bee2").addClass("bee-flip");
         }
         $(".direction").attr("class", "direction east");
@@ -97,7 +92,7 @@ $(document).keydown(function(e) {
         } else {
             counterEast = counterEast - 7;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
-                             $(".bee1").removeClass("bee-flip");
+            $(".bee1").removeClass("bee-flip");
             $(".bee2").removeClass("bee-flip");
         }
 
@@ -105,18 +100,26 @@ $(document).keydown(function(e) {
     }
 
 
-
+    // GO TO LINK WHEN AT SPECIFIC LOCATION
     // console.log("counterEast:", counterEast);
     // console.log("counterNorth:", counterNorth);
+    if (counterEast === 48 && counterNorth === 77) {
+        console.log("Welcome to the Restaurant!"); 
+        window.location.href = "recipe-book.html";
+    } 
 
-if(counterEast === 48 && counterNorth === 77) {
-   console.log("Welcome to the Restaurant!");
 
-    // $('#recipe-link').click();
 
-    // $('<a href="recipe-book.html" id="recipe-link">Recipe Book</a>').click();
-window.location.href = "recipe-book.html";
-}
+        var mainBeeCounter = 5;
+    if (event === 39) {
+          var mainBeeCounter = mainBeeCounter + 20;
+        $(".main-bee").css("left", mainBeeCounter + 20 + "px");
+            // $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
+
+        
+
+    }
+
 
 
 });

@@ -41,6 +41,7 @@ body {
     font-size: 4vw;
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
     @include media-breakpoint-up(md) {
         font-size: 23px;
     }
@@ -69,12 +70,94 @@ body {
 }
 
 
+.bee1 {
+    position: absolute;
+    animation: blink1 1s, flutter 3s;
+    animation-iteration-count: infinite;
+}
+
+.bee2 {
+    position: absolute;
+    animation: blink2 1s, flutter 3s;
+    animation-iteration-count: infinite;
+}
+
+.hide-bee {
+    display: none;
+}
+
+.bee-flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.main-bee {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+}
+
+@keyframes flutter {
+
+    0%,
+    100% {
+        bottom: 40%;
+    }
+
+    50% {
+        bottom: 44%;
+    }
+}
+
+@keyframes blink1 {
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes blink2 {
+    0% {
+        opacity: 0;
+    }
+
+    49% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 #main-content {
     background-color: #000000;
     height: 100%;
     border-radius: 17px;
     font-size: 12px;
+
     &::-webkit-scrollbar {
         width: 35px;
     }
@@ -111,11 +194,11 @@ body {
         overflow: hidden;
 
 
-// background-image: url("/images/icons/salt.gif");
-// background-position: 50% 50%;
-// background-size: cover;
-// background-repeat: repeat;
-// height: 100%;
+        // background-image: url("/images/icons/salt.gif");
+        // background-position: 50% 50%;
+        // background-size: cover;
+        // background-repeat: repeat;
+        // height: 100%;
 
 
         .weather-overlay {
@@ -149,12 +232,13 @@ body {
         @include media-breakpoint-up(md) {
             font-size: 40px;
         }
+
         &.homepage-h1 {
             position: absolute;
             color: white;
             top: 30px;
             left: 20px;
-            background-color: rgba(0,0,0, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
         }
     }
 
@@ -252,6 +336,71 @@ body {
     }
 }
 
+
+#homepage {
+    .scroll-up {
+        height: 500px;
+        overflow: hidden;
+        position: absolute;
+        top: 118px;
+    }
+
+    .scroll-up p {
+        // position: absolute;
+        position: relative;
+        width: 100%;
+        // height: 100%;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        /* Starting position */
+        -moz-transform: translateY(256%);
+        -webkit-transform: translateY(256%);
+        transform: translateY(256%);
+        -moz-animation: scroll-up 25s linear infinite;  
+        -webkit-animation: scroll-up 25s linear infinite;
+        animation: scroll-up 25s linear infinite;
+        z-index:50;
+        font-size: 22px;
+    }
+
+    /* Move it (define the animation) */
+    // @-moz-keyframes scroll-up {
+    //     0% {
+    //         -moz-transform: translateY(100%);
+    //     }
+
+    //     100% {
+    //         -moz-transform: translateY(-100%);
+    //     }
+    // }
+
+    // @-webkit-keyframes scroll-up {
+    //     0% {
+    //         -webkit-transform: translateY(100%);
+    //     }
+
+    //     100% {
+    //         -webkit-transform: translateY(-100%);
+    //     }
+    // }
+
+    @keyframes scroll-up {
+        0% {
+            -moz-transform: translateY(256%);
+            -webkit-transform: translateY(256%);
+            transform: translateY(256%);
+        }
+
+        100% {
+
+             -moz-transform: translateY(-100%);
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
+    }
+}
+
 #side-nav-list {
     background-color: #000000;
     background-color: $red;
@@ -331,80 +480,7 @@ body {
         filter: drop-shadow(3px 22px 8px #000);
     }
 
-    .bee1 {
-        position: absolute;
-        animation: blink1 1s, flutter 3s;
-        animation-iteration-count: infinite;
-    }
 
-    .bee2 {
-        position: absolute;
-        animation: blink2 1s, flutter 3s;
-        animation-iteration-count: infinite;
-    }
-
-    .hide-bee {
-        display: none;
-    }
-
-    .bee-flip {
-        -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
-    }
-
-    @keyframes flutter {
-
-        0%,
-        100% {
-            bottom: 40%;
-        }
-
-        50% {
-            bottom: 44%;
-        }
-    }
-
-    @keyframes blink1 {
-        0% {
-            opacity: 1;
-        }
-
-        49% {
-            opacity: 1;
-        }
-
-        50% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 0;
-        }
-
-    }
-
-
-    @keyframes blink2 {
-        0% {
-            opacity: 0;
-        }
-
-        49% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
 
     .sidemenu-magic {
         white-space: nowrap;
