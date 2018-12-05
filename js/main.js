@@ -25,84 +25,75 @@ $(document).keydown(function(e) {
 
     // Change direction and arrow direction with arrow presses
 
+
+
+
+
+
     // NORTH
     else if (event === 38) {
 
-        $(".fa").attr("class", "fa fa-arrow-up");
+        // $(".fa").attr("class", "fa fa-arrow-up");
         if (counterNorth <= -7) {
-            // $(".eagle-eye").css("background-position", "48%" + -7 + "%");
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + "%");
         } else {
             counterNorth = counterNorth - 7;
-            // $(".eagle-eye").css("background-position", "48%" + counterNorth + "%");
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
         }
 
         $(".direction").attr("class", "direction north");
 
+
+
+
+
+
+
+
         // EAST
     } else if (event === 39) {
-        $(".fa").attr("class", "fa fa-arrow-right");
+        // $(".fa").attr("class", "fa fa-arrow-right");
         var direction = "east";
-
         if (counterEast <= -7) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
-
-
             $(".bee1").addClass("bee-flip");
             $(".bee2").addClass("bee-flip");
-
-
         } else {
             counterEast = counterEast + 7;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
                       $(".bee1").addClass("bee-flip");
             $(".bee2").addClass("bee-flip");
-
         }
-
-
         $(".direction").attr("class", "direction east");
+
 
 
 
         // SOUTH
     } else if (event === 40) {
-        $(".fa").attr("class", "fa fa-arrow-down");
-
-
+        // $(".fa").attr("class", "fa fa-arrow-down");
         if (direction === "south") {
             counterNorth = counterNorth + 7;
-
             $(".eagle-eye").css("background-position", "48%" + counterNorth + "%");
         } else { var direction = "south"; }
-
         var direction = "south";
-
         $(".direction").attr("class", "direction south");
-
-
-
         if (counterNorth <= +7) {
-            // $(".eagle-eye").css("background-position", "48%" + -7 + "%");
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + "%");
         } else {
             counterNorth = counterNorth + 7;
-            // $(".eagle-eye").css("background-position", "48%" + counterNorth + "%");
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
         }
 
+
+
+
         // WEST
     } else if (event === 37) {
-        $(".fa").attr("class", "fa fa-arrow-left");
-
+        // $(".fa").attr("class", "fa fa-arrow-left");
         var direction = "west";
-
-
-
         if (counterEast <= -7) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
-
         } else {
             counterEast = counterEast - 7;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
@@ -110,22 +101,31 @@ $(document).keydown(function(e) {
             $(".bee2").removeClass("bee-flip");
         }
 
-
-
-
-
-
         $(".direction").attr("class", "direction west");
     }
 
 
-    // console.log(direction);
 
+    // console.log("counterEast:", counterEast);
+    // console.log("counterNorth:", counterNorth);
 
+if(counterEast === 48 && counterNorth === 77) {
+   console.log("Welcome to the Restaurant!");
 
+    // $('#recipe-link').click();
+
+    // $('<a href="recipe-book.html" id="recipe-link">Recipe Book</a>').click();
+window.location.href = "recipe-book.html";
+}
 
 
 });
+
+
+
+
+
+
 
 // window.onload = function() {
 //     getLocation();
