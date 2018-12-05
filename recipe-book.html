@@ -23,19 +23,21 @@
                 <div class="col-xs-12 col-lg-8">
                     <section id="main-content" class="scroll">
                         <div class="header-image">
+
+                            <img id="keyboard-arrows" src="/images/icons/keyboard-arrows.png" />
                             <!-- <img src="/images/mm2.png" class="img-fluid" /> -->
                             <img src="/images/shop1.png" class="img-fluid" />
                             <!-- <img class="weather-overlay" src="images/icons/salt.gif" /> -->
-                            <img class="bee1 toggle main-bee show-bee bee-flip" src="images/icons/bee1.ico">
-                            <img class="bee2 toggle main-bee show-bee bee-flip" src="images/icons/bee2.ico">
+                            <img class="main-bee1 bee-flip" src="images/icons/bee1.ico">
+                            <img class="main-bee2 bee-flip" src="images/icons/bee2.ico">
                         </div>
                             <div class="page-content">
-                                <a href="#">
-                                    <h1>
+
+                                    <h2 id="kraut">
                                         <img class="icon" src="images/icons/cabbage.png" />Simple Sauerkraut
-                                    </h1>
-                                </a>
-                                <div id="sauerkraut">
+                                    </h2>
+
+                                <div>
                                     <h3><img class="icon" src="images/icons/map.ico" />Quick Facts</h3>
                                     Total Time: <br />
                                     Total Yield: 2 filled mason jars<br />
@@ -93,7 +95,15 @@
                                                 </ul>
                                             </div>
                                         </div>
+
+                                            <h2 id="ct">
+                                        <img class="icon" src="images/icons/cabbage.png" />Cherry Tomato Poppers
+                                    </h2>
+                                               <h2 id="salsa">
+                                        <img class="icon" src="images/icons/cabbage.png" />Salsa
+                                    </h2>
                     </section>
+
                 </div>
                 <div class="col-xs-12 col-lg-4">
                     <section id="side-nav-list" class="toggle options-menu-off">
@@ -105,8 +115,16 @@
 
                                 </div> -->
                                 <section class="eagle-eye">
-                                    <img class="bee1 toggle show-bee" src="images/icons/bee1.ico">
-                                    <img class="bee2 toggle show-bee" src="images/icons/bee2.ico">
+                                    <!--                                   <img class="bee1 toggle show-bee" src="images/icons/bee1.ico">
+                                    <img class="bee2 toggle show-bee" src="images/icons/bee2.ico"> -->
+                                    <div id="options-menu" class="d-none">
+                                        <!-- <h2>Fermentation Recipes</h2> -->
+                                        <a href="#" onclick="toggleOptions(); return false;"><h1>Fermentation Recipes</h1></a>
+                                        <a href="#kraut"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Sauerkraut</h5></a>
+                                        <a href="#ct"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Cherry Tomato Poppers</h5></a>
+                                        <a href="#salsa"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Salsa</h5></a>
+
+                                    </div>
                                 </section>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-2">
@@ -159,7 +177,6 @@
             </section>
         </div>
     </div>
-
     <!-- ############################# SCRIPTS ################################# -->
     <script src="lib/jquery-3.2.1.min.js"></script>
     <script src="lib/popper.min.js"></script>

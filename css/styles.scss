@@ -67,9 +67,14 @@ body {
     @include media-breakpoint-up(md) {
         border: 7px solid $red;
     }
+
     // @include media-breakpoint-up(xl) {
     //     height: 908px;
     // }
+    //
+    @include media-breakpoint-up(lg) {
+        margin-top: 25px;
+    }
 }
 
 
@@ -98,10 +103,20 @@ body {
     -ms-filter: "FlipH";
 }
 
-.main-bee {
+.main-bee1 {
     position: absolute;
-    top: 50%;
-    left: 5px;
+    // top: 50%;
+    left: 55px;
+        animation: blink1 1s, flutter 3s;
+    animation-iteration-count: infinite;
+}
+
+.main-bee2 {
+    position: absolute;
+    // top: 50%;
+    left: 55px;
+        animation: blink2 1s, flutter 3s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes flutter {
@@ -192,9 +207,13 @@ body {
         overflow-x: hidden;
     }
 
+    @include media-breakpoint-up(lg) {
+        height: 343px;
+    }
 
     @include media-breakpoint-up(xl) {
-     height: 600px;
+        height: 600px;
+        height: 571px;
     }
 
 
@@ -445,6 +464,14 @@ body {
             z-index: 2;
             position: relative;
 
+            @include media-breakpoint-up(lg) {
+                height: 152px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                height: 275px;
+            }
+
             .fa {
                 position: absolute;
                 top: 50%;
@@ -605,4 +632,23 @@ body {
         position: relative;
         z-index: 5;
     }
+}
+
+
+
+// RECIPE BOOK PAGE
+//
+#recipe-popup {
+    opacity: 0;
+    position: absolute;
+    transform: translate3d(368px, 63px, 0px);
+    top: 124px;
+    left: 118px;
+    will-change: transform;
+}
+
+#keyboard-arrows {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }

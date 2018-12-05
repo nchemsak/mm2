@@ -3,6 +3,8 @@
 
 var counterNorth = 70;
 var counterEast = 48;
+var counterEastMain = 55;
+
 // Open SIDE OPTIONS MENU when letter 'O' is pressed on keyboard
 var direction = "north";
 
@@ -18,8 +20,9 @@ function toggleOptions() {
 
 
 $(document).keydown(function(e) {
-    // Open SIDE OPTIONS MENU and toggle bee when letter 'O' is pressed on keyboard
     var event = e.which;
+
+    //////////////////////////// Letter 'O' opens options and hides bee //////////////////////
     if (event === 79) {
         $('.toggle').toggleClass('options-menu-off options-menu-on');
         $('.bee1').toggleClass('hide-bee show-bee');
@@ -50,13 +53,35 @@ $(document).keydown(function(e) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
             $(".bee1").addClass("bee-flip");
             $(".bee2").addClass("bee-flip");
+
+
+
         } else {
             counterEast = counterEast + 7;
+            counterEastMain = counterEastMain + 55;
+
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
             $(".bee1").addClass("bee-flip");
             $(".bee2").addClass("bee-flip");
+            $(".main-bee1").addClass("bee-flip");
+            $(".main-bee2").addClass("bee-flip");
+            if (counterEastMain <= 550) {
+                $(".main-bee1").css("left", (counterEastMain) + "px");
+                $(".main-bee2").css("left", (counterEastMain) + "px");
+            }
+            // console.log("counterEastMain", counterEastMain);
+            if (counterEastMain === 550) {
+                $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop!  Please view available recipes you want to learn by clicking on a recipe on the right.</div></div>');
+                $("#recipe-popup").animate({ opacity: '0.8' });
+            }
+            // prevent bee counter from going past a set amount in recipes
+            if (counterEastMain > 550) {
+                counterEastMain = 550;
+            }
+
         }
         $(".direction").attr("class", "direction east");
+
 
 
 
@@ -85,9 +110,30 @@ $(document).keydown(function(e) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
         } else {
             counterEast = counterEast - 7;
+            counterEastMain = counterEastMain - 55;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
             $(".bee1").removeClass("bee-flip");
             $(".bee2").removeClass("bee-flip");
+
+
+            if (counterEastMain >= 0) {
+                $(".main-bee1").css("left", (counterEastMain) + "px");
+                $(".main-bee2").css("left", (counterEastMain) + "px");
+
+                $(".main-bee1").removeClass("bee-flip");
+                $(".main-bee2").removeClass("bee-flip");
+
+            }
+
+            if (counterEastMain < 550) {
+                $("#recipe-popup").animate({ opacity: '0' });
+            }
+
+            // if (counterEastMain === 0) {
+
+            //     window.location.href = "index.html";
+
+            // }
         }
 
         $(".direction").attr("class", "direction west");
