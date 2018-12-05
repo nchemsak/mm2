@@ -67,6 +67,9 @@ body {
     @include media-breakpoint-up(md) {
         border: 7px solid $red;
     }
+    // @include media-breakpoint-up(xl) {
+    //     height: 908px;
+    // }
 }
 
 
@@ -189,10 +192,19 @@ body {
         overflow-x: hidden;
     }
 
+
+    @include media-breakpoint-up(xl) {
+     height: 600px;
+    }
+
+
     .header-image {
         position: relative;
         overflow: hidden;
 
+        @include media-breakpoint-up(lg) {
+            height: 100%;
+        }
 
         // background-image: url("/images/icons/salt.gif");
         // background-position: 50% 50%;
@@ -357,10 +369,10 @@ body {
         -moz-transform: translateY(256%);
         -webkit-transform: translateY(256%);
         transform: translateY(256%);
-        -moz-animation: scroll-up 25s linear infinite;  
+        -moz-animation: scroll-up 25s linear infinite;
         -webkit-animation: scroll-up 25s linear infinite;
         animation: scroll-up 25s linear infinite;
-        z-index:50;
+        z-index: 50;
         font-size: 22px;
     }
 
@@ -394,7 +406,7 @@ body {
 
         100% {
 
-             -moz-transform: translateY(-100%);
+            -moz-transform: translateY(-100%);
             -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
         }
@@ -451,7 +463,7 @@ body {
 
         .eagle-eye {
             border-radius: 15px;
-            background-image: url("/images/screenshot1.png");
+            // background-image: url("/images/screenshot1.png");
             background-size: cover;
             background-size: contain;
             height: 275px;
@@ -480,6 +492,11 @@ body {
         filter: drop-shadow(3px 22px 8px #000);
     }
 
+    section.eagle-eye .options-icon {
+        position: relative;
+        filter: none;
+        right: 0px;
+    }
 
 
     .sidemenu-magic {

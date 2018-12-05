@@ -847,9 +847,15 @@ body {
       font-size: 16px;
       overflow: scroll;
       overflow-x: hidden; } }
+  @media (min-width: 1200px) {
+    #main-content {
+      height: 600px; } }
   #main-content .header-image {
     position: relative;
     overflow: hidden; }
+    @media (min-width: 992px) {
+      #main-content .header-image {
+        height: 100%; } }
     #main-content .header-image .weather-overlay {
       position: absolute;
       bottom: 0px;
@@ -992,7 +998,6 @@ body {
     content: 'Options'; }
   #side-nav-list.options-menu-on .eagle-eye {
     border-radius: 15px;
-    background-image: url("/images/screenshot1.png");
     background-size: cover;
     background-size: contain;
     height: 275px;
@@ -1012,6 +1017,10 @@ body {
     right: 50%;
     -webkit-filter: drop-shadow(3px 22px 8px #000);
     filter: drop-shadow(3px 22px 8px #000); }
+  #side-nav-list section.eagle-eye .options-icon {
+    position: relative;
+    filter: none;
+    right: 0px; }
   #side-nav-list .sidemenu-magic {
     white-space: nowrap;
     padding-right: 0px;
