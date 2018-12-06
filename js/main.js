@@ -9,6 +9,13 @@ var counterEastMain = 55;
 var direction = "north";
 
 
+
+
+function toggleQuote() {
+    $('#home-page-quote').toggleClass('d-none');
+}
+
+
 // Function to call to open SIDE OPTIONS MENU and toggle bee when link is clicked
 
 function toggleOptions() {
@@ -53,9 +60,6 @@ $(document).keydown(function(e) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
             $(".bee1").addClass("bee-flip");
             $(".bee2").addClass("bee-flip");
-
-
-
         } else {
             counterEast = counterEast + 7;
             counterEastMain = counterEastMain + 55;
@@ -71,7 +75,7 @@ $(document).keydown(function(e) {
             }
             // console.log("counterEastMain", counterEastMain);
             if (counterEastMain === 550) {
-                $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop!  Please view available recipes you want to learn by clicking on a recipe on the right.</div></div>');
+                $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop! <br /> What recipe would you like to learn? <br />Please select a recipe from the menu on the right.</div></div>');
                 $("#recipe-popup").animate({ opacity: '0.8' });
             }
             // prevent bee counter from going past a set amount in recipes
@@ -129,11 +133,11 @@ $(document).keydown(function(e) {
                 $("#recipe-popup").animate({ opacity: '0' });
             }
 
-            // if (counterEastMain === 0) {
+            if (counterEastMain === 0) {
 
-            //     window.location.href = "index.html";
+                window.location.href = "index.html";
 
-            // }
+            }
         }
 
         $(".direction").attr("class", "direction west");
@@ -156,4 +160,18 @@ $(document).keydown(function(e) {
         $(".main-bee").css("left", mainBeeCounter + 20 + "px");
         // $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
     }
+
+
+
+
+
+
+    // SCROLL TO LINK
+
+    $("a.page-scroll").click(function(event) {
+        event.preventDefault();
+        $("#main-content").animate({ scrollTop: $($(this).attr("href")).offset().top - 35 }, 1000);
+ 
+    });
+
 });
