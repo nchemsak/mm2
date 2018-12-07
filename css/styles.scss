@@ -399,35 +399,13 @@ body {
     }
 
 
-
-    /* Move it (define the animation) */
-    // @-moz-keyframes scroll-up {
-    //     0% {
-    //         -moz-transform: translateY(100%);
-    //     }
-
-    //     100% {
-    //         -moz-transform: translateY(-100%);
-    //     }
-    // }
-
-    // @-webkit-keyframes scroll-up {
-    //     0% {
-    //         -webkit-transform: translateY(100%);
-    //     }
-
-    //     100% {
-    //         -webkit-transform: translateY(-100%);
-    //     }
-    // }
-
     @keyframes scroll-up {
         0% {
             // -moz-transform: translateY(256%);
             // -webkit-transform: translateY(256%);
             // transform: translateY(256%);
 
-             -moz-transform: translateY(290%);
+            -moz-transform: translateY(290%);
             -webkit-transform: translateY(290%);
             transform: translateY(290%);
         }
@@ -438,6 +416,21 @@ body {
             -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
         }
+    }
+}
+
+h2 {
+    font-size: 23px;
+    margin-bottom: 25px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: white;
+    color: black;
+
+    @include media-breakpoint-up(md) {
+        font-size: 40px;
+        font-size: 2vw;
+        text-align: center;
     }
 }
 
@@ -485,7 +478,8 @@ body {
             background-size: contain;
             background-size: auto;
             height: 275px;
-            background-position: 48% 71%;
+            // background-position: 48% 71%;
+            // background-position: 48% 49%;
             background-repeat: no-repeat;
             z-index: 2;
             position: relative;
@@ -520,7 +514,9 @@ body {
             background-size: cover;
             background-size: contain;
             height: 275px;
-            background-position: 48% 70%;
+            // background-position: 48% 70%;
+            // background-position: 48% 71%;
+            // background-position: 48% 49%;
             background-repeat: no-repeat;
             z-index: 2;
             position: relative;
@@ -671,7 +667,7 @@ body {
     top: 124px;
     top: 99px;
     left: 118px;
-    left:100px;
+    left: 100px;
     will-change: transform;
 }
 

@@ -952,28 +952,26 @@ body {
 .direction.west:before {
   content: 'W'; }
 
-#homepage {
-  /* Move it (define the animation) */ }
-  #homepage .scroll-up {
-    height: 500px;
-    overflow: hidden;
-    position: absolute;
-    top: 118px; }
-  #homepage .scroll-up p {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    line-height: 50px;
-    text-align: center;
-    /* Starting position */
-    -moz-transform: translateY(256%);
-    -webkit-transform: translateY(256%);
-    transform: translateY(256%);
-    -moz-animation: scroll-up 25s linear infinite;
-    -webkit-animation: scroll-up 25s linear infinite;
-    animation: scroll-up 25s linear infinite;
-    z-index: 50;
-    font-size: 22px; }
+#homepage .scroll-up {
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  top: 118px; }
+#homepage .scroll-up p {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform: translateY(256%);
+  -webkit-transform: translateY(256%);
+  transform: translateY(256%);
+  -moz-animation: scroll-up 25s linear infinite;
+  -webkit-animation: scroll-up 25s linear infinite;
+  animation: scroll-up 25s linear infinite;
+  z-index: 50;
+  font-size: 22px; }
 @keyframes scroll-up {
   0% {
     -moz-transform: translateY(290%);
@@ -983,6 +981,19 @@ body {
     -moz-transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%); } }
+h2 {
+  font-size: 23px;
+  margin-bottom: 25px;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: white;
+  color: black; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 40px;
+      font-size: 2vw;
+      text-align: center; } }
+
 #side-nav-list {
   background-color: #000000;
   background-color: #AA0000;
@@ -1015,7 +1026,6 @@ body {
     background-size: contain;
     background-size: auto;
     height: 275px;
-    background-position: 48% 71%;
     background-repeat: no-repeat;
     z-index: 2;
     position: relative; }
@@ -1036,7 +1046,6 @@ body {
     background-size: cover;
     background-size: contain;
     height: 275px;
-    background-position: 48% 70%;
     background-repeat: no-repeat;
     z-index: 2;
     position: relative; }

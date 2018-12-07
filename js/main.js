@@ -1,14 +1,21 @@
 // EYE JS
 "use strict";
 
-var counterNorth = 70;
+var counterNorth = 49;
 var counterEast = 48;
 var counterEastMain = 55;
 
 // Open SIDE OPTIONS MENU when letter 'O' is pressed on keyboard
 var direction = "north";
 
+// Change the counter and background-position of bee when leaving the shop
+if (window.location.href.indexOf("left-recipe-shop") > -1) {
+    var counterNorth = 70;
+    $(".eagle-eye").css("background-position", "48% 71%");
 
+} else {
+    $(".eagle-eye").css("background-position", "48% 49%");
+}
 
 
 function toggleQuote() {
@@ -69,11 +76,14 @@ $(document).keydown(function(e) {
             $(".bee2").addClass("bee-flip");
             $(".main-bee1").addClass("bee-flip");
             $(".main-bee2").addClass("bee-flip");
+
+
+            // INSIDE RECIPE ShOP
             if (counterEastMain <= 550) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
                 $(".main-bee2").css("left", (counterEastMain) + "px");
             }
-            // console.log("counterEastMain", counterEastMain);
+
             if (counterEastMain === 550) {
                 $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop! <br /> What recipe would you like to learn? <br />Please select a recipe from the menu on the right.</div></div>');
                 $("#recipe-popup").animate({ opacity: '0.8' });
@@ -119,24 +129,20 @@ $(document).keydown(function(e) {
             $(".bee1").removeClass("bee-flip");
             $(".bee2").removeClass("bee-flip");
 
-
             if (counterEastMain >= 0) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
                 $(".main-bee2").css("left", (counterEastMain) + "px");
 
                 $(".main-bee1").removeClass("bee-flip");
                 $(".main-bee2").removeClass("bee-flip");
-
             }
 
             if (counterEastMain < 550) {
                 $("#recipe-popup").animate({ opacity: '0' });
             }
 
-            if (counterEastMain === 0) {
-
-                window.location.href = "index.html";
-
+            if (counterEastMain === 0 && window.location.href.indexOf("recipe-book") > -1) {
+                window.location.href = "index.html?left-recipe-shop";
             }
         }
 
@@ -154,24 +160,22 @@ $(document).keydown(function(e) {
 
 
 
-    var mainBeeCounter = 5;
-    if (event === 39) {
-        var mainBeeCounter = mainBeeCounter + 20;
-        $(".main-bee").css("left", mainBeeCounter + 20 + "px");
-        // $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
-    }
-
-
-
-
+    // var mainBeeCounter = 5;
+    // if (event === 39) {
+    //     var mainBeeCounter = mainBeeCounter + 20;
+    //     $(".main-bee").css("left", mainBeeCounter + 20 + "px");
+    //     // $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
+    // }
 
 
     // SCROLL TO LINK
-
     $("a.page-scroll").click(function(event) {
         event.preventDefault();
         $("#main-content").animate({ scrollTop: $($(this).attr("href")).offset().top - 35 }, 1000);
- 
+
     });
 
 });
+
+
+
