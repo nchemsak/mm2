@@ -149,7 +149,6 @@ $(document).keydown(function(e) {
         $(".direction").attr("class", "direction west");
     }
 
-
     // GO TO LINK WHEN AT SPECIFIC LOCATION
     // console.log("counterEast:", counterEast);
     // console.log("counterNorth:", counterNorth);
@@ -158,6 +157,10 @@ $(document).keydown(function(e) {
         window.location.href = "recipe-book.html";
     }
 
+        if (counterEast === 13 && counterNorth === 63) {
+        console.log("Welcome to the tree!");
+        window.location.href = "katsura.html";
+    }
 
 
     // var mainBeeCounter = 5;
