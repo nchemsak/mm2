@@ -760,6 +760,85 @@ body {
       font-size: 1.5em;
       font-size: 2em; } }
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 7;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s; }
+  .overlay .arrow-key {
+    width: 70px;
+    height: auto;
+    display: inline; }
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  text-align: right;
+  bottom: -66%; }
+  @media (min-width: 768px) {
+    .overlay-content {
+      top: 82px;
+      bottom: initial; } }
+  @media (min-width: 992px) {
+    .overlay-content {
+      padding-right: 360px; } }
+  @media (min-width: 1200px) {
+    .overlay-content {
+      padding-right: 33vw; } }
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1; }
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+  text-align: right;
+  font-size: 45px;
+  color: #AA0000;
+  z-index: 5; }
+  @media (min-width: 576px) {
+    .overlay .closebtn {
+      top: initial;
+      left: initial;
+      bottom: 20px;
+      right: 45px;
+      font-size: 60px; } }
+  @media (min-width: 768px) {
+    .overlay .closebtn {
+      font-size: 122px;
+      bottom: 381px;
+      right: initial; } }
+  @media (min-width: 1200px) {
+    .overlay .closebtn {
+      font-size: 160px;
+      bottom: 20px;
+      right: 45px; } }
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px; }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px; } }
 .page-wrapper {
   max-width: 1580px;
   margin: 0 auto;
@@ -866,7 +945,11 @@ body {
       height: 571px; } }
   #main-content .header-image {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    display: none; }
+    @media (min-width: 768px) {
+      #main-content .header-image {
+        display: block; } }
     @media (min-width: 992px) {
       #main-content .header-image {
         height: 100%; } }
@@ -1018,7 +1101,7 @@ h2 {
     #side-nav-list {
       border: none; } }
   #side-nav-list.options-menu-off .side-nav-list-heading:before {
-    content: 'Eagle Eye'; }
+    content: 'Ephemeral Wave'; }
   #side-nav-list.options-menu-off .eagle-eye {
     border-radius: 15px;
     background-image: url("/images/map-edit2.png");
@@ -1027,7 +1110,7 @@ h2 {
     background-size: auto;
     height: 275px;
     background-repeat: no-repeat;
-    z-index: 2;
+    z-index: 7;
     position: relative; }
     @media (min-width: 992px) {
       #side-nav-list.options-menu-off .eagle-eye {

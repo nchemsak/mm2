@@ -32,10 +32,18 @@ function toggleOptions() {
     $('#options-menu').toggleClass('d-none d-block');
 }
 
+    var keydownCounter = 0;
+
 
 $(document).keydown(function(e) {
+    // console.log("e", e);
+    let loopCounter = +keydownCounter;
+    console.log("loop Counter", loopCounter);
+// console.log("event",event);
+if (loopCounter = 1) {
     var event = e.which;
-
+  
+}
     //////////////////////////// Letter 'O' opens options and hides bee //////////////////////
     if (event === 79) {
         $('.toggle').toggleClass('options-menu-off options-menu-on');
@@ -182,3 +190,23 @@ $(document).keydown(function(e) {
 
 
 
+function firstVisit() {
+    console.log("First Ever Visit");
+    $("body").addClass('first-visit-body-overlay');
+
+
+
+// function openNav() {
+  $(".overlay").css("width", "100%");
+// }
+
+
+
+
+}
+
+
+function closeNav() {
+ $(".overlay").css("width", "0%");
+
+}

@@ -57,6 +57,121 @@ body {
     }
 }
 
+
+.first-visit-body-overlay {}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    .arrow-key {
+        width: 70px;
+        height: auto;
+        display: inline;
+    }
+}
+
+.overlay-content {
+    position: relative;
+    // top: 82px;
+    width: 100%;
+    margin-top: 30px;
+    text-align: right;
+
+
+
+    bottom: -66%;
+
+
+
+    @include media-breakpoint-up(md) {
+  top: 82px;
+  bottom: initial;
+
+    }
+
+
+
+    @include media-breakpoint-up(lg) {
+        padding-right: 360px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        // padding-right: 556px;
+        padding-right: 33vw;
+    }
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 45px;
+
+    text-align: right;
+    font-size: 45px;
+    color: $red;
+    z-index: 5;
+
+    @include media-breakpoint-up(sm) {
+        top: initial;
+        left: initial;
+        bottom: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 122px;
+        bottom: 381px;
+        right: initial;
+
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 160px;
+        bottom: 20px;
+        right: 45px;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+
+
 .page-wrapper {
     max-width: 1580px;
     margin: 0 auto;
@@ -220,6 +335,13 @@ body {
     .header-image {
         position: relative;
         overflow: hidden;
+
+
+display: none;
+
+  @include media-breakpoint-up(md) {
+            display:block;
+        }
 
         @include media-breakpoint-up(lg) {
             height: 100%;
@@ -467,7 +589,7 @@ h2 {
     &.options-menu-off {
         .side-nav-list-heading {
             &:before {
-                content: 'Eagle Eye';
+                content: 'Ephemeral Wave';
             }
         }
 
@@ -481,7 +603,7 @@ h2 {
             // background-position: 48% 71%;
             // background-position: 48% 49%;
             background-repeat: no-repeat;
-            z-index: 2;
+            z-index: 7;
             position: relative;
 
             @include media-breakpoint-up(lg) {
