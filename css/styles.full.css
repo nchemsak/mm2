@@ -775,6 +775,14 @@ body {
     width: 70px;
     height: auto;
     display: inline; }
+  .overlay .recipeShop-focus {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    z-index: 500;
+    left: 44px;
+    bottom: 663px;
+    border-radius: 50%; }
 
 .overlay-content {
   position: relative;
@@ -876,14 +884,18 @@ body {
 .main-bee1 {
   position: absolute;
   left: 55px;
+  left: 165px;
   animation: blink1 1s, flutter 3s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  z-index: 1000; }
 
 .main-bee2 {
   position: absolute;
   left: 55px;
+  left: 165px;
   animation: blink2 1s, flutter 3s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  z-index: 1000; }
 
 @keyframes flutter {
   0%,
@@ -1104,7 +1116,7 @@ h2 {
     content: 'Ephemeral Wave'; }
   #side-nav-list.options-menu-off .eagle-eye {
     border-radius: 15px;
-    background-image: url("/images/map-edit2.png");
+    background-image: url("/images/map-edit3.png");
     background-size: cover;
     background-size: contain;
     background-size: auto;

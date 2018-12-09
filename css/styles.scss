@@ -78,6 +78,17 @@ body {
         height: auto;
         display: inline;
     }
+    .recipeShop-focus {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        // background-color: red;
+        z-index: 500;
+        // position: absolute;
+           left: 44px;
+    bottom: 663px;
+    border-radius: 50%;
+    }
 }
 
 .overlay-content {
@@ -86,27 +97,18 @@ body {
     width: 100%;
     margin-top: 30px;
     text-align: right;
-
-
-
     bottom: -66%;
 
-
-
     @include media-breakpoint-up(md) {
-  top: 82px;
-  bottom: initial;
-
+        top: 82px;
+        bottom: initial;
     }
-
-
 
     @include media-breakpoint-up(lg) {
         padding-right: 360px;
     }
 
     @include media-breakpoint-up(xl) {
-        // padding-right: 556px;
         padding-right: 33vw;
     }
 }
@@ -222,16 +224,20 @@ body {
     position: absolute;
     // top: 50%;
     left: 55px;
+    left: 165px;
     animation: blink1 1s, flutter 3s;
     animation-iteration-count: infinite;
+    z-index: 1000;
 }
 
 .main-bee2 {
     position: absolute;
     // top: 50%;
     left: 55px;
+    left: 165px;
     animation: blink2 1s, flutter 3s;
     animation-iteration-count: infinite;
+      z-index: 1000;
 }
 
 @keyframes flutter {
@@ -337,10 +343,10 @@ body {
         overflow: hidden;
 
 
-display: none;
+        display: none;
 
-  @include media-breakpoint-up(md) {
-            display:block;
+        @include media-breakpoint-up(md) {
+            display: block;
         }
 
         @include media-breakpoint-up(lg) {
@@ -595,7 +601,7 @@ h2 {
 
         .eagle-eye {
             border-radius: 15px;
-            background-image: url("/images/map-edit2.png");
+            background-image: url("/images/map-edit3.png");
             background-size: cover;
             background-size: contain;
             background-size: auto;

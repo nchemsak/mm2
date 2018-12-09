@@ -16,14 +16,14 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
-<body>
+<body id="recipe">
+
     <div class="page-wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-lg-8">
                     <section id="main-content" class="scroll">
                         <div class="header-image">
-
                             <img id="keyboard-arrows" src="/images/icons/keyboard-arrows.png" />
                             <!-- <img src="/images/mm2.png" class="img-fluid" /> -->
                             <img src="/images/shop1.png" class="img-fluid" />
@@ -32,11 +32,9 @@
                             <img class="main-bee2 bee-flip" src="images/icons/bee2.ico">
                         </div>
                             <div class="page-content">
-
-                                    <h2 id="kraut">
+                                <h2 id="kraut">
                                         <img class="icon" src="images/icons/cabbage.png" />Simple Sauerkraut
                                     </h2>
-
                                 <div>
                                     <h3><img class="icon" src="images/icons/map.ico" />Quick Facts</h3>
                                     Total Time: <br />
@@ -95,18 +93,16 @@
                                                 </ul>
                                             </div>
                                         </div>
-
-                                            <h2 id="ct">
+                                        <h2 id="ct">
                                         <img class="icon" src="images/icons/cabbage.png" />Cherry Tomato Poppers
                                     </h2>
-                                               <h2 id="salsa">
+                                        <h2 id="salsa">
                                         <img class="icon" src="images/icons/cabbage.png" />Salsa
                                     </h2>
                     </section>
-
                 </div>
                 <div class="col-xs-12 col-lg-4">
-                    <section id="side-nav-list" class="toggle options-menu-off">
+                    <section id="side-nav-list" class="toggle options-menu-on">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-1">
                                 <a href="#" onclick="toggleOptions(); return false;"><h2 class="side-nav-list-heading"></h2></a>
@@ -117,13 +113,12 @@
                                 <section class="eagle-eye">
                                     <!--                                   <img class="bee1 toggle show-bee" src="images/icons/bee1.ico">
                                     <img class="bee2 toggle show-bee" src="images/icons/bee2.ico"> -->
-                                    <div id="options-menu" class="d-none">
-                                        <!-- <h2>Fermentation Recipes</h2> --> 
+                                    <div id="options-menu" class="d-block">
+                                        <!-- <h2>Fermentation Recipes</h2> -->
                                         <a href="#" onclick="toggleOptions(); return false;"><h1>Fermentation Recipes</h1></a>
                                         <a href="#kraut" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Sauerkraut</h5></a>
                                         <a href="#ct" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Cherry Tomato Poppers</h5></a>
                                         <a href="#salsa" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Salsa</h5></a>
-
                                     </div>
                                 </section>
                             </div>
@@ -183,7 +178,7 @@
     <!-- <script src="lib/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script> -->
     <script href="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="lib/parallax.min.js"></script>
-    <script src="lib/waves.min.js"></script>    
+    <script src="lib/waves.min.js"></script>
     <script src="js/main.js"></script>
     <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +

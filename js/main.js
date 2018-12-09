@@ -3,7 +3,7 @@
 
 var counterNorth = 49;
 var counterEast = 48;
-var counterEastMain = 55;
+var counterEastMain = 165;
 
 // Open SIDE OPTIONS MENU when letter 'O' is pressed on keyboard
 var direction = "north";
@@ -12,6 +12,12 @@ var direction = "north";
 if (window.location.href.indexOf("left-recipe-shop") > -1) {
     var counterNorth = 70;
     $(".eagle-eye").css("background-position", "48% 71%");
+
+} else if (window.location.href.indexOf("left-katsura") > -1) {
+    console.log("Coutnter east", counterEast);
+    var counterEast = 13;
+    var counterNorth = 49;
+    $(".eagle-eye").css("background-position", "13% 49%");
 
 } else {
     $(".eagle-eye").css("background-position", "48% 49%");
@@ -32,18 +38,18 @@ function toggleOptions() {
     $('#options-menu').toggleClass('d-none d-block');
 }
 
-    var keydownCounter = 0;
+var keydownCounter = 0;
 
 
 $(document).keydown(function(e) {
     // console.log("e", e);
     let loopCounter = +keydownCounter;
-    console.log("loop Counter", loopCounter);
-// console.log("event",event);
-if (loopCounter = 1) {
-    var event = e.which;
-  
-}
+    // console.log("loop Counter", loopCounter);
+    // console.log("event",event);
+    if (loopCounter = 1) {
+        var event = e.which;
+
+    }
     //////////////////////////// Letter 'O' opens options and hides bee //////////////////////
     if (event === 79) {
         $('.toggle').toggleClass('options-menu-off options-menu-on');
@@ -66,11 +72,12 @@ if (loopCounter = 1) {
 
         $(".direction").attr("class", "direction north");
 
-
+        console.log("counterNorth", counterNorth);
 
         //////////////////////////// EAST ///////////////////////////////////
     } else if (event === 39) {
         var direction = "east";
+        console.log("counterEast", counterEast);
         if (counterEast <= -7) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
             $(".bee1").addClass("bee-flip");
@@ -85,7 +92,7 @@ if (loopCounter = 1) {
             $(".main-bee1").addClass("bee-flip");
             $(".main-bee2").addClass("bee-flip");
 
-
+            console.log(counterEastMain);
             // INSIDE RECIPE ShOP
             if (counterEastMain <= 550) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
@@ -152,6 +159,13 @@ if (loopCounter = 1) {
             if (counterEastMain === 0 && window.location.href.indexOf("recipe-book") > -1) {
                 window.location.href = "index.html?left-recipe-shop";
             }
+
+
+            if (counterEastMain === 0 && window.location.href.indexOf("katsura") > -1) {
+                window.location.href = "index.html?left-katsura";
+            }
+
+
         }
 
         $(".direction").attr("class", "direction west");
@@ -165,7 +179,7 @@ if (loopCounter = 1) {
         window.location.href = "recipe-book.html";
     }
 
-        if (counterEast === 13 && counterNorth === 63) {
+    if (counterEast === 13 && counterNorth === 63) {
         console.log("Welcome to the tree!");
         window.location.href = "katsura.html";
     }
@@ -193,20 +207,18 @@ if (loopCounter = 1) {
 function firstVisit() {
     console.log("First Ever Visit");
     $("body").addClass('first-visit-body-overlay');
-
-
-
-// function openNav() {
-  $(".overlay").css("width", "100%");
-// }
-
-
-
-
+    $(".overlay").css("width", "100%");
 }
 
 
 function closeNav() {
- $(".overlay").css("width", "0%");
+    $(".overlay").css("width", "0%");
 
+}
+
+
+
+function recipeShopVisit() {
+    $("body").addClass('first-visit-body-overlay');
+    $(".overlay").css("width", "100%");
 }
