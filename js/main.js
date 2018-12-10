@@ -63,8 +63,10 @@ $(document).keydown(function(e) {
 
     //////////////////////////// NORTH ///////////////////////////////////
     else if (event === 38) {
+        // Prevent bee from leaving top of screen
         if (counterNorth <= -7) {
-            $(".eagle-eye").css("background-position", counterEast + "%" + -7 + "%");
+            $(".eagle-eye").css("background-position", counterEast + "%" - 7 + "%");
+            // console.log("counterNorth", counterNorth);
         } else {
             counterNorth = counterNorth - 7;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
@@ -78,10 +80,20 @@ $(document).keydown(function(e) {
     } else if (event === 39) {
         var direction = "east";
         console.log("counterEast", counterEast);
+        console.log("counterNorth", counterNorth);
+
+
         if (counterEast <= -7) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
             $(".bee1").addClass("bee-flip");
             $(".bee2").addClass("bee-flip");
+        }
+
+        // Prevent bee from leaving right side of screen
+        if (counterEast === 90) {
+            console.log("counterNorth", counterNorth);
+            $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
+
         } else {
             counterEast = counterEast + 7;
             counterEastMain = counterEastMain + 55;
@@ -92,7 +104,7 @@ $(document).keydown(function(e) {
             $(".main-bee1").addClass("bee-flip");
             $(".main-bee2").addClass("bee-flip");
 
-            console.log(counterEastMain);
+            console.log("counterEastMain", counterEastMain);
             // INSIDE RECIPE ShOP
             if (counterEastMain <= 550) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
@@ -106,7 +118,12 @@ $(document).keydown(function(e) {
             // prevent bee counter from going past a set amount in recipes
             if (counterEastMain > 550) {
                 counterEastMain = 550;
+
             }
+
+            // if (counterEast > 83) {
+            //     counterEast = 83;
+            // }
 
         }
         $(".direction").attr("class", "direction east");
@@ -116,16 +133,29 @@ $(document).keydown(function(e) {
 
         //////////////////////////// SOUTH ///////////////////////////////////
     } else if (event === 40) {
+        console.log("counterNorth", counterNorth);
 
-        if (direction === "south") {
-            counterNorth = counterNorth + 7;
-            $(".eagle-eye").css("background-position", "48%" + counterNorth + "%");
-        } else { var direction = "south"; }
+        // if (direction === "south") {
+        //     counterNorth = counterNorth + 7;
+        //     $(".eagle-eye").css("background-position", "48%" + counterNorth + "%");
+
+        // } else {
+        //     var direction = "south";
+        // }
         var direction = "south";
+
         $(".direction").attr("class", "direction south");
-        if (counterNorth <= +7) {
+        if (counterNorth < -7) {
+            console.log("error at top");
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + "%");
-        } else {
+        }
+
+        else if (counterNorth > 91) {
+            console.log("hey");
+                $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
+            }
+
+        else {
             counterNorth = counterNorth + 7;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
         }
@@ -135,14 +165,16 @@ $(document).keydown(function(e) {
         //////////////////////////// WEST ///////////////////////////////////
     } else if (event === 37) {
         var direction = "west";
-        if (counterEast <= -7) {
-            $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
+        // Prevent bee from leaving left side of screen
+        if (counterEast <= 14) {
+            $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
         } else {
             counterEast = counterEast - 7;
             counterEastMain = counterEastMain - 55;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
             $(".bee1").removeClass("bee-flip");
             $(".bee2").removeClass("bee-flip");
+
 
             if (counterEastMain >= 0) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
