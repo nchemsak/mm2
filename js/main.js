@@ -110,7 +110,7 @@ $(document).keydown(function(e) {
             }
 
 
-            if (counterEastMain === 550 && window.location.href.indexOf("recipe-book") > -1 ) {
+            if (counterEastMain === 550 && window.location.href.indexOf("recipe-book") > -1) {
                 $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop! <br /> What recipe would you like to learn? <br />Please select a recipe from the menu on the right.</div></div>');
                 $("#recipe-popup").animate({ opacity: '0.8' });
             }
@@ -147,14 +147,10 @@ $(document).keydown(function(e) {
         if (counterNorth < -7) {
             console.log("error at top");
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + "%");
-        }
-
-        else if (counterNorth > 91) {
+        } else if (counterNorth > 91) {
             console.log("hey");
-                $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
-            }
-
-        else {
+            $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
+        } else {
             counterNorth = counterNorth + 7;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
         }
@@ -168,9 +164,7 @@ $(document).keydown(function(e) {
         if (counterEast <= 14) {
             $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
 
-        }
-
-        else {
+        } else {
             counterEast = counterEast - 7;
             counterEastMain = counterEastMain - 55;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
@@ -229,6 +223,11 @@ $(document).keydown(function(e) {
     // }
 
 
+
+
+});
+
+
     // SCROLL TO LINK
     $("a.page-scroll").click(function(event) {
         event.preventDefault();
@@ -236,23 +235,27 @@ $(document).keydown(function(e) {
 
     });
 
+//ANIMATE BLINK LINK CLICK
+$(".h1-animation").click(function() {
+    $('.homepage-h1').addClass('blink');
+// remove class so it can be added back and blink again
+    setTimeout(
+        function() {
+            $('.homepage-h1').removeClass('blink');
+        }, 750)
 });
 
 
-
+// FIRST VISIT
 function firstVisit() {
     console.log("First Ever Visit");
     $("body").addClass('first-visit-body-overlay');
     $(".overlay").css("width", "100%");
 }
 
-
 function closeNav() {
     $(".overlay").css("width", "0%");
-
 }
-
-
 
 function recipeShopVisit() {
     $("body").addClass('first-visit-body-overlay');

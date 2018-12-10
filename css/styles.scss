@@ -78,6 +78,7 @@ body {
         height: auto;
         display: inline;
     }
+
     .recipeShop-focus {
         width: 100px;
         height: 100px;
@@ -85,9 +86,9 @@ body {
         // background-color: red;
         z-index: 500;
         // position: absolute;
-           left: 44px;
-    bottom: 663px;
-    border-radius: 50%;
+        left: 44px;
+        bottom: 663px;
+        border-radius: 50%;
     }
 }
 
@@ -237,8 +238,31 @@ body {
     left: 165px;
     animation: blink2 1s, flutter 3s;
     animation-iteration-count: infinite;
-      z-index: 1000;
+    z-index: 1000;
 }
+
+
+@keyframes blinkText {
+    0% {
+        opacity: 0
+    }
+
+    49% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+
+.blink {
+    animation: blinkText 0.25s;
+    animation-iteration-count: 3;
+
+}
+
 
 @keyframes flutter {
 
@@ -396,10 +420,10 @@ body {
 
         &.homepage-h1 {
             position: absolute;
-            color: white;
+            // color: white;
             top: 30px;
             left: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
+            // background-color: rgba(0, 0, 0, 0.5);
             text-align: left;
         }
     }
@@ -595,7 +619,7 @@ h2 {
     &.options-menu-off {
         .side-nav-list-heading {
             &:before {
-                content: 'Ephemeral Wave';
+                content: 'Map';
             }
         }
 
