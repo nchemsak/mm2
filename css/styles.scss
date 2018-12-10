@@ -808,9 +808,21 @@ h2 {
         position: relative;
         z-index: 5;
     }
+
+
 }
 
-
+img.ewave-icon {
+    background-color: red;
+    color: #ff0;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 13px;
+    border-radius: 50% !important;
+    &:hover {
+        background-color:blue
+    }
+}
 
 // RECIPE BOOK PAGE
 //
