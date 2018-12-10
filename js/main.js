@@ -8,15 +8,16 @@ var counterEastMain = 165;
 // Open SIDE OPTIONS MENU when letter 'O' is pressed on keyboard
 var direction = "north";
 
+
 // Change the counter and background-position of bee when leaving the shop
 if (window.location.href.indexOf("left-recipe-shop") > -1) {
     var counterNorth = 70;
     $(".eagle-eye").css("background-position", "48% 71%");
 
-} else if (window.location.href.indexOf("left-katsura") > -1) {
-    console.log("Coutnter east", counterEast);
+} else if (window.location.href.indexOf("left-tree") > -1) {
     var counterEast = 13;
     var counterNorth = 49;
+    var counterEastMain = -55;
     $(".eagle-eye").css("background-position", "13% 49%");
 
 } else {
@@ -48,7 +49,7 @@ $(document).keydown(function(e) {
     // console.log("event",event);
     if (loopCounter = 1) {
         var event = e.which;
-
+        console.log("counterEastMain", counterEastMain);
     }
     //////////////////////////// Letter 'O' opens options and hides bee //////////////////////
     if (event === 79) {
@@ -74,14 +75,11 @@ $(document).keydown(function(e) {
 
         $(".direction").attr("class", "direction north");
 
-        console.log("counterNorth", counterNorth);
+        // console.log("counterNorth", counterNorth);
 
         //////////////////////////// EAST ///////////////////////////////////
     } else if (event === 39) {
         var direction = "east";
-        console.log("counterEast", counterEast);
-        console.log("counterNorth", counterNorth);
-
 
         if (counterEast <= -7) {
             $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
@@ -111,7 +109,8 @@ $(document).keydown(function(e) {
                 $(".main-bee2").css("left", (counterEastMain) + "px");
             }
 
-            if (counterEastMain === 550) {
+
+            if (counterEastMain === 550 && window.location.href.indexOf("recipe-book") > -1 ) {
                 $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop! <br /> What recipe would you like to learn? <br />Please select a recipe from the menu on the right.</div></div>');
                 $("#recipe-popup").animate({ opacity: '0.8' });
             }
@@ -168,12 +167,16 @@ $(document).keydown(function(e) {
         // Prevent bee from leaving left side of screen
         if (counterEast <= 14) {
             $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
-        } else {
+
+        }
+
+        else {
             counterEast = counterEast - 7;
             counterEastMain = counterEastMain - 55;
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
             $(".bee1").removeClass("bee-flip");
             $(".bee2").removeClass("bee-flip");
+
 
 
             if (counterEastMain >= 0) {
@@ -182,6 +185,7 @@ $(document).keydown(function(e) {
 
                 $(".main-bee1").removeClass("bee-flip");
                 $(".main-bee2").removeClass("bee-flip");
+
             }
 
             if (counterEastMain < 550) {
@@ -194,7 +198,7 @@ $(document).keydown(function(e) {
 
 
             if (counterEastMain === 0 && window.location.href.indexOf("katsura") > -1) {
-                window.location.href = "index.html?left-katsura";
+                window.location.href = "index.html?left-tree";
             }
 
 
