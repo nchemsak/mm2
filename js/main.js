@@ -261,3 +261,19 @@ function recipeShopVisit() {
     $("body").addClass('first-visit-body-overlay');
     $(".overlay").css("width", "100%");
 }
+
+
+// sound
+var play = function () {
+  var audio = document.getElementById("audio");
+  audio.play("/audio/slap.mp3");
+}
+
+$('.seizure').on('click', function(e) {
+  $('#homepage').addClass('nick');
+  var millisecondsToWait = 100;
+  setTimeout(function() {
+    $('#homepage').removeClass('nick');
+  }, millisecondsToWait);
+
+});
