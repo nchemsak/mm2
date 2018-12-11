@@ -819,8 +819,9 @@ img.ewave-icon {
     height: 42px;
     margin-bottom: 13px;
     border-radius: 50% !important;
+
     &:hover {
-        background-color:blue
+        background-color: blue
     }
 }
 
@@ -847,21 +848,32 @@ img.ewave-icon {
 
 // audio buttons
 #play_button {
-  transition: .5s ease;
+    transition: .5s ease;
+}
 
 
-
- .nick {
-  animation-name: nick;
-  animation-duration: 100ms;
-  animation-iteration-count: 1;
-z-index:10000;
+.nick {
+    animation-name: nick;
+    animation-duration: 100ms;
+    animation-iteration-count: 1;
+    z-index: 10000;
 }
 
 @keyframes nick {
-    from {background-color: black;}
-    to {background-color: white;}
-    from {color: black;}
-    to {color: white;}
-}
+    from {
+        background: black;
+    }
+
+    to {
+        background: white;
+    }
+
+    // from {
+    //     color: black;
+    // }
+
+    // to {
+    //     color: white;
+    // }
+
 }

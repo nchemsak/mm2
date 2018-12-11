@@ -1271,19 +1271,17 @@ img.ewave-icon {
 
 #play_button {
   transition: .5s ease; }
-  #play_button .nick {
-    animation-name: nick;
-    animation-duration: 100ms;
-    animation-iteration-count: 1;
-    z-index: 10000; }
+
+.nick {
+  animation-name: nick;
+  animation-duration: 100ms;
+  animation-iteration-count: 1;
+  z-index: 10000; }
+
 @keyframes nick {
   from {
-    background-color: black; }
+    background: black; }
   to {
-    background-color: white; }
-  from {
-    color: black; }
-  to {
-    color: white; } }
+    background: white; } }
 
 /*# sourceMappingURL=styles.full.css.map */

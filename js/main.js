@@ -64,7 +64,7 @@ $(document).keydown(function(e) {
 
     //////////////////////////// NORTH ///////////////////////////////////
     else if (event === 38) {
-        // Prevent bee from leaving top of screen
+        // Prevent bee from leaving top of map
         if (counterNorth <= -7) {
             $(".eagle-eye").css("background-position", counterEast + "%" - 7 + "%");
             // console.log("counterNorth", counterNorth);
@@ -87,7 +87,7 @@ $(document).keydown(function(e) {
             $(".bee2").addClass("bee-flip");
         }
 
-        // Prevent bee from leaving right side of screen
+        // Prevent bee from leaving right side of map
         if (counterEast === 90) {
             console.log("counterNorth", counterNorth);
             $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
@@ -102,7 +102,7 @@ $(document).keydown(function(e) {
             $(".main-bee1").addClass("bee-flip");
             $(".main-bee2").addClass("bee-flip");
 
-            console.log("counterEastMain", counterEastMain);
+            // console.log("counterEastMain", counterEastMain);
             // INSIDE RECIPE ShOP
             if (counterEastMain <= 550) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
@@ -160,7 +160,7 @@ $(document).keydown(function(e) {
         //////////////////////////// WEST ///////////////////////////////////
     } else if (event === 37) {
         var direction = "west";
-        // Prevent bee from leaving left side of screen
+        // Prevent bee from leaving left side of map
         if (counterEast <= 14) {
             $(".eagle-eye").css("background-position", counterEast + "%" - 7 + counterNorth + "%");
 
@@ -170,8 +170,6 @@ $(document).keydown(function(e) {
             $(".eagle-eye").css("background-position", counterEast + "%" + counterNorth + "%");
             $(".bee1").removeClass("bee-flip");
             $(".bee2").removeClass("bee-flip");
-
-
 
             if (counterEastMain >= 0) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
@@ -214,6 +212,20 @@ $(document).keydown(function(e) {
         window.location.href = "katsura.html";
     }
 
+    console.log("counterEast", counterEast);
+    console.log("counterNorth", counterNorth);
+
+    if (counterEast === 90 && counterNorth === -7) {
+        console.log("Welcome to the castle!");
+        window.location.href = "coding.html";
+    }
+
+
+if (counterEast === 90 && counterNorth === 42) {
+        console.log("Welcome home!");
+        window.location.href = "character.html";
+    }
+
 
     // var mainBeeCounter = 5;
     // if (event === 39) {
@@ -228,17 +240,17 @@ $(document).keydown(function(e) {
 });
 
 
-    // SCROLL TO LINK
-    $("a.page-scroll").click(function(event) {
-        event.preventDefault();
-        $("#main-content").animate({ scrollTop: $($(this).attr("href")).offset().top - 35 }, 1000);
+// SCROLL TO LINK
+$("a.page-scroll").click(function(event) {
+    event.preventDefault();
+    $("#main-content").animate({ scrollTop: $($(this).attr("href")).offset().top - 35 }, 1000);
 
-    });
+});
 
 //ANIMATE BLINK LINK CLICK
 $(".h1-animation").click(function() {
     $('.homepage-h1').addClass('blink');
-// remove class so it can be added back and blink again
+    // remove class so it can be added back and blink again
     setTimeout(
         function() {
             $('.homepage-h1').removeClass('blink');
@@ -264,16 +276,16 @@ function recipeShopVisit() {
 
 
 // sound
-var play = function () {
-  var audio = document.getElementById("audio");
-  audio.play("/audio/slap.mp3");
+var play = function() {
+    var audio = document.getElementById("audio");
+    audio.play("/audio/slap.mp3");
 }
 
 $('.seizure').on('click', function(e) {
-  $('#homepage').addClass('nick');
-  var millisecondsToWait = 100;
-  setTimeout(function() {
-    $('#homepage').removeClass('nick');
-  }, millisecondsToWait);
+    $('.eagle-eye, body').addClass('nick');
+    var millisecondsToWait = 1000;
+    setTimeout(function() {
+        $('.eagle-eye, body, .header-image').removeClass('nick');
+    }, millisecondsToWait);
 
 });
