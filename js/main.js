@@ -193,6 +193,12 @@ $(document).keydown(function(e) {
                 window.location.href = "index.html?left-tree";
             }
 
+    // if (counterEastMain === 0 && window.location.href.indexOf("katsura") > -1) {
+    //             window.location.href = "index.html?left-tree";
+    //         }
+
+
+
 
         }
 

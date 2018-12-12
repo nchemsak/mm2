@@ -14,6 +14,8 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/grid";
 
+@import "sequencer";
+
 ///////////////////////// VARIABLE OVERRIDES  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
@@ -877,3 +879,6 @@ img.ewave-icon {
     // }
 
 }
+
+
+
