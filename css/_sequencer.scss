@@ -591,42 +591,42 @@
         right: 20%;
     }
 
-    .glyphicon {
-        // position: relative;
-        // top: 1px;
-        display: inline-block;
-        // font-family: none;
-        // font-size: .8em;
-        font-style: normal;
-        font-weight: bold;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+    // .glyphicon {
+    //     // position: relative;
+    //     // top: 1px;
+    //     display: inline-block;
+    //     // font-family: none;
+    //     // font-size: .8em;
+    //     font-style: normal;
+    //     font-weight: bold;
+    //     line-height: 1;
+    //     -webkit-font-smoothing: antialiased;
+    //     -moz-osx-font-smoothing: grayscale;
+    // }
 
-    .glyphicon-plus:before {
-        font-size: .7em;
-    }
+    // .glyphicon-plus:before {
+    //     font-size: .7em;
+    // }
 
-    .glyphicon-minus:before {
-        font-size: .7em;
-    }
+    // .glyphicon-minus:before {
+    //     font-size: .7em;
+    // }
 
-    .glyphicon-pause {
-        color: red;
-    }
+    // .glyphicon-pause {
+    //     color: red;
+    // }
 
-    .glyphicon-play {
-        color: green;
-    }
+    // .glyphicon-play {
+    //     color: green;
+    // }
 
-    .glyphicon-stop {
-        color: darkred;
-    }
+    // .glyphicon-stop {
+    //     color: darkred;
+    // }
 
-    .glyphicon-record {
-        color: red;
-    }
+    // .glyphicon-record {
+    //     color: red;
+    // }
 
     .brand {
         position: absolute;
@@ -958,14 +958,16 @@
         font-size: 12px;
         color: RGBA(95, 186, 255, 1.00);
         transition-duration: 0.65s;
-        background: RGBA(47, 50, 56, 1.00);
-        background-image: url("../images/black-thread.png");
+        // background-color: #a00;
+        background-color: rgba(255, 255, 255, 0.1);
+        // background: RGBA(47, 50, 56, 1.00);
+        // background-image: url("../images/black-thread.png");
         box-shadow: 7px 9px 23px -2px rgba(0, 0, 0, 0.75);
         // background-color: rgba(255, 255, 255, 0.1);
     }
 
     .optin7:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.3);
         color: white;
     }
 
@@ -1154,7 +1156,8 @@
  ****************************************************************************/
 
     .seqButtonStyle {
-        width: 20px;
+        // width: 20px;
+        cursor: pointer;
         // height: 20px;
         background-color: transparent;
         cursor: default;
@@ -1165,6 +1168,7 @@
         // height: 20px;
         background-color: transparent;
         cursor: default;
+        cursor: pointer;
     }
 
     .seqButtonStyle2 {
@@ -1181,23 +1185,23 @@
         // cursor: default;
     }
 
-    .seqGlyphStyle {
-        width: 5px;
-        height: 5px;
-        margin-bottom: 10px;
-        margin-right: 20px;
-        text-align: center;
-        cursor: pointer;
-    }
+    // .seqGlyphStyle {
+    //     width: 5px;
+    //     height: 5px;
+    //     margin-bottom: 10px;
+    //     margin-right: 20px;
+    //     text-align: center;
+    //     cursor: pointer;
+    // }
 
-    .seqGlyphStyle2 {
-        width: 5px;
-        height: 5px;
-        margin-bottom: 10px;
-        margin-right: 20px;
-        text-align: center;
-        // cursor: pointer;
-    }
+    // .seqGlyphStyle2 {
+    //     width: 5px;
+    //     height: 5px;
+    //     margin-bottom: 10px;
+    //     margin-right: 20px;
+    //     text-align: center;
+    //     // cursor: pointer;
+    // }
 
     button#recordStop.seqButtonStyle:hover,
     button#downloadButton.seqButtonStyle:hover,
@@ -1796,6 +1800,10 @@
         color: lightgreen;
         cursor: pointer;
         opacity: 0.70;
+    }
+
+    .fa-stop {
+        color: $red;
     }
 
     .fa-save:hover {

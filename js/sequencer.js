@@ -242,14 +242,14 @@
   ********************************************************************/
   let playPause = function() {
     $('#play-pause').click(function() {
-      let $span = $(this).children("span");
-      if ($span.hasClass('glyphicon-play')) {
-        $span.removeClass('glyphicon-play');
-        $span.addClass('glyphicon-stop');
+      let $span = $(this).children("i");
+      if ($span.hasClass('fa-play')) {
+        $span.removeClass('fa-play');
+        $span.addClass('fa-stop');
         handlePlay();
       } else {
-        $span.addClass('glyphicon-play');
-        $span.removeClass('glyphicon-stop');
+        $span.addClass('fa-play');
+        $span.removeClass('fa-stop');
         stop();
       }
     });
@@ -793,15 +793,15 @@
 
   let recordStop = function() {
     $('#recordStop').click(function() {
-      let $span = $(this).children("span");
-      if ($span.hasClass('glyphicon-record')) {
-        $span.removeClass('glyphicon-record');
-        $span.addClass('glyphicon-stop animated infinite pulse');
+      let $span = $(this).children("i");
+      if ($span.hasClass('fa-microphone')) {
+        $span.removeClass('fa-microphone');
+        $span.addClass('fa-stop animated infinite pulse');
         startRecording();
       } else {
         pause();
-        $span.addClass('glyphicon-record');
-        $span.removeClass('glyphicon-stop animated infinite pulse');
+        $span.addClass('fa-microphone');
+        $span.removeClass('fa-stop animated infinite pulse');
         playBtn.disabled = false;
         downloadBtn.disabled = false;
       }
@@ -810,14 +810,14 @@
 
   let pausePlay = function() {
     $('#pausePlay').click(function() {
-      let $span = $(this).children("span");
-      if ($span.hasClass('glyphicon-play')) {
-        $span.removeClass('glyphicon-play');
-        $span.addClass('glyphicon-stop animated infinite pulse');
+      let $span = $(this).children("i");
+      if ($span.hasClass('fa-play')) {
+        $span.removeClass('fa-play');
+        $span.addClass('fa-stop animated infinite pulse');
       } else {
         pause();
-        $span.addClass('glyphicon-play');
-        $span.removeClass('glyphicon-stop animated infinite pulse');
+        $span.addClass('fa-play');
+        $span.removeClass('fa-stop animated infinite pulse');
         playBtn.disabled = false;
         downloadBtn.disabled = false;
       }
@@ -968,19 +968,19 @@
     };
 
     let midiRecord = function() {
-      let $span = $('#recordStop').children("span");
-      if ($span.hasClass('glyphicon-record')) {
-        $span.removeClass('glyphicon-record');
-        $span.addClass('glyphicon-stop animated infinite pulse');
+      let $span = $('#recordStop').children("i");
+      if ($span.hasClass('fa-microphone')) {
+        $span.removeClass('fa-microphone');
+        $span.addClass('fa-stop animated infinite pulse');
         startRecording();
       }
     };
 
     let stopMidiRecord = function() {
-      let $span = $('#recordStop').children("span");
+      let $span = $('#recordStop').children("i");
       pause();
-      $span.addClass('glyphicon-record');
-      $span.removeClass('glyphicon-stop animated infinite pulse');
+      $span.addClass('fa-microphone');
+      $span.removeClass('fa-stop animated infinite pulse');
       playBtn.disabled = false;
       downloadBtn.disabled = false;
     };
