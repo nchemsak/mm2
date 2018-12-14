@@ -1107,6 +1107,7 @@
 
     input[type=range] {
         height: 20px;
+
         // width: 200px;
     }
 
@@ -1394,6 +1395,7 @@
         width: 65%;
         float: left;
         height: 30px;
+        height: 9px;
         background-color: black;
     }
 
@@ -1412,14 +1414,7 @@
         border-radius: 8px;
         -moz-border-radius: 8px;
         -webkit-border-radius: 8px;
-        // border: 1px solid black;
-        // background: #a90329;
-        // background: -moz-linear-gradient(left, #a90329 0%, #8f0222 50%, #6d0019 100%);
-        // background: -webkit-gradient(linear, left top, right top, color-stop(0%, #a90329), color-stop(50%, #8f0222), color-stop(100%, #6d0019));
-        // background: -webkit-linear-gradient(left, #a90329 0%, #8f0222 50%, #6d0019 100%);
-        // background: -o-linear-gradient(left, #a90329 0%, #8f0222 50%, #6d0019 100%);
-        // background: -ms-linear-gradient(left, #a90329 0%, #8f0222 50%, #6d0019 100%);
-        // background: linear-gradient(to right, #a90329 0%, #8f0222 50%, #6d0019 100%);
+
         background: RGBA(95, 186, 255, 1.00);
         background: -moz-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
         background: -webkit-gradient(linear, left top, right top, color-stop(0%, #5FBAFF), color-stop(50%, #4c94cc), color-stop(100%, #264a66));
@@ -1431,8 +1426,8 @@
 
     .seqOptin {
         -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        // -moz-appearance: none;
+        // appearance: none;
         outline: 0;
         background-color: rgba(255, 255, 255, 0.2);
         width: 75%;
@@ -1443,7 +1438,7 @@
         -webkit-transition-duration: 0.25s;
         transition-duration: 0.25s;
         font-weight: 300;
-        background-color: none;
+        // background-color: none;
     }
 
     .seqOptin:hover {
@@ -1496,11 +1491,11 @@
     }
 
     .noselect {
-        -webkit-touch-callout: none;
+        // -webkit-touch-callout: none;
         -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
+        // -khtml-user-select: none;
+        // -moz-user-select: none;
+        // -ms-user-select: none;
         user-select: none;
     }
 
@@ -1511,8 +1506,8 @@
     }
 
     button#play-pause:hover {
-        background-color: darkgrey;
-        color: black;
+        // background-color: darkgrey;
+        // color: black;
     }
 
     button#play-pause:focus {
@@ -1793,17 +1788,21 @@
     }
 
     .fa-play {
-        color: darkgreen;
+        // color: darkgreen;
+        color: $green-dark;
+        display: block;
     }
 
     .fa-play:hover {
-        color: lightgreen;
+        // color: lightgreen;
+        color: $green-light;
         cursor: pointer;
         opacity: 0.70;
     }
 
     .fa-stop {
         color: $red;
+        display: block;
     }
 
     .fa-save:hover {
