@@ -817,8 +817,18 @@ h2 {
 
 }
 
+
+
+.fa-github {
+       color: $blue-medium;
+       &:hover {
+     
+        color: $blue-baby;
+    }
+}
 img.ewave-icon {
     background-color: red;
+    background-color: $blue-medium;
     color: #ff0;
     width: 42px;
     height: 42px;
@@ -826,7 +836,8 @@ img.ewave-icon {
     border-radius: 50% !important;
 
     &:hover {
-        background-color: blue
+        background-color: blue;
+        background-color: $blue-baby;
     }
 }
 

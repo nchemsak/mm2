@@ -1102,7 +1102,6 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     left: 21%;
     bottom: 37%;
     color: white;
-    font-family: 'Space Mono', monospace;
     font-size: 30px;
     font-weight: 800;
     text-align: right;
@@ -1113,7 +1112,6 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     left: 7%;
     bottom: 3%;
     color: white;
-    font-family: 'Space Mono', monospace;
     font-size: 13px;
     font-weight: 400;
     text-align: center;
@@ -1122,8 +1120,6 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     margin-top: 15%; }
   #sequencer-content .signup {
     color: RGBA(204, 204, 204, 1);
-    font-family: 'Space Mono', monospace;
-    font-family: 'Raleway', sans-serif;
     font-size: 2em;
     font-weight: 800;
     text-align: center;
@@ -1159,7 +1155,6 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     display: block;
     margin: auto;
     color: #333333;
-    font-family: 'Space Mono', monospace;
     font-size: 10px;
     font-weight: 400;
     text-align: right;
@@ -1319,6 +1314,7 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     padding: 2px 15px 5px 15px;
     font-size: 12px;
     color: RGBA(95, 186, 255, 1);
+    color: #55FFFF;
     transition-duration: 0.65s;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 7px 9px 23px -2px rgba(0, 0, 0, 0.75); }
@@ -1363,6 +1359,7 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     padding: 5px 15px;
     font-size: 12px;
     color: RGBA(95, 186, 255, 1);
+    color: #55FFFF;
     transition-duration: 0.65s;
     background: RGBA(47, 50, 56, 1);
     background-image: url("../images/black-thread.png");
@@ -1562,7 +1559,8 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     float: left;
     height: 30px;
     height: 9px;
-    background-color: black; }
+    background-color: black;
+    margin-top: 10px; }
   #sequencer-content #liveVolume {
     width: 65%;
     float: left;
@@ -1606,7 +1604,7 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     margin-bottom: 2px;
     display: inline-block;
     background: #DADADA;
-    margin-right: 1px;
+    margin-right: 2px;
     cursor: pointer; }
   #sequencer-content .dark {
     background-color: RGBA(248, 248, 248, 0.6);
@@ -1614,7 +1612,8 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
   #sequencer-content .selected {
     background-color: RGBA(95, 186, 255, 1);
     border: 0px;
-    box-shadow: inset 3px 3px 3px 0px rgba(0, 0, 0, 0.35); }
+    background-color: #5555FF;
+    box-shadow: inset 0px 0px 0px 1px #0000AA; }
   #sequencer-content .cymDiv.selected {
     background-color: RGBA(95, 186, 255, 1);
     background-image: url("../images/circleWave.gif"); }
@@ -1622,7 +1621,8 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     background: grey;
     border: 0px; }
   #sequencer-content .playing.selected {
-    background-color: maroon; }
+    background-color: maroon;
+    background-color: #AA0000; }
   #sequencer-content .noselect {
     -webkit-user-select: none;
     user-select: none; }
@@ -1651,23 +1651,23 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     margin: 0 10px;
     line-height: 30px;
     border-radius: 3px;
-    font-size: 20px;
+    font-size: 12px;
     padding-left: 5px;
     color: silver;
     background-color: black;
     width: 100px;
     vertical-align: middle;
     text-align: center;
-    border: 0px solid white; }
+    border: 0px solid white;
+    height: 28px; }
   #sequencer-content .space {
     margin-left: 20px; }
   #sequencer-content .tempo-btn {
-    margin: 0 5px;
     color: white;
-    border: 0px; }
+    border: 0px;
+    font-size: 11px; }
   #sequencer-content .fontIncrease {
-    font-size: 1.2em;
-    font-family: 'Raleway', sans-serif; }
+    padding-left: 5px; }
   #sequencer-content .col-xs-offset-1 {
     margin-left: 5%; }
   #sequencer-content h2 {
@@ -2389,15 +2389,22 @@ h2 {
     position: relative;
     z-index: 5; }
 
+.fa-github {
+  color: #5555FF; }
+  .fa-github:hover {
+    color: #55FFFF; }
+
 img.ewave-icon {
   background-color: red;
+  background-color: #5555FF;
   color: #ff0;
   width: 42px;
   height: 42px;
   margin-bottom: 13px;
   border-radius: 50% !important; }
   img.ewave-icon:hover {
-    background-color: blue; }
+    background-color: blue;
+    background-color: #55FFFF; }
 
 #recipe-popup {
   opacity: 0;

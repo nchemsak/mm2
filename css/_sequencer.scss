@@ -645,7 +645,7 @@
         bottom: 37%;
         color: white;
         // font-family: "lato";
-        font-family: 'Space Mono', monospace;
+        // font-family: 'Space Mono', monospace;
         // font-family: 'Raleway', sans-serif;
         // font-family: 'Dosis', sans-serif;
         // font-family: 'Amatic SC', cursive;
@@ -663,7 +663,7 @@
         bottom: 3%;
         color: white;
         // font-family: "lato";
-        font-family: 'Space Mono', monospace;
+        // font-family: 'Space Mono', monospace;
         // font-family: 'Raleway', sans-serif;
         // font-family: 'Dosis', sans-serif;
         // font-family: 'Amatic SC', cursive;
@@ -687,8 +687,8 @@
         // color: red;
         color: RGBA(204, 204, 204, 1.00);
         // font-family: "lato";
-        font-family: 'Space Mono', monospace;
-        font-family: 'Raleway', sans-serif;
+        // font-family: 'Space Mono', monospace;
+        // font-family: 'Raleway', sans-serif;
         // font-family: 'Dosis', sans-serif;
         // font-family: 'Amatic SC', cursive;
         // font-family: 'Orbitron', sans-serif;
@@ -745,7 +745,7 @@
         margin: auto;
         color: #333333;
         // font-family: "lato";
-        font-family: 'Space Mono', monospace;
+        // font-family: 'Space Mono', monospace;
         // font-family: 'Raleway', sans-serif;
         // font-family: 'Dosis', sans-serif;
         // font-family: 'Amatic SC', cursive;
@@ -957,6 +957,7 @@
         padding: 2px 15px 5px 15px;
         font-size: 12px;
         color: RGBA(95, 186, 255, 1.00);
+        color: $blue-baby;
         transition-duration: 0.65s;
         // background-color: #a00;
         background-color: rgba(255, 255, 255, 0.1);
@@ -1025,6 +1026,7 @@
         padding: 5px 15px;
         font-size: 12px;
         color: RGBA(95, 186, 255, 1.00);
+        color: $blue-baby;
         transition-duration: 0.65s;
         background: RGBA(47, 50, 56, 1.00);
         background-image: url("../images/black-thread.png");
@@ -1397,6 +1399,7 @@
         height: 30px;
         height: 9px;
         background-color: black;
+        margin-top: 10px;
     }
 
     #liveVolume {
@@ -1456,7 +1459,7 @@
         margin-bottom: 2px;
         display: inline-block;
         background: #DADADA;
-        margin-right: 1px;
+        margin-right: 2px;
         cursor: pointer;
         // border: 1px solid white;
         // border-radius: 3px;
@@ -1471,7 +1474,13 @@
         background-color: RGBA(95, 186, 255, 1.00);
         // background-image: url("../images/circleWave.gif");
         border: 0px;
-        box-shadow: inset 3px 3px 3px 0px rgba(0, 0, 0, 0.35);
+        // box-shadow: inset 3px 3px 3px 0px rgba(0, 0, 0, 0.35);
+
+
+        background-color: $blue-medium;
+        box-shadow: inset 0px 0px 0px 1px $blue-dark;
+
+
     }
 
     .cymDiv.selected {
@@ -1487,6 +1496,7 @@
 
     .playing.selected {
         background-color: maroon;
+        background-color: $red;
         // background-image: url("../images/circleWave.gif");
     }
 
@@ -1539,7 +1549,7 @@
         margin: 0 10px;
         line-height: 30px;
         border-radius: 3px;
-        font-size: 20px;
+        font-size: 12px;
         padding-left: 5px;
         color: silver;
         background-color: black;
@@ -1548,6 +1558,8 @@
         vertical-align: middle;
         text-align: center;
         border: 0px solid white;
+        height: 28px
+        ;
     }
 
     .space {
@@ -1555,14 +1567,19 @@
     }
 
     .tempo-btn {
-        margin: 0 5px;
+        // margin: 0 5px;
         color: white;
         border: 0px;
+        font-size: 11px;
+
     }
 
+
+
     .fontIncrease {
-        font-size: 1.2em;
-        font-family: 'Raleway', sans-serif;
+        // font-size: 1.2em;
+        // font-family: 'Raleway', sans-serif;
+        padding-left: 5px;
     }
 
     .col-xs-offset-1 {
