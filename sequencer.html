@@ -25,14 +25,18 @@
                         <div class="page-content">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="optin7">VOLUME
+                                    <div class="col-md-4">
+                                      VOLUME
                                             <br>
                                             <input type='range' min='0' max='1' step='0.01' value='0.75' id='seqVolume' class="seqOptin">
-                                            <button id="play-pause" type="button" class="btn btn-default btn- noselect">
+                             
+                                        
+                                    </div>
+                                    <div class="col-md-2">
+                                                  <button id="play-pause" type="button" class="btn btn-default btn- noselect">
                                                 <i class="fa fa-play" aria-hidden="true"></i>
                                             </button>
-                                        </div>
+                                      
                                     </div>
                                     <div class="col-md-6">
                                         <div class="tempo-container optin7">TEMPO
@@ -478,7 +482,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+<!--                                 <div class="row">
                                     <div class="col-12">
                                         <div class="optin10">SAMPLER
                                             <button id="recordStop" type="button" class="btn btn-default btn- noselect seqButtonStyle">
@@ -487,7 +491,7 @@
                                             </button>
                                             <button id="downloadButton" type="button" class="btn btn-default btn- noselect seqButtonStyle2" disabled>
                                                 <i class="fa fa-download seqGlyphStyle2" aria-hidden="true"></i>
-                                                <!-- <span class="glyphicon glyphicon-download-alt seqGlyphStyle2" aria-hidden="true"></span> -->
+                                 
                                             </button>
                                             <div class="row" data-instrument="drumloop2">
                                                 <span class="instrument-label"></span>
@@ -523,14 +527,14 @@
                                             <br>VOLUME:
                                             <input type='range' min='0' max='1' step='0.01' value='0.75' id='liveVolume2' class="seqOptin2 liveVolume2">
                                             <div id="controls" ng-model="ngControls">
-                                                <!-- delay -->
+                                        
                                                 <div id="delayControls">
                                                     <br>BPM: {{60 / slider2.value | number : 0}}
                                                     <input id="dtime" type="range" min="0.2" max="1.0" step="0.01" ng-model="slider2.value" ng-change="changeEffect();" class="liveVolume2 seqOptin2">
                                                     <br>Feedback
                                                     <input id="dregen" type="range" min="0.1" max="1.0" step="0.01" ng-model="slider3.value" ng-change="changeEffect();" class="liveVolume2 seqOptin2">
                                                 </div>
-                                                <!-- LFO -->
+                                     
                                                 <div id="gainLFOControls">
                                                     LFO Shape:
                                                     <select id="lfotype webmenu" name="webmenu" ng-model="lfoDropdown.value" ng-change="changeEffect();" class="optin">
@@ -542,7 +546,7 @@
                                                     BPM: {{60 * lfoSlider1.value}}
                                                     <input id="lfo" type="range" min="0.25" max="20" step="0.25" value="3" ng-model="lfoSlider1.value" class="liveVolume2 seqOptin2" ng-change="changeEffect();">
                                                 </div>
-                                                <!-- Stereo Flanger -->
+                                         
                                                 <div id="stFlangeControls">
                                                     <br>
                                                     <option id="sflspeed" min="0.05" max="2" step="0.05" value="0.15">
@@ -553,10 +557,8 @@
                                                         <br>
                                                     <option id="sflfb" min="0" max="1" step="0.01" value="0.9">
                                                 </div>
-                                                <!-- telephone -->
                                                 <div id="telephoneControls">
                                                 </div>
-                                                <!-- autowah -->
                                                 <div id="autowahControls">
                                                     <br> Envelope follower filter frequency:
                                                     <input id="awEF" type="range" min="0.25" max="20" step="0.25" value="10" onInput="if (awFollower) awFollower.frequency.value = event.target.value;">
@@ -568,7 +570,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                 </div>
@@ -614,14 +616,14 @@
             </div>
             <section id="character-section">
                 <div class="row">
-                    <div class="col-12 col-lg-6"><span class="name">1) <a href="character.html">Character</a></span><span class="health">/191</span></div>
-                    <div class="col-12 col-lg-6"><span class="name">2) <a href="sequencer.html">Sequencer</a></span><span class="health">/122</span></div>
-                    <div class="col-12 col-lg-6"><span class="name">3) <a href="art.html">Art</a></span><span class="health">/138</span></div>
-                    <div class="col-12 col-lg-6"><span class="name">4) <a href="recipe-book.html">Recipe Book</a></span><span class="health">/121</span></div>
-                    <div class="col-12 col-lg-6"><span class="name">5) <a href="news.html">News</a></span><span class="health">/72</span></div>
-                    <div class="col-12 col-lg-6"><span class="name">6) <a href="music.html">Music</a></span><span class="health">/68</span></div>
-                    <div class="col-12 col-lg-6"><span class="name">7) <a href="coding.html">Coding</a></span><span class="health">/98</span></div>
-                    <div class="col-12 col-lg-6"><span class="name">8) <a href="contact.html">Contact</a></span><span class="health">/92</span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">1) <a href="character.html">Character</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">2) <a href="sequencer.html">Sequencer</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">3) <a href="art.html">Art</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">4) <a href="recipe-book.html">Recipe Book</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">5) <a href="news.html">News</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">6) <a href="music.html">Music</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">7) <a href="coding.html">Coding</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">8) <a href="contact.html">Contact</a></span></div>
                 </div>
             </section>
         </div>

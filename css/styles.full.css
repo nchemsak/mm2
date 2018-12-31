@@ -1555,11 +1555,11 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     display: inline;
     margin-left: 20px; }
   #sequencer-content #seqVolume {
-    width: 65%;
+    width: 95%;
     float: left;
     height: 30px;
     height: 9px;
-    background-color: black;
+    background-color: #fff;
     margin-top: 10px; }
   #sequencer-content #liveVolume {
     width: 65%;
@@ -1628,7 +1628,6 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     user-select: none; }
   #sequencer-content button#play-pause {
     border: none;
-    margin-left: 35px;
     color: silver; }
   #sequencer-content button#play-pause:focus {
     background-color: black;
@@ -1708,14 +1707,20 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     margin-top: 20px; }
   #sequencer-content .fa-play {
     color: #00AA00;
-    display: block; }
+    display: block;
+    font-size: 50px;
+    outline: none; }
   #sequencer-content .fa-play:hover {
     color: #55FF55;
     cursor: pointer;
     opacity: 0.70; }
   #sequencer-content .fa-stop {
     color: #AA0000;
-    display: block; }
+    display: block;
+    font-size: 50px;
+    outline: none; }
+  #sequencer-content .btn.focus, #sequencer-content .btn:focus {
+    box-shadow: none; }
   #sequencer-content .fa-save:hover {
     color: silver;
     cursor: pointer;

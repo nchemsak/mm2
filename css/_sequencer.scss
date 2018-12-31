@@ -1394,11 +1394,11 @@
 
     // SEQUENCER
     #seqVolume {
-        width: 65%;
+        width: 95%;
         float: left;
         height: 30px;
         height: 9px;
-        background-color: black;
+        background-color: #fff;
         margin-top: 10px;
     }
 
@@ -1511,8 +1511,9 @@
 
     button#play-pause {
         border: none;
-        margin-left: 35px;
+        // margin-left: 35px;
         color: silver;
+
     }
 
     button#play-pause:hover {
@@ -1808,6 +1809,9 @@
         // color: darkgreen;
         color: $green-dark;
         display: block;
+        font-size: 50px;
+         outline: none;
+
     }
 
     .fa-play:hover {
@@ -1820,7 +1824,14 @@
     .fa-stop {
         color: $red;
         display: block;
+                font-size: 50px;
+ outline: none;
+
     }
+
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
 
     .fa-save:hover {
         color: silver;
