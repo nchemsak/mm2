@@ -24,19 +24,17 @@
                     <section id="main-content" class="scroll">
                         <div class="page-content">
                             <div class="container">
+                                <h1>Sequencer</h1>
                                 <div class="row">
                                     <div class="col-md-4">
-                                      VOLUME
-                                            <br>
-                                            <input type='range' min='0' max='1' step='0.01' value='0.75' id='seqVolume' class="seqOptin">
-                             
-                                        
+                                        VOLUME
+                                        <br>
+                                        <input type='range' min='0' max='1' step='0.01' value='0.75' id='seqVolume' class="seqOptin">
                                     </div>
                                     <div class="col-md-2">
-                                                  <button id="play-pause" type="button" class="btn btn-default btn- noselect">
-                                                <i class="fa fa-play" aria-hidden="true"></i>
-                                            </button>
-                                      
+                                        <button id="play-pause" type="button" class="btn btn-default btn- noselect">
+                                            <i class="fa fa-play" aria-hidden="true"></i>
+                                        </button>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="tempo-container optin7">TEMPO
@@ -482,7 +480,7 @@
                                         </div>
                                     </div>
                                 </div>
-<!--                                 <div class="row">
+                                <!--                                 <div class="row">
                                     <div class="col-12">
                                         <div class="optin10">SAMPLER
                                             <button id="recordStop" type="button" class="btn btn-default btn- noselect seqButtonStyle">
@@ -491,7 +489,7 @@
                                             </button>
                                             <button id="downloadButton" type="button" class="btn btn-default btn- noselect seqButtonStyle2" disabled>
                                                 <i class="fa fa-download seqGlyphStyle2" aria-hidden="true"></i>
-                                 
+
                                             </button>
                                             <div class="row" data-instrument="drumloop2">
                                                 <span class="instrument-label"></span>
@@ -527,14 +525,14 @@
                                             <br>VOLUME:
                                             <input type='range' min='0' max='1' step='0.01' value='0.75' id='liveVolume2' class="seqOptin2 liveVolume2">
                                             <div id="controls" ng-model="ngControls">
-                                        
+
                                                 <div id="delayControls">
                                                     <br>BPM: {{60 / slider2.value | number : 0}}
                                                     <input id="dtime" type="range" min="0.2" max="1.0" step="0.01" ng-model="slider2.value" ng-change="changeEffect();" class="liveVolume2 seqOptin2">
                                                     <br>Feedback
                                                     <input id="dregen" type="range" min="0.1" max="1.0" step="0.01" ng-model="slider3.value" ng-change="changeEffect();" class="liveVolume2 seqOptin2">
                                                 </div>
-                                     
+
                                                 <div id="gainLFOControls">
                                                     LFO Shape:
                                                     <select id="lfotype webmenu" name="webmenu" ng-model="lfoDropdown.value" ng-change="changeEffect();" class="optin">
@@ -546,7 +544,7 @@
                                                     BPM: {{60 * lfoSlider1.value}}
                                                     <input id="lfo" type="range" min="0.25" max="20" step="0.25" value="3" ng-model="lfoSlider1.value" class="liveVolume2 seqOptin2" ng-change="changeEffect();">
                                                 </div>
-                                         
+
                                                 <div id="stFlangeControls">
                                                     <br>
                                                     <option id="sflspeed" min="0.05" max="2" step="0.05" value="0.15">

@@ -8,7 +8,6 @@ var counterEastMain = 165;
 // Open SIDE OPTIONS MENU when letter 'O' is pressed on keyboard
 var direction = "north";
 
-
 // Change the counter and background-position of bee when leaving the shop
 if (window.location.href.indexOf("left-recipe-shop") > -1) {
     var counterNorth = 70;
@@ -295,3 +294,5 @@ $('.seizure').on('click', function(e) {
     }, millisecondsToWait);
 
 });
+
+

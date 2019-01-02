@@ -38,7 +38,6 @@ $pink: #FF5555;
 
 
 
-@import "sequencer";
 
 
 body {
@@ -65,8 +64,10 @@ body {
 }
 
 
-.first-visit-body-overlay {}
-
+code {
+    vertical-align: bottom;
+    font-size: 100%;
+}
 
 .overlay {
     height: 100%;
@@ -820,15 +821,19 @@ h2 {
 
 
 .fa-github {
-       color: $blue-medium;
-       &:hover {
-     
+    color: $blue-medium;
+    color: #007bff;
+
+    &:hover {
+
         color: $blue-baby;
     }
 }
+
 img.ewave-icon {
     background-color: red;
     background-color: $blue-medium;
+    background-color: #007bff;
     color: #ff0;
     width: 42px;
     height: 42px;
@@ -883,16 +888,15 @@ img.ewave-icon {
     to {
         background: white;
     }
-
-    // from {
-    //     color: black;
-    // }
-
-    // to {
-    //     color: white;
-    // }
-
 }
 
 
+// character page
+.fixit {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 60px;
+}
 
+
+@import "sequencer";
