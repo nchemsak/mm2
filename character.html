@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nick Chemsak">
-    <title>MM2</title>
+    <title>Ephemeral Wave</title>
     <!-- STYLESHEETS -->
-    <!-- <link rel="stylesheet" href="lib/bootstrap-4.0.0/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
@@ -27,11 +25,11 @@
                             <img class="weather-overlay" src="images/icons/salt.gif" />
                         </div>
                             <div class="page-content">
-                                <a href="#">
-                                    <h1>
+                                <!-- <a href="#"> -->
+                                <h1>
                                         <img class="icon" src="images/icons/cabbage.png" />Character Sheet
                                     </h1>
-                                </a>
+                                <!-- </a> -->
                                 <div id="character">
                                     <h3 id="traits"><img class="icon" src="images/icons/map.ico" />Traits</h3>
                                     <div class="row materials-list">
@@ -40,9 +38,9 @@
                                         <div class="col-12 col-md-3">Age</div>
                                         <div class="col-12 col-md-9">????</div>
                                         <div class="col-12 col-md-3">Level</div>
-                                        <div class="col-12 col-md-9">3</div>
-                                        <div class="col-12 col-md-3">Type</div>
-                                        <div class="col-12 col-md-9">Sorcerer</div>
+                                        <div class="col-12 col-md-9">2</div>
+                                        <div class="col-12 col-md-3">Class</div>
+                                        <div class="col-12 col-md-9">Knight</div>
                                         <div class="col-12 col-md-3">Alignment</div>
                                         <div class="col-12 col-md-9">Neutral</div>
                                     </div>
@@ -244,12 +242,12 @@
                                                             <!-- <h3 id="nss"><img class="icon" src="images/icons/map.ico" />NSS Spotlight Blog</h3> -->
                                                             <div class="row">
                                                                 <div class="col-12 text-center">
-                                                                    <h3 class="section-heading" id="nss"><img class="icon" src="images/icons/map.ico" /><a href="http://nashvillesoftwareschool.com/blog/2017/04/27/do-you-accept-cache#nick-chemsak">NSS Graduate Spotlight Blog</a></h3>
+                                                                    <h3 class="section-heading" id="nss"><img class="icon" src="images/icons/map.ico" /><a href="http://nashvillesoftwareschool.com/blog/2017/04/27/do-you-accept-cache#nick-chemsak">Read - Nick featured on Nashville Software School Graduate Spotlight Blog</a></h3>
                                                                     <a href="http://nashvillesoftwareschool.com/blog/2017/04/27/do-you-accept-cache#nick-chemsak"><img src="images/demoday.jpg" alt="Nashville Software School Demo Day" class="img-fluid"/></a>
                                                                 </div>
                                                             </div>
                                                             <hr />
-                                                            <h3 id="podcast"><img class="icon" src="images/icons/map.ico" />Podcast</h3>
+                                                            <h3 id="podcast"><img class="icon" src="images/icons/map.ico" />Listen - Nick on Nashville Software School Podcast</h3>
                                                             <div class="row">
                                                                 <div class="col-12 text-center">
                                                                     <!-- <h2 class="section-heading">NashDev Podcast</h2> -->
@@ -261,23 +259,17 @@
                     </section>
                 </div>
                 <div class="col-xs-12 col-lg-4">
-                    <section id="side-nav-list" class="toggle options-menu-off">
+                    <section id="side-nav-list" class="toggle options-menu-on">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-1">
-                                <a href="#" onclick="toggleOptions(); return false;"><h2 class="side-nav-list-heading"></h2></a>
-                                <!--                                 <div class="eagle-eye">
-                                    <i class="fa fa-arrow-up"></i>
-
-                                </div> -->
                                 <section class="eagle-eye">
-                                    <!--                                   <img class="bee1 toggle show-bee" src="images/icons/bee1.ico">
-                                    <img class="bee2 toggle show-bee" src="images/icons/bee2.ico"> -->
-                                    <div id="options-menu" class="d-none">
+                                    <div id="options-menu" class="d-block">
+                                        <h1>Character</h1>
                                         <a href="#traits" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Traits</h5></a>
                                         <a href="#projects" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Select Projects</h5></a>
                                         <a href="#tech" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Technologies</h5></a>
                                         <a href="#nss" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />NSS Spotlight Blog</h5></a>
-                                        <a href="#podcast" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Podcast</h5></a>
+                                        <a href="#podcast" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />NSS Podcast</h5></a>
                                     </div>
                                 </section>
                             </div>
@@ -317,7 +309,7 @@
                     <div class="col-xs-12 col-lg-6"><span class="name">2) <a href="sequencer.html">Sequencer</a></span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">3) <a href="art.html">Art</a></span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">4) <a href="recipe-book.html">Recipe Book</a></span></div>
-                    <div class="col-xs-12 col-lg-6"><span class="name">5) <a href="news.html">RSS Feed</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">5) <a href="rss.html">RSS Feed</a></span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">6) <a href="katsura.html">Katsura Tree</a></span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">7) <a href="coding.html">Coding</a></span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">8) <a href="contact.html">Contact</a></span></div>

@@ -1282,9 +1282,6 @@ img.ewave-icon {
   top: 10px;
   right: 10px; }
 
-#play_button {
-  transition: .5s ease; }
-
 .nick {
   animation-name: nick;
   animation-duration: 100ms;
@@ -1332,10 +1329,6 @@ img.ewave-icon {
    /****************************************************************************
                             SEQUENCER
 ****************************************************************************/ }
-  #sequencer-content h1 {
-    color: #fff;
-    border: none;
-    background-color: #000; }
   #sequencer-content .list-item {
     background: #000;
     text-align: center;
@@ -2233,7 +2226,6 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
   #sequencer-content .col-xs-offset-1 {
     margin-left: 5%; }
   #sequencer-content h2 {
-    color: RGBA(204, 204, 204, 1);
     margin-bottom: 20px;
     margin-top: 0px; }
   #sequencer-content #audioinput {
