@@ -1,56 +1,9 @@
 /************************************************************************************
-                                  GENERAL STYLES
-************************************************************************************/
-
-// * {
-//   -webkit-user-select: none;
-//   -moz-user-select: none;
-//   -ms-user-select: none;
-//   -o-user-select: none;
-//   user-select: none;
-// }
-
-// body {
-//   background-color: RGBA(47, 50, 56, 1.00);
-//   color: lightgrey;
-//   background-image: url("../images/black-thread.png");
-// }
-
-// *,
-// *:before,
-// *:after {
-//   box-sizing: border-box;
-// }
-
-// html,
-// body {
-//   width: 100%;
-//   height: 100%;
-// }
-
-// body {
-//   font-family: 'Space Mono', monospace;
-//   font-family: 'Raleway', sans-serif;
-//   align-items: center;
-//   -webkit-box-pack: center;
-//   -webkit-justify-content: center;
-//   -ms-flex-pack: center;
-//   justify-content: center;
-//   -webkit-transform: translate3d(0, 0, 0);
-//   transform: translate3d(0, 0, 0);
-// }
-
-
-/************************************************************************************
                                   BLACK BUTTON STYLES
 ************************************************************************************/
 
 #sequencer-content {
-    // h1 {
-    //     color: #fff;
-    //     border: none;
-    //     background-color: #000;
-    // }
+
     .list-item {
         background: #000;
         text-align: center;
@@ -1422,14 +1375,9 @@
         border-radius: 8px;
         -moz-border-radius: 8px;
         -webkit-border-radius: 8px;
+        box-shadow: inset 0 0 0 1px #00a;
+        background: $blue-medium;
 
-        background: RGBA(95, 186, 255, 1.00);
-        background: -moz-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%, #5FBAFF), color-stop(50%, #4c94cc), color-stop(100%, #264a66));
-        background: -webkit-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
-        background: -o-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
-        background: -ms-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
-        background: linear-gradient(to right, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
     }
 
     .seqOptin {
@@ -1446,7 +1394,7 @@
         -webkit-transition-duration: 0.25s;
         transition-duration: 0.25s;
         font-weight: 300;
-        // background-color: none;
+
     }
 
     .seqOptin:hover {
@@ -1466,8 +1414,7 @@
         background: #DADADA;
         margin-right: 2px;
         cursor: pointer;
-        // border: 1px solid white;
-        // border-radius: 3px;
+
     }
 
     .dark {
@@ -1477,15 +1424,9 @@
 
     .selected {
         background-color: RGBA(95, 186, 255, 1.00);
-        // background-image: url("../images/circleWave.gif");
         border: 0px;
-        // box-shadow: inset 3px 3px 3px 0px rgba(0, 0, 0, 0.35);
-
-
         background-color: $blue-medium;
         box-shadow: inset 0px 0px 0px 1px $blue-dark;
-
-
     }
 
     .cymDiv.selected {
@@ -1495,14 +1436,12 @@
 
     .playing {
         background: grey;
-        // background-image: url("../images/circleWave.gif");
         border: 0px;
     }
 
     .playing.selected {
         background-color: maroon;
         background-color: $red;
-        // background-image: url("../images/circleWave.gif");
     }
 
     .noselect {
@@ -1516,14 +1455,8 @@
 
     button#play-pause {
         border: none;
-        // margin-left: 35px;
         color: silver;
 
-    }
-
-    button#play-pause:hover {
-        // background-color: darkgrey;
-        // color: black;
     }
 
     button#play-pause:focus {
@@ -1560,12 +1493,10 @@
         color: silver;
         background-color: black;
         width: 100px;
-        // height: 30px;
         vertical-align: middle;
         text-align: center;
         border: 0px solid white;
-        height: 28px
-        ;
+        height: 28px;
     }
 
     .space {
@@ -1573,18 +1504,14 @@
     }
 
     .tempo-btn {
-        // margin: 0 5px;
         color: white;
         border: 0px;
         font-size: 11px;
-
     }
 
 
 
     .fontIncrease {
-        // font-size: 1.2em;
-        // font-family: 'Raleway', sans-serif;
         padding-left: 5px;
     }
 
@@ -1593,8 +1520,6 @@
     }
 
     h2 {
-        // color: red;
-        // color: RGBA(204, 204, 204, 1.00);
         margin-bottom: 20px;
         margin-top: 0px;
     }
@@ -1607,166 +1532,7 @@
         width: 200px;
     }
 
-    // glossy select box
-    // .glossy-selectbox {
-    //   display: inline-block;
-    //   font: normal bold 12px Arial, Sans-Serif;
-    //   position: relative;
-    //   width: 300px;
-    //   background-color: #111;
-    //   text-align: left;
-    //   /* CSS3 Browser */
-    //   background-image: linear-gradient(top, rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, .1) 100%);
-    //   /* IE only */
-    //   // filter: progid: DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#333333', endColorstr='#111111');
-    //   border-radius: 7px;
-    //   box-shadow: inset 0 1px 1px 1px rgba(255, 255, 255, .1), 0 1px 3px rgba(0, 0, 0, .7);
-    // }
-    // .glossy-selectbox:before,
-    // .glossy-selectbox:after {
-    //   content: "";
-    //   display: block;
-    //   width: 0;
-    //   height: 0;
-    //   border: 3px solid transparent;
-    //   border-width: 5px 3px;
-    //   border-bottom-color: #999;
-    //   position: absolute;
-    //   top: 25%;
-    //   right: 5px;
-    //   z-index: 4;
-    // }
-    // .glossy-selectbox:after {
-    //   border-color: #999 transparent transparent;
-    //   top: auto;
-    //   bottom: 25%;
-    // }
-    // .glossy-selectbox input {
-    //   display: block;
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   width: 15px;
-    //   height: 100%;
-    //   opacity: 0;
-    //   z-index: 10;
-    //   cursor: pointer;
-    // }
-    // .glossy-selectbox label {
-    //   display: block;
-    //   line-height: 45px;
-    //   color: rgba(255, 255, 255, .5);
-    //   padding: 0 15px;
-    //   transition: all 0s ease-out;
-    // }
-    // .glossy-selectbox label:before {
-    //   content: attr(data-default);
-    // }
-    // .glossy-selectbox label:after {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   width: 15px;
-    //   border-left: 1px solid rgba(0, 0, 0, .4);
-    //   border-radius: 0 7px 7px 0;
-    //   box-shadow: inset 1px 0 0 rgba(255, 255, 255, .1), -1px 0 0 rgba(255, 255, 255, .1);
-    // }
-    // .glossy-selectbox input:hover + label {
-    //   color: white;
-    // }
-    // .glossy-selectbox input:hover + label:after {
-    //   background-color: rgba(255, 255, 255, .04);
-    // }
-    // .glossy-selectbox ul {
-    //   margin: 0 0;
-    //   padding: 0 0;
-    //   position: absolute;
-    //   top: 100%;
-    //   left: 14px;
-    //   right: 14px;
-    //   background-color: #222;
-    //   border: 1px solid #111;
-    //   box-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 5px 7px -2px rgba(0, 0, 0, .4);
-    //   visibility: hidden;
-    //   opacity: 0;
-    //   z-index: 99;
-    // }
-    // .glossy-selectbox li {
-    //   margin: 0 0;
-    //   padding: 0 0;
-    //   list-style: none;
-    //   float: left;
-    //   width: 50%;
-    //   display: inline;
-    // }
-    // .glossy-selectbox a {
-    //   display: block;
-    //   position: relative;
-    //   color: #999;
-    //   text-decoration: none;
-    //   text-shadow: 0 0 2px black;
-    //   line-height: 30px;
-    //   border-top: 1px solid #111;
-    //   border-right: 1px solid #111;
-    //   padding: 0 15px 0 32px;
-    //   box-shadow: inset 0 0 0 1px #333;
-    //   /* Opera note: An unstable box shadow will appear if you don't define the border radius less than 1 pixel. Weird! */
-    //   border-radius: 1px;
-    // }
-    // .glossy-selectbox a:nth-child(even) {
-    //   border-right-width: 0;
-    // }
-    // .glossy-selectbox a:before {
-    //   content: "";
-    //   display: block;
-    //   width: 16px;
-    //   height: 16px;
-    //   position: absolute;
-    //   top: 7px;
-    //   left: 7px;
-    //   background-color: transparent;
-    //   background-repeat: no-repeat;
-    //   background-position: 50% 0;
-    // }
-    // .glossy-selectbox a:hover:before {
-    //   background-position: 50% 100%;
-    // }
-    // .glossy-selectbox .social-rss:before {
-    //   background-image: url('')
-    // }
-    // .glossy-selectbox .social-facebook:before {
-    //   background-image: url('')
-    // }
-    // .glossy-selectbox .social-twitter:before {
-    //   background-image: url('')
-    // }
-    // .glossy-selectbox .social-google:before {
-    //   background-image: url('')
-    // }
-    // .glossy-selectbox a:hover {
-    //   background-color: rgba(0, 0, 0, .2);
-    //   color: #ccc;
-    // }
-    // /* On click, then... */
-    // .glossy-selectbox input:checked + label {
-    //   color: rgba(255, 255, 255, .4);
-    //   transition-duration: .4s;
-    // }
-    // .glossy-selectbox input:checked + label:before {
-    //   content: attr(data-focus);
-    // }
-    // .glossy-selectbox input:checked + label:after {
-    //   background-color: rgba(0, 0, 0, .2);
-    //   box-shadow: inset 1px 0 1px rgba(0, 0, 0, .4), -1px 0 0 rgba(255, 255, 255, .1);
-    // }
-    // .glossy-selectbox input:checked ~ ul {
-    //   visibility: visible;
-    //   opacity: 1;
-    // }
+
     img #controls {
         display: flex;
         flex-direction: row;
@@ -1806,21 +1572,18 @@
     #wavedisplay {
         width: 600px;
         height: 100px;
-        // margin-left: 40px;
         margin-top: 20px;
     }
 
     .fa-play {
-        // color: darkgreen;
         color: $green-dark;
         display: block;
         font-size: 50px;
-         outline: none;
+        outline: none;
 
     }
 
     .fa-play:hover {
-        // color: lightgreen;
         color: $green-light;
         cursor: pointer;
         opacity: 0.70;
@@ -1829,14 +1592,15 @@
     .fa-stop {
         color: $red;
         display: block;
-                font-size: 50px;
- outline: none;
+        font-size: 50px;
+        outline: none;
 
     }
 
-.btn.focus, .btn:focus {
-    box-shadow: none;
-}
+    .btn.focus,
+    .btn:focus {
+        box-shadow: none;
+    }
 
     .fa-save:hover {
         color: silver;
@@ -1845,14 +1609,12 @@
     }
 
     .samplerPad.selected {
-        // background-image: url("../images/cubes.png");
         background-image: url("../images/circleWave.gif");
         border: 0px;
     }
 
     .samplerPad.playing {
         background: grey;
-        // background-image: url("../images/circleWave.gif");
         border: 0px;
 
     }
@@ -1864,12 +1626,8 @@
     .optin9 {
         background-color: rgba(255, 255, 255, 0.1);
         width: 200px;
-        // float: left;
         margin-left: 30px;
         margin-bottom: 15px;
-        // margin: 0 auto;
-        // border-radius: 3px;
-        // padding: 5px 15px;
         text-align: center;
         font-size: 12px;
         color: RGBA(95, 186, 255, 1.00);
@@ -1895,7 +1653,6 @@
         background-color: rgba(255, 255, 255, 0.2);
         width: 75%;
         display: inline;
-        // border-radius: 3px;
         font-size: 18px;
         color: RGBA(95, 186, 255, 1.00);
         -webkit-transition-duration: 0.25s;
@@ -1905,12 +1662,8 @@
         margin-bottom: 10px;
     }
 
-    .seqOptin2:hover {
-        // background-color: rgba(255, 255, 255, 0.1);
-    }
 
     .seqOptin2:focus {
-        // width: 90%;
         color: RGBA(95, 186, 255, 1.00);
     }
 
@@ -1923,16 +1676,12 @@
 
     .liveVolume2 {
         width: 100%;
-        // margin-top: 10px;
-        // float: left;
         height: 20px;
         background-color: black;
     }
 
     #liveVolume2 {
         width: 100%;
-        // margin-top: 10px;
-        // float: left;
         height: 20px;
         background-color: black;
     }
@@ -1944,9 +1693,6 @@
         position: relative;
         width: 400px;
         margin-right: 20px;
-        // margin: 0 auto;
-        // min-width: 300px
-        // wrap: nowrap;
         display: inline-block;
     }
 
@@ -2040,10 +1786,8 @@
         content: attr(data-text);
         position: absolute;
         left: 2px;
-        // text-shadow: -1px 0 red;
         top: 0;
         color: white;
-        // background-image: url("orangezigzag.jpg");
         overflow: hidden;
         clip: rect(0, 900px, 0, 0);
         animation: noise-anim 2s infinite linear alternate-reverse;
@@ -2142,7 +1886,6 @@
         text-shadow: 1px 0 grey;
         top: 0;
         color: white;
-        // background-image: url("orangezigzag.jpg");
         overflow: hidden;
         clip: rect(0, 900px, 0, 0);
         animation: noise-anim-2 3s infinite linear alternate-reverse;

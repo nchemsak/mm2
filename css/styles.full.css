@@ -1299,9 +1299,6 @@ img.ewave-icon {
   margin-bottom: 60px; }
 
 /************************************************************************************
-                                  GENERAL STYLES
-************************************************************************************/
-/************************************************************************************
                                   BLACK BUTTON STYLES
 ************************************************************************************/
 #sequencer-content {
@@ -2130,13 +2127,8 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
-    background: RGBA(95, 186, 255, 1);
-    background: -moz-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #5FBAFF), color-stop(50%, #4c94cc), color-stop(100%, #264a66));
-    background: -webkit-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
-    background: -o-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
-    background: -ms-linear-gradient(left, #5FBAFF 0%, #4c94cc 50%, #264a66 100%);
-    background: linear-gradient(to right, #5FBAFF 0%, #4c94cc 50%, #264a66 100%); }
+    box-shadow: inset 0 0 0 1px #00a;
+    background: #5555FF; }
   #sequencer-content .seqOptin {
     -webkit-appearance: none;
     outline: 0;
@@ -2274,7 +2266,8 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     display: block;
     font-size: 50px;
     outline: none; }
-  #sequencer-content .btn.focus, #sequencer-content .btn:focus {
+  #sequencer-content .btn.focus,
+  #sequencer-content .btn:focus {
     box-shadow: none; }
   #sequencer-content .fa-save:hover {
     color: silver;
