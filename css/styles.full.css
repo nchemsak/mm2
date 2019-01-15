@@ -1292,10 +1292,12 @@ img.ewave-icon {
     background: black; }
   to {
     background: white; } }
-.fixit {
+#characterpage .fixit {
   max-width: 100px;
   max-height: 100px;
   margin-bottom: 60px; }
+#characterpage .tech-icons img {
+  border-radius: 0px; }
 
 /************************************************************************************
                                   BLACK BUTTON STYLES

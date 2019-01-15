@@ -892,16 +892,24 @@ img.ewave-icon {
 
 
 // character page
-.fixit {
-    max-width: 100px;
-    max-height: 100px;
-    margin-bottom: 60px;
+#characterpage {
+    .fixit {
+        max-width: 100px;
+        max-height: 100px;
+        margin-bottom: 60px;
+    }
+
+    .tech-icons {
+        img {
+            border-radius: 0px;
+        }
+    }
 }
 
 #RSSpage {
-h4 {
-    // display: inline;
-}
+    h4 {
+        // display: inline;
+    }
 
 }
 

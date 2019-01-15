@@ -15,6 +15,17 @@
 </head>
 
 <body>
+    <div class="overlay">
+        <div class="overlay-content">
+            <div class="container">
+                Welcome!
+                <br /> <br />
+                Use your computer<br />keyboard "arrow keys"<img src="images/icons/arrowkey.png" class="arrow-key" alt="keyboard arrow key" /><br />to control the bee.<br />
+                <!--  Click "Start" -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">START</a>
+            </div>
+        </div>
+    </div>
     <div class="page-wrapper" id="sequencer-content">
         <div class="container-fluid">
             <div class="row">
@@ -36,7 +47,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="tempo-container optin7">TEMPO
-                                                    <div class="row">
+                                            <div class="row">
                                                 <div class="col-4"><input id="tempo-input" type="number"></div>
                                                 <div class="col-2"><span id="decrease-tempo" class="btn btn-default tempo-btn">
                                                     <i class="fas fa-minus"></i><span class='fontIncrease'>1</span>
@@ -461,7 +472,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -561,12 +571,10 @@
                     <section id="side-nav-list" class="toggle options-menu-on">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-1">
-
                                 <section class="eagle-eye">
                                     <div id="options-menu" class="d-block">
                                         <h1>Drum Machine</h1>
                                     </div>
-
                                 </section>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-2">
@@ -593,7 +601,7 @@
             </div>
             <div id="options-row">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">'<a href="#" onclick="toggleOptions(); return false;">H</a>' Help</div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">'<a href="#" onclick="firstVisit(); return false;">H</a>' Help</div>
                     <div class="col-12 col-md-6 col-lg-3 col-xl-3">Day= 332</div>
                     <div class="col-12 col-md-6 col-lg-3 col-xl-3">Year= 2018</div>
                     <div class="col-12 col-md-6 col-lg-3 col-xl-3">Face= <span class="direction north"></span></div>

@@ -52,15 +52,11 @@ $(document).keydown(function(e) {
     }
     //////////////////////////// Letter 'H' opens Help //////////////////////
     if (event === 72) {
-        $('.toggle').toggleClass('options-menu-off options-menu-on');
-        $('.bee1').toggleClass('hide-bee show-bee');
-        $('.bee2').toggleClass('hide-bee show-bee');
-        $('#options-menu').toggleClass('d-none d-block');
-
-
-DisplayInfo();
-
-
+        // $('.toggle').toggleClass('options-menu-off options-menu-on');
+        // $('.bee1').toggleClass('hide-bee show-bee');
+        // $('.bee2').toggleClass('hide-bee show-bee');
+        // $('#options-menu').toggleClass('d-none d-block');
+        firstVisit();
     }
 
     // Change direction and arrow direction with arrow presses
@@ -197,9 +193,9 @@ DisplayInfo();
                 window.location.href = "index.html?left-tree";
             }
 
-    // if (counterEastMain === 0 && window.location.href.indexOf("katsura") > -1) {
-    //             window.location.href = "index.html?left-tree";
-    //         }
+            // if (counterEastMain === 0 && window.location.href.indexOf("katsura") > -1) {
+            //             window.location.href = "index.html?left-tree";
+            //         }
 
 
 
@@ -231,7 +227,7 @@ DisplayInfo();
     }
 
 
-if (counterEast === 90 && counterNorth === 42) {
+    if (counterEast === 90 && counterNorth === 42) {
         console.log("Welcome home!");
         window.location.href = "character.html";
     }
@@ -299,5 +295,3 @@ $('.seizure').on('click', function(e) {
     }, millisecondsToWait);
 
 });
-
-
