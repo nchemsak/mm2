@@ -818,7 +818,6 @@ code {
   color: #f1f1f1; }
 
 .overlay .closebtn {
-  position: absolute;
   top: 20px;
   left: 45px;
   text-align: right;

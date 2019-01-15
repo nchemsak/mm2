@@ -50,12 +50,17 @@ $(document).keydown(function(e) {
         var event = e.which;
         console.log("counterEastMain", counterEastMain);
     }
-    //////////////////////////// Letter 'O' opens options and hides bee //////////////////////
-    if (event === 79) {
+    //////////////////////////// Letter 'H' opens Help //////////////////////
+    if (event === 72) {
         $('.toggle').toggleClass('options-menu-off options-menu-on');
         $('.bee1').toggleClass('hide-bee show-bee');
         $('.bee2').toggleClass('hide-bee show-bee');
         $('#options-menu').toggleClass('d-none d-block');
+
+
+DisplayInfo();
+
+
     }
 
     // Change direction and arrow direction with arrow presses
