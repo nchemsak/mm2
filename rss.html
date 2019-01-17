@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
-<body>
+<body id="RSSpage">
     <div class="overlay">
         <div class="overlay-content">
             <div class="container">
@@ -31,23 +31,23 @@
             <div class="row">
                 <div class="col-xs-12 col-lg-8">
                     <section id="main-content" class="scroll">
-                        <div class="page-content" id="RSSpage">
+                        <div class="page-content">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <h2>RSS News Feed</h2>
-                                        <h3>CNN</h3>
+                                        <h2>RSS Feeds</h2>
+                                        <h3 id="cnn">CNN</h3>
                                         <script src="//rss.bloople.net/?url=http%3A%2F%2Frss.cnn.com%2Frss%2Fcnn_topstories.rss&detail=-1&limit=1&showtitle=false&type=js"></script>
                                         <!-- <h3>CNN Politics</h3> <script src="//rss.bloople.net/?url=http%3A%2F%2Frss.cnn.com%2Frss%2Fcnn_allpolitics.rss&detail=-1&limit=1&showtitle=false&type=js"></script> -->
-                                        <h3>Steelers</h3>
+                                        <h3 id="steelers">Steelers</h3>
                                         <script src="//rss.bloople.net/?url=http%3A%2F%2Ffeeds.feedburner.com%2Ftribunereviewsteelers&detail=-1&limit=1&showtitle=false&type=js"></script>
-                                        <h3>Huff Post</h3>
+                                        <h3 id="huffpost">Huff Post</h3>
                                         <script src="//rss.bloople.net/?url=https%3A%2F%2Fwww.huffingtonpost.com%2Fsection%2Ffront-page%2Ffeed&detail=-1&limit=1&showtitle=false&type=js"></script>
-                                        <h3>CNET</h3>
+                                        <h3 id="cnet">CNET</h3>
                                         <script src="//rss.bloople.net/?url=https%3A%2F%2Fwww.cnet.com%2Frss%2Fnews%2F&detail=-1&limit=1&showtitle=false&type=js"></script>
-                                        <h3>Drudge Report</h3>
+                                        <h3 id="drudge">Drudge Report</h3>
                                         <script src="//rss.bloople.net/?url=http%3A%2F%2Ffeeds.feedburner.com%2FDrudgeReportFeed&detail=-1&limit=1&showtitle=false&type=js"></script>
-                                        <h3>Slashdot</h3>
+                                        <h3 id="slashdot">Slashdot</h3>
                                         <script src="//rss.bloople.net/?url=http%3A%2F%2Frss.slashdot.org%2FSlashdot%2FslashdotMain%2Fto&detail=-1&limit=1&showtitle=false&type=js"></script>
                                     </div>
                                 </div>
@@ -61,7 +61,13 @@
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-1">
                                 <section class="eagle-eye">
                                     <div id="options-menu" class="d-block">
-                                        <h1>RSS Feed</h1>
+                                        <h1>RSS Feeds</h1>
+                                        <a href="#cnn" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />CNN</h5></a>
+                                        <a href="#steelers" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Steelers</h5></a>
+                                        <a href="#huffpost" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Huff Post</h5></a>
+                                        <a href="#cnet" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />CNET</h5></a>
+                                        <a href="#drudge" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Drudge Report</h5></a>
+                                        <a href="#slashdot" class="page-scroll"><h5><img class="options-icon" src="images/icons/Wooden-Sword-Blue.ico" />Slashdot</h5></a>
                                     </div>
                                 </section>
                             </div>
