@@ -9,6 +9,15 @@
 // @include media-breakpoint-up(lg) {}
 // @include media-breakpoint-up(xl) {}
 //
+//
+//1200 - 1500
+@mixin xxl {
+    @media (min-width: 1500px) {
+        @content;
+    }
+}
+
+
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -468,8 +477,14 @@ code {
 
     .page-content {
         word-break: break-word;
-        padding: 10px;
-        padding-right: 5px;
+        padding: 0px;
+        // padding-right: 5px;
+        overflow: hidden;
+
+        @include media-breakpoint-up(sm) {
+            padding: 10px;
+            padding-right: 5px;
+        }
 
         @include media-breakpoint-up(md) {
             padding: 15px;
@@ -585,12 +600,19 @@ h2 {
     padding: 10px;
     background-color: white;
     color: black;
+    text-align: center;
 
     @include media-breakpoint-up(md) {
-        font-size: 40px;
-        font-size: 2vw;
+        font-size: 34px;
+        // font-size: 2vw;
         text-align: center;
     }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 34px;
+
+    }
+
 }
 
 #side-nav-list {
@@ -602,8 +624,6 @@ h2 {
     padding-right: 10px;
     border-top: 10px solid $red;
 
-
-
     h1 {
         font-size: 23px;
         margin-bottom: 25px;
@@ -611,11 +631,16 @@ h2 {
         padding: 10px;
         background-color: white;
         color: black;
+        text-align: center;
 
         @include media-breakpoint-up(md) {
             font-size: 40px;
             font-size: 1.9vw;
-            text-align: center;
+            // text-align: center;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 36px;
         }
     }
 
@@ -744,11 +769,32 @@ h2 {
         border-radius: 17px;
         background-color: #000;
         padding-bottom: 15px;
+        overflow-y: scroll;
+        overflow-x: hidden;
 
+        &::-webkit-scrollbar {
+            width: 35px;
+        }
 
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            color: red;
+            background-color: #330000;
+        }
 
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+            color: red;
+            background-color: pink;
+            background-color: #660000;
+            background-color: $gray;
+        }
 
-
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: $gray;
+        }
     }
 
     .column-2 {
@@ -902,12 +948,23 @@ img.ewave-icon {
     .fixit {
         max-width: 100px;
         max-height: 100px;
-        margin-bottom: 60px;
+        // margin-bottom: 60px;
+    }
+
+    .npm {
+        margin-top: 37px;
+        // margin-bottom: 0px;
     }
 
     .tech-icons {
         img {
             border-radius: 0px;
+        }
+
+        .row {
+            div {
+                margin-bottom: 20px;
+            }
         }
     }
 }
@@ -920,72 +977,73 @@ img.ewave-icon {
         font-size: 10px;
         margin-top: 10px;
     }
+
     h1 {
-        font-size:30px;
+        font-size: 30px;
         margin-bottom: 0px;
     }
-     .column-1 {
-        overflow-y: scroll;
-        overflow-x: scroll;
+
+    // .column-1 {
+    //     overflow-y: scroll;
+    //     overflow-x: scroll;
 
 
-        &::-webkit-scrollbar {
-            width: 15px;
-        }
+    //     &::-webkit-scrollbar {
+    //         width: 15px;
+    //     }
 
-        &::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            color: red;
-            background-color: #330000;
-        }
+    //     &::-webkit-scrollbar-track {
+    //         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    //         border-radius: 10px;
+    //         color: red;
+    //         background-color: #330000;
+    //     }
 
-        &::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-            color: red;
-            background-color: pink;
-            background-color: #660000;
-            background-color: $gray;
-        }
+    //     &::-webkit-scrollbar-thumb {
+    //         border-radius: 10px;
+    //         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    //         color: red;
+    //         background-color: pink;
+    //         background-color: #660000;
+    //         background-color: $gray;
+    //     }
 
-        &::-webkit-scrollbar-thumb:hover {
-            background-color: $gray;
-        }
-    }
+    //     &::-webkit-scrollbar-thumb:hover {
+    //         background-color: $gray;
+    //     }
+    // }
 }
 
 // rss page
 #RSSpage {
-    .column-1 {
-        overflow-y: scroll;
-        overflow-x: hidden;
+    // .column-1 {
+    //     overflow-y: scroll;
+    //     overflow-x: hidden;
 
+    //     &::-webkit-scrollbar {
+    //         width: 35px;
+    //     }
 
-        &::-webkit-scrollbar {
-            width: 35px;
-        }
+    //     &::-webkit-scrollbar-track {
+    //         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    //         border-radius: 10px;
+    //         color: red;
+    //         background-color: #330000;
+    //     }
 
-        &::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            color: red;
-            background-color: #330000;
-        }
+    //     &::-webkit-scrollbar-thumb {
+    //         border-radius: 10px;
+    //         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    //         color: red;
+    //         background-color: pink;
+    //         background-color: #660000;
+    //         background-color: $gray;
+    //     }
 
-        &::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-            color: red;
-            background-color: pink;
-            background-color: #660000;
-            background-color: $gray;
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background-color: $gray;
-        }
-    }
+    //     &::-webkit-scrollbar-thumb:hover {
+    //         background-color: $gray;
+    //     }
+    // }
 
     h4 {
         // display: inline;
