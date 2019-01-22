@@ -479,6 +479,7 @@ code {
         word-break: break-word;
         padding: 0px;
         // padding-right: 5px;
+        // padding-left: 5px;
         overflow: hidden;
 
         @include media-breakpoint-up(sm) {
@@ -601,6 +602,8 @@ h2 {
     background-color: white;
     color: black;
     text-align: center;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
 
     @include media-breakpoint-up(md) {
         font-size: 34px;
@@ -625,13 +628,21 @@ h2 {
     border-top: 10px solid $red;
 
     h1 {
-        font-size: 23px;
+        font-size: 16px;
         margin-bottom: 25px;
         border: 1px solid white;
         padding: 10px;
         background-color: white;
         color: black;
         text-align: center;
+
+
+        @include media-breakpoint-up(sm) {
+            font-size: 23px;
+        }
+
+
+
 
         @include media-breakpoint-up(md) {
             font-size: 40px;
@@ -640,7 +651,7 @@ h2 {
         }
 
         @include media-breakpoint-up(xl) {
-            font-size: 36px;
+            font-size: 30px;
         }
     }
 
@@ -694,13 +705,9 @@ h2 {
 
         .eagle-eye {
             border-radius: 15px;
-            // background-image: url("/images/screenshot1.png");
             background-size: cover;
             background-size: contain;
             height: 275px;
-            // background-position: 48% 70%;
-            // background-position: 48% 71%;
-            // background-position: 48% 49%;
             background-repeat: no-repeat;
             z-index: 2;
             position: relative;
@@ -714,22 +721,54 @@ h2 {
         }
     }
 
-    section.eagle-eye {
-        position: relative;
+    section {
+        &.eagle-eye {
+            position: relative;
+
+            img {
+                position: absolute;
+                right: 50%;
+                -webkit-filter: drop-shadow(3px 22px 8px #000);
+                filter: drop-shadow(3px 22px 8px #000);
+            }
+
+            .options-icon {
+                position: relative;
+                filter: none;
+                right: 0px;
+            }
+
+            h5 {
+                font-size: 9px;
+
+                @include media-breakpoint-up(sm) {
+                    font-size: 20px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 10px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    font-size: 16px;
+                }
+            }
+
+        }
     }
 
-    section.eagle-eye img {
-        position: absolute;
-        right: 50%;
-        -webkit-filter: drop-shadow(3px 22px 8px #000);
-        filter: drop-shadow(3px 22px 8px #000);
-    }
+    // section.eagle-eye img {
+    //     position: absolute;
+    //     right: 50%;
+    //     -webkit-filter: drop-shadow(3px 22px 8px #000);
+    //     filter: drop-shadow(3px 22px 8px #000);
+    // }
 
-    section.eagle-eye .options-icon {
-        position: relative;
-        filter: none;
-        right: 0px;
-    }
+    // section.eagle-eye .options-icon {
+    //     position: relative;
+    //     filter: none;
+    //     right: 0px;
+    // }
 
 
 
@@ -922,6 +961,11 @@ img.ewave-icon {
 // audio buttons
 #play_button {
     // transition: .5s ease;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 
@@ -949,6 +993,28 @@ img.ewave-icon {
         max-width: 100px;
         max-height: 100px;
         // margin-bottom: 60px;
+    }
+
+    .firebase {
+        @include media-breakpoint-up(sm) {
+            max-height: 137px;
+        }
+
+        @include media-breakpoint-up(md) {
+            max-height: 125px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-height: 61px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-height: 85px;
+        }
+
+        @include xxl {
+            max-height: 115px;
+        }
     }
 
     .npm {
@@ -1065,6 +1131,29 @@ img.ewave-icon {
     }
 
 }
+
+
+
+// ordering columns:
+//
+
+    #main {
+        order: 2;
+    }
+    #sidebar {
+        order: 1;
+    }
+
+@include media-breakpoint-up(md) {
+    #main {
+        order: 1;
+    }
+    #sidebar {
+        order: 2;
+    }
+}
+
+
 
 
 @import "sequencer";
