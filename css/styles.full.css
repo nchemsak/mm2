@@ -1034,11 +1034,7 @@ code {
     overflow: hidden; }
     @media (min-width: 576px) {
       #main-content .page-content {
-        padding: 10px;
         padding-right: 5px; } }
-    @media (min-width: 768px) {
-      #main-content .page-content {
-        padding: 15px; } }
     #main-content .page-content #materials {
       margin-bottom: 40px; }
   #main-content hr {
