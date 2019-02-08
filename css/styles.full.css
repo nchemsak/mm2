@@ -764,6 +764,9 @@ code {
   vertical-align: bottom;
   font-size: 100%; }
 
+@keyframes blinker {
+  50% {
+    color: rgba(170, 0, 0, 0.5); } }
 .overlay {
   height: 100%;
   width: 0;
@@ -787,23 +790,28 @@ code {
     left: 44px;
     bottom: 663px;
     border-radius: 50%; }
+  .overlay .blink {
+    animation: blinker 1.5s step-start infinite; }
+    .overlay .blink:hover {
+      animation: none; }
 
 .overlay-content {
   position: relative;
   width: 100%;
-  margin-top: 30px;
-  text-align: right;
-  bottom: -66%; }
+  margin-top: 30px; }
   @media (min-width: 768px) {
     .overlay-content {
-      top: 82px;
+      top: 0px;
+      text-align: right;
       bottom: initial; } }
   @media (min-width: 992px) {
     .overlay-content {
-      padding-right: 360px; } }
+      padding-right: 360px;
+      top: 0px; } }
   @media (min-width: 1200px) {
     .overlay-content {
-      padding-right: 33vw; } }
+      padding-right: 33vw;
+      top: 0px; } }
 
 .overlay a {
   padding: 8px;
@@ -821,7 +829,7 @@ code {
   top: 20px;
   left: 45px;
   text-align: right;
-  font-size: 45px;
+  font-size: 20px;
   color: #AA0000;
   z-index: 5; }
   @media (min-width: 576px) {
@@ -833,12 +841,15 @@ code {
       font-size: 60px; } }
   @media (min-width: 768px) {
     .overlay .closebtn {
-      font-size: 122px;
+      font-size: 49px;
       bottom: 381px;
       right: initial; } }
+  @media (min-width: 992px) {
+    .overlay .closebtn {
+      font-size: 44px; } }
   @media (min-width: 1200px) {
     .overlay .closebtn {
-      font-size: 160px;
+      font-size: 57px;
       bottom: 20px;
       right: 45px; } }
 
@@ -1032,9 +1043,6 @@ code {
     word-break: break-word;
     padding: 0px;
     overflow: hidden; }
-    @media (min-width: 576px) {
-      #main-content .page-content {
-        padding-right: 5px; } }
     #main-content .page-content #materials {
       margin-bottom: 40px; }
   #main-content hr {
@@ -1045,8 +1053,11 @@ code {
     margin-right: 10px;
     vertical-align: 0px;
     margin-bottom: -2px; }
-    #main-content .icon.cabbage {
+    #main-content .icon.cabbage, #main-content .icon.garlic, #main-content .icon.water, #main-content .icon.tomato, #main-content .icon.jalapeno, #main-content .icon.cilantro {
       width: 32px; }
+    #main-content .icon.cilantro {
+      margin-bottom: 5px;
+      margin-top: 2px; }
     #main-content .icon.salt {
       width: 50px; }
 
@@ -1146,8 +1157,10 @@ h2 {
     background-size: auto;
     height: 275px;
     background-repeat: no-repeat;
-    z-index: 7;
     position: relative; }
+    @media (min-width: 768px) {
+      #side-nav-list.options-menu-off .eagle-eye {
+        z-index: 7; } }
     @media (min-width: 992px) {
       #side-nav-list.options-menu-off .eagle-eye {
         height: 152px; } }
@@ -1263,7 +1276,9 @@ h2 {
     padding-bottom: 2px; }
 
 #character-section {
-  background-color: #AA0000; }
+  background-color: #AA0000;
+  z-index: 7;
+  position: relative; }
   #character-section .row {
     border: 10px solid #AA0000;
     border-radius: 17px;
@@ -1341,6 +1356,12 @@ img.ewave-icon {
 #characterpage .fixit {
   max-width: 100px;
   max-height: 100px; }
+#characterpage .biopic {
+  width: 181px;
+  float: right;
+  border-radius: 0px;
+  border: 5px solid #AA0000;
+  padding: 10px; }
 @media (min-width: 576px) {
   #characterpage .firebase {
     max-height: 137px; } }

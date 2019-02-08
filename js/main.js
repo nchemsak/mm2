@@ -248,9 +248,8 @@ $(document).keydown(function(e) {
 
 // SCROLL TO LINK
 $("a.page-scroll").click(function(event) {
-    event.preventDefault();
+    // event.preventDefault();
     $("#main-content").animate({ scrollTop: $($(this).attr("href")).offset().top - 35 }, 1000);
-
 });
 
 //ANIMATE BLINK LINK CLICK
