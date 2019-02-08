@@ -1039,11 +1039,11 @@ img.ewave-icon {
     }
 
     .biopic {
-        width: 181px;
-        float: right;
-        border-radius: 0px;
-        border: 5px solid $red;
-        padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 475px;
+    margin-bottom: 15px;
     }
 
     .firebase {
