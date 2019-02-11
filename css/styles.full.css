@@ -969,7 +969,6 @@ code {
     background-color: #AAAAAA; }
   @media (min-width: 768px) {
     #main-content {
-      max-height: 600px;
       font-size: 16px;
       overflow: scroll;
       overflow-x: hidden; } }
@@ -1020,14 +1019,14 @@ code {
       left: 20px;
       text-align: left; }
   #main-content h3 {
-    font-size: 19px;
+    font-size: 18px;
     margin-bottom: 15px;
     text-align: center; }
     @media (min-width: 768px) {
       #main-content h3 {
         font-size: 28px; } }
   #main-content h4 {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 40px; }
     @media (min-width: 768px) {
       #main-content h4 {
@@ -1050,11 +1049,23 @@ code {
     margin-bottom: 35px;
     background-color: #AA0000; }
   #main-content .icon {
-    margin-right: 10px;
+    margin-right: 2px;
     vertical-align: 0px;
     margin-bottom: -2px; }
-    #main-content .icon.cabbage, #main-content .icon.garlic, #main-content .icon.water, #main-content .icon.tomato, #main-content .icon.jalapeno, #main-content .icon.cilantro {
-      width: 32px; }
+    @media (min-width: 768px) {
+      #main-content .icon {
+        margin-right: 10px; } }
+    #main-content .icon.sea-salt-half {
+      width: 13px; }
+      @media (min-width: 768px) {
+        #main-content .icon.sea-salt-half {
+          width: 16px; } }
+    #main-content .icon.cabbage, #main-content .icon.sea-salt, #main-content .icon.jar, #main-content .icon.garlic, #main-content .icon.water, #main-content .icon.tomato, #main-content .icon.jalapeno, #main-content .icon.cilantro {
+      width: 23px;
+      margin-right: 1px; }
+      @media (min-width: 768px) {
+        #main-content .icon.cabbage, #main-content .icon.sea-salt, #main-content .icon.jar, #main-content .icon.garlic, #main-content .icon.water, #main-content .icon.tomato, #main-content .icon.jalapeno, #main-content .icon.cilantro {
+          width: 32px; } }
     #main-content .icon.cilantro {
       margin-bottom: 5px;
       margin-top: 2px; }
@@ -1155,7 +1166,6 @@ h2 {
     background-size: cover;
     background-size: contain;
     background-size: auto;
-    height: 275px;
     background-repeat: no-repeat;
     position: relative; }
     @media (min-width: 768px) {
@@ -1177,10 +1187,16 @@ h2 {
     border-radius: 15px;
     background-size: cover;
     background-size: contain;
-    height: 275px;
     background-repeat: no-repeat;
     z-index: 2;
     position: relative; }
+    @media (min-width: 992px) {
+      #side-nav-list.options-menu-on .eagle-eye {
+        height: 152px; } }
+    @media (min-width: 1200px) {
+      #side-nav-list.options-menu-on .eagle-eye {
+        height: 275px;
+        height: 354px; } }
     #side-nav-list.options-menu-on .eagle-eye .fa {
       position: absolute;
       top: 50%;
@@ -1356,6 +1372,19 @@ img.ewave-icon {
 #characterpage .fixit {
   max-width: 100px;
   max-height: 100px; }
+#characterpage .materials-list {
+  margin-top: 0px; }
+  @media (min-width: 768px) {
+    #characterpage .materials-list {
+      font-size: 15px; } }
+  @media (min-width: 992px) {
+    #characterpage .materials-list {
+      font-size: 18px; } }
+  @media (min-width: 1200px) {
+    #characterpage .materials-list {
+      margin-top: 125px; } }
+  #characterpage .materials-list > div {
+    word-break: normal; }
 #characterpage .biopic {
   margin: 0 auto;
   text-align: center;
@@ -1409,12 +1438,15 @@ img.ewave-icon {
 #sidebar {
   order: 1; }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #main {
     order: 1; }
 
   #sidebar {
     order: 2; } }
+.seizure {
+  font-size: 25px; }
+
 /************************************************************************************
                                   BLACK BUTTON STYLES
 ************************************************************************************/

@@ -108,7 +108,9 @@ $(document).keydown(function(e) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
                 $(".main-bee2").css("left", (counterEastMain) + "px");
             }
-
+    if (window.location.href.indexOf("recipe-book") > -1) {
+    console.log("recipe shopppp");
+}
 
             if (counterEastMain === 550 && window.location.href.indexOf("recipe-book") > -1) {
                 $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop! <br /> What recipe would you like to learn? <br />Please select a recipe from the menu on the right.</div></div>');

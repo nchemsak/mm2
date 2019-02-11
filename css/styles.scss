@@ -388,7 +388,7 @@ code {
     }
 
     @include media-breakpoint-up(md) {
-        max-height: 600px;
+        // max-height: 600px;
         font-size: 16px;
         overflow: scroll;
         overflow-x: hidden;
@@ -471,7 +471,7 @@ code {
     }
 
     h3 {
-        font-size: 19px;
+        font-size: 18px;
         margin-bottom: 15px;
         text-align: center;
 
@@ -482,7 +482,7 @@ code {
 
 
     h4 {
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 40px;
 
         @include media-breakpoint-up(md) {
@@ -530,17 +530,35 @@ code {
     }
 
     .icon {
-        margin-right: 10px;
+        margin-right: 2px;
         vertical-align: 0px;
         margin-bottom: -2px;
 
+        @include media-breakpoint-up(md) {
+            margin-right: 10px;
+        }
+ &.sea-salt-half {
+    width: 13px;
+      @include media-breakpoint-up(md) {
+                width: 16px;
+            }
+ }
         &.cabbage,
+        &.sea-salt,
+        &.jar,
         &.garlic,
         &.water,
         &.tomato,
         &.jalapeno,
         &.cilantro {
-            width: 32px;
+            width: 23px;
+            // height: 23px;
+            margin-right: 1px;
+
+            @include media-breakpoint-up(md) {
+                width: 32px;
+                // height: 32px;
+            }
         }
 
         &.cilantro {
@@ -709,7 +727,7 @@ h2 {
             background-size: cover;
             background-size: contain;
             background-size: auto;
-            height: 275px;
+            // height: 275px;
             // background-position: 48% 71%;
             // background-position: 48% 49%;
             background-repeat: no-repeat;
@@ -748,10 +766,19 @@ h2 {
             border-radius: 15px;
             background-size: cover;
             background-size: contain;
-            height: 275px;
+            // height: 275px;
             background-repeat: no-repeat;
             z-index: 2;
             position: relative;
+
+            @include media-breakpoint-up(lg) {
+                height: 152px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                height: 275px;
+                height: 354px;
+            }
 
             .fa {
                 position: absolute;
@@ -888,6 +915,7 @@ h2 {
 
 #options-row {
     background-color: $red;
+    // background-color: green;
     white-space: nowrap;
 
     @include media-breakpoint-up(lg) {
@@ -1038,12 +1066,33 @@ img.ewave-icon {
         // margin-bottom: 60px;
     }
 
+    .materials-list {
+        margin-top: 0px;
+
+        // font-size: 15px;
+        @include media-breakpoint-up(md) {
+            font-size: 15px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-top: 125px;
+        }
+
+        &>div {
+            word-break: normal;
+        }
+    }
+
     .biopic {
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-    width: 475px;
-    margin-bottom: 15px;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 475px;
+        margin-bottom: 15px;
     }
 
     .firebase {
@@ -1196,7 +1245,7 @@ img.ewave-icon {
     order: 1;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(xl) {
     #main {
         order: 1;
     }
@@ -1206,7 +1255,9 @@ img.ewave-icon {
     }
 }
 
-
+.seizure {
+    font-size: 25px;
+}
 
 
 @import "sequencer";
