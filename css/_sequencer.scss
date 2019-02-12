@@ -1,8 +1,9 @@
-/************************************************************************************
-                                  BLACK BUTTON STYLES
-************************************************************************************/
-
 #sequencer-content {
+
+    .drum-machine-h2-heading {
+        margin-bottom: 75px;
+
+    }
 
     .list-item {
         background: #000;
@@ -291,58 +292,25 @@
                                   THEREMIN AND CANVAS STYLES
 ************************************************************************************/
 
-    canvas {
-        // background-color: #79BD9A;
-        // width: 100%;
-        // margin-top: 25px;
-        // margin-left: 25px;
-        // padding-left: 5px;
-        // padding-top: 5px;
-        // cursor: none;
-        //   background-color: lightgrey;
-        //   // background-image: '..wave.jpg';
-        //  width: 100%;
-        // display: block;
-        // // margin: auto;
-        // height: 100%;
-        // // position: absolute;
-        // top: 0%;
-        // left: 0%;
-        // /*  background: linear-gradient(rgba(251, 139, 166, 0.7), rgba(224, 140, 194, 0.8), rgba(194, 139, 228, 0.9)), url("");*/
-        // // background: url("../images/circleWave.gif");
-        // // background: url("https://68.media.tumblr.com/96d47aa0646fc19e68691743955b9c77/tumblr_n1a0c2M2hN1sns7veo1_500.gif");
-        // background-size: cover;
-        // border-radius: 0%;
-        // z-index: 1;
-        // opacity: 0.9;
-        /*  -webkit-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/
-    }
 
     #thereminCanvas {
-        // float: left;
-        // width: 500px;
-        // height: 500px;
-        // border-radius: 3px;
-        // background: #1E1E1E url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2P8+vWrJAMRgBGkkJub+zkhtaMK8YYQ0cEDABxGJwNr5yClAAAAAElFTkSuQmCC);
         width: 100%;
         display: block;
         margin: auto;
         height: 100%;
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        /*  background: linear-gradient(rgba(251, 139, 166, 0.7), rgba(224, 140, 194, 0.8), rgba(194, 139, 228, 0.9)), url("");*/
+        // position: absolute;
+        // top: 0%;
+        // left: 0%;
         background: url("../images/circleWave.gif");
-        // background: url("https://68.media.tumblr.com/96d47aa0646fc19e68691743955b9c77/tumblr_n1a0c2M2hN1sns7veo1_500.gif");
         background-size: cover;
         border-radius: 0%;
         z-index: 1;
         opacity: 0.9;
-        /*  -webkit-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/
+
+        @include media-breakpoint-up(xl) {
+            height: 237px;
+            margin-top: 27px;
+        }
     }
 
     #thereminCanvas:hover {
@@ -1523,11 +1491,12 @@
     .tempo-container {
         margin: 0px;
         padding: 5px 12px;
+
         //    @include media-breakpoint-up(sm) {
         //     padding: 0px;
         // }
-           @include media-breakpoint-up(md) {
-             padding-left: 3px;
+        @include media-breakpoint-up(md) {
+            padding-left: 3px;
         }
     }
 
@@ -1551,17 +1520,20 @@
             margin: 0 10px;
             padding-left: 5px;
         }
-           @include media-breakpoint-up(sm) {
+
+        @include media-breakpoint-up(sm) {
             width: 67px;
 
 
         }
-               @include media-breakpoint-up(lg) {
+
+        @include media-breakpoint-up(lg) {
             width: 56px;
 
 
         }
-           @include media-breakpoint-up(xl) {
+
+        @include media-breakpoint-up(xl) {
             width: 85px;
 
         }

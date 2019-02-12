@@ -1081,6 +1081,18 @@ code {
 .direction.west:before {
   content: 'W'; }
 
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+#homepage.flip {
+  animation: spin 1s linear 1; }
 #homepage .scroll-up {
   height: 500px;
   overflow: hidden;
@@ -1162,7 +1174,7 @@ h2 {
     content: 'Map'; }
   #side-nav-list.options-menu-off .eagle-eye {
     border-radius: 15px;
-    background-image: url("/images/map-edit6.png");
+    background-image: url("/images/map-edit9.png");
     background-size: cover;
     background-size: contain;
     background-size: auto;
@@ -1171,9 +1183,6 @@ h2 {
     @media (min-width: 768px) {
       #side-nav-list.options-menu-off .eagle-eye {
         z-index: 7; } }
-    @media (min-width: 992px) {
-      #side-nav-list.options-menu-off .eagle-eye {
-        height: 152px; } }
     @media (min-width: 1200px) {
       #side-nav-list.options-menu-off .eagle-eye {
         height: 275px; } }
@@ -1190,9 +1199,6 @@ h2 {
     background-repeat: no-repeat;
     z-index: 2;
     position: relative; }
-    @media (min-width: 992px) {
-      #side-nav-list.options-menu-on .eagle-eye {
-        height: 152px; } }
     @media (min-width: 1200px) {
       #side-nav-list.options-menu-on .eagle-eye {
         height: 275px;
@@ -1291,6 +1297,10 @@ h2 {
     padding-top: 5px;
     padding-bottom: 2px; }
 
+@media (min-width: 1200px) {
+  #contact {
+    margin-top: 100px; } }
+
 #character-section {
   background-color: #AA0000;
   z-index: 7;
@@ -1323,7 +1333,7 @@ h2 {
   color: #5555FF;
   color: #007bff; }
   .fa-github:hover {
-    color: #55FFFF; }
+    color: #0056b3; }
 
 img.ewave-icon {
   background-color: red;
@@ -1447,9 +1457,6 @@ img.ewave-icon {
 .seizure {
   font-size: 25px; }
 
-/************************************************************************************
-                                  BLACK BUTTON STYLES
-************************************************************************************/
 #sequencer-content {
   /*BUTTON MOVE ON HOVER*/
   /*button thickness grow on hover*/
@@ -1475,6 +1482,8 @@ img.ewave-icon {
    /****************************************************************************
                             SEQUENCER
 ****************************************************************************/ }
+  #sequencer-content .drum-machine-h2-heading {
+    margin-bottom: 75px; }
   #sequencer-content .list-item {
     background: #000;
     text-align: center;
@@ -1642,27 +1651,20 @@ img.ewave-icon {
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); }
   #sequencer-content input[type=checkbox]:checked ~ aside {
     transform: translateX(0); }
-  #sequencer-content canvas {
-      /*  -webkit-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);
--moz-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);
-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
   #sequencer-content #thereminCanvas {
     width: 100%;
     display: block;
     margin: auto;
     height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    /*  background: linear-gradient(rgba(251, 139, 166, 0.7), rgba(224, 140, 194, 0.8), rgba(194, 139, 228, 0.9)), url("");*/
     background: url("../images/circleWave.gif");
     background-size: cover;
     border-radius: 0%;
     z-index: 1;
-    opacity: 0.9;
-      /*  -webkit-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);
--moz-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);
-box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
+    opacity: 0.9; }
+    @media (min-width: 1200px) {
+      #sequencer-content #thereminCanvas {
+        height: 237px;
+        margin-top: 27px; } }
   #sequencer-content #thereminCanvas:hover {
     cursor: crosshair; }
   #sequencer-content .clearfix:before,
