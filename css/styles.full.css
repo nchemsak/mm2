@@ -831,7 +831,8 @@ code {
   text-align: right;
   font-size: 20px;
   color: #AA0000;
-  z-index: 5; }
+  z-index: 5;
+  display: inline-block; }
   @media (min-width: 576px) {
     .overlay .closebtn {
       top: initial;
@@ -994,6 +995,29 @@ code {
       bottom: 0px;
       width: 950px;
       height: 565px; }
+      #main-content .header-image .weather-overlay.clouds {
+        width: 450px;
+        height: auto;
+        top: -100px;
+        bottom: initial; }
+      #main-content .header-image .weather-overlay.clouds2 {
+        width: 450px;
+        height: auto;
+        top: -100px;
+        right: 0px;
+        bottom: initial; }
+      #main-content .header-image .weather-overlay.clouds3 {
+        width: 450px;
+        height: auto;
+        top: -100px;
+        right: 250px;
+        bottom: initial; }
+      #main-content .header-image .weather-overlay.clouds4 {
+        width: 250px;
+        height: auto;
+        top: 0px;
+        right: 150px;
+        bottom: initial; }
     #main-content .header-image blockquote {
       position: absolute;
       width: 50%;
@@ -1249,6 +1273,14 @@ h2 {
     @media (min-width: 1200px) {
       #side-nav-list h2 {
         font-size: 30px; } }
+    #side-nav-list h2 #location {
+      font-size: 3.5vw; }
+      @media (min-width: 576px) {
+        #side-nav-list h2 #location {
+          font-size: 34px; } }
+      @media (min-width: 992px) {
+        #side-nav-list h2 #location {
+          font-size: 1.5vw; } }
   #side-nav-list .column-1 {
     border-bottom: 5px solid #AA0000;
     border-radius: 17px;
@@ -1390,7 +1422,7 @@ img.ewave-icon {
       font-size: 18px; } }
   @media (min-width: 1200px) {
     #characterpage .materials-list {
-      margin-top: 125px; } }
+      margin-top: 80px; } }
   #characterpage .materials-list > div {
     word-break: normal; }
 #characterpage .biopic {
@@ -1453,7 +1485,16 @@ img.ewave-icon {
   #sidebar {
     order: 2; } }
 .seizure {
-  font-size: 25px; }
+  font-size: 4vw; }
+  @media (min-width: 768px) {
+    .seizure {
+      font-size: 25px; } }
+
+#temperature {
+  font-size: 3.5vw; }
+  @media (min-width: 768px) {
+    #temperature {
+      font-size: 21px; } }
 
 #sequencer-content {
   /*BUTTON MOVE ON HOVER*/

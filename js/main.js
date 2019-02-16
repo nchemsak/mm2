@@ -106,11 +106,11 @@ $(document).keydown(function(e) {
                 $(".main-bee1").css("left", (counterEastMain) + "px");
                 $(".main-bee2").css("left", (counterEastMain) + "px");
             }
-            if (window.location.href.indexOf("recipe-book") > -1) {
-                console.log("recipe shopppp");
+            if (window.location.href.indexOf("fermentation") > -1) {
+        
             }
 
-            if (counterEastMain === 550 && window.location.href.indexOf("recipe-book") > -1) {
+            if (counterEastMain === 550 && window.location.href.indexOf("fermentation") > -1) {
                 $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop! <br /> What recipe would you like to learn? <br />Please select a recipe from the menu on the right.</div></div>');
                 $("#recipe-popup").animate({ opacity: '0.8' });
             }
@@ -184,8 +184,8 @@ $(document).keydown(function(e) {
                 $("#recipe-popup").animate({ opacity: '0' });
             }
 
-            if (counterEastMain === 0 && window.location.href.indexOf("recipe-book") > -1) {
-                window.location.href = "index.html?left-recipe-shop";
+            if (counterEastMain === 0 && window.location.href.indexOf("fermentation") > -1) {
+                window.location.href = "/index?left-recipe-shop";
             }
 
 
@@ -208,7 +208,7 @@ $(document).keydown(function(e) {
 
     // middlegate - recipes
     if (counterEast === 48 && counterNorth === 77) {
-        window.location.href = "/recipe-book";
+        window.location.href = "/fermentation";
     }
     // tree - Katsura
     if (counterEast === 13 && counterNorth === 63) {

@@ -174,7 +174,7 @@ code {
     font-size: 20px;
     color: $red;
     z-index: 5;
-
+    display:inline-block;
     @include media-breakpoint-up(sm) {
         top: initial;
         left: initial;
@@ -431,6 +431,36 @@ code {
             bottom: 0px;
             width: 950px;
             height: 565px;
+
+            &.clouds {
+                width: 450px;
+                height: auto;
+               top: -100px;
+                bottom: initial;
+            }
+
+            &.clouds2 {
+                width: 450px;
+                height: auto;
+                top: -100px;
+                right: 0px;
+                bottom: initial;
+            }
+
+            &.clouds3 {
+                width: 450px;
+                height: auto;
+                top: -100px;
+                right: 250px;
+                bottom: initial;
+            }
+                   &.clouds4 {
+                width: 250px;
+                height: auto;
+                top: 0px;
+                right: 150px;
+                bottom: initial;
+            }
         }
 
         blockquote {
@@ -609,7 +639,7 @@ code {
 }
 
 @-webkit-keyframes spin {
-    100% { 
+    100% {
         -webkit-transform: rotate(360deg);
     }
 }
@@ -778,7 +808,7 @@ h2 {
                 top: 50%;
                 right: 50%;
             }
-        } 
+        }
     }
 
 
@@ -896,6 +926,18 @@ h2 {
 
         @include media-breakpoint-up(xl) {
             font-size: 30px;
+        }
+
+        #location {
+            font-size: 3.5vw;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 34px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1.5vw;
+            }
         }
     }
 
@@ -1018,6 +1060,7 @@ h2 {
 .fa-github {
     color: $blue-medium;
     color: #007bff;
+
     &:hover {
         color: #0056b3;
     }
@@ -1110,7 +1153,7 @@ img.ewave-icon {
         }
 
         @include media-breakpoint-up(xl) {
-            margin-top: 125px;
+            margin-top: 80px;
         }
 
         &>div {
@@ -1287,8 +1330,20 @@ img.ewave-icon {
 }
 
 .seizure {
-    font-size: 25px;
+    font-size: 4vw;
+
+    @include media-breakpoint-up(md) {
+        font-size: 25px;
+    }
 }
 
+
+#temperature {
+    font-size: 3.5vw;
+
+    @include media-breakpoint-up(md) {
+        font-size: 21px;
+    }
+}
 
 @import "sequencer";
