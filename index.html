@@ -17,14 +17,14 @@
 <body id="homepage" onload="DisplayInfo()">
     <div class="overlay">
         <div class="overlay-content">
-            <div class="container">
+            <div class="container"> 
                 Hi!
                 <br /> <br />
                 <span class="d-none d-md-block">Use your computer<br />keyboard "arrow keys"<img src="images/icons/arrowkey.png" class="arrow-key" alt="keyboard arrow key" /><br />to control the bee.<br />
-                <!--  Click "Start" -->
-                <br />
-                OR </span><br /><br />Click the navigation links below <i class="fa fa-toggle-down"></i>
-                <a href="javascript:void(0)" class="closebtn blink" onclick="closeNav()">Close Overlay</a>
+                    <!--  Click "Start" -->
+                    <br />
+                    OR </span><br /><br />Click the navigation links below <i class="fa fa-toggle-down"></i>
+                <a href="javascript:void(0)" class="closebtn blink" onclick="closeNav()">Close Help</a>
             </div>
         </div>
     </div>
@@ -35,7 +35,9 @@
                     <section id="main-content" class="scroll">
                         <div class="header-image">
                             <img src="/images/mm2.png" class="img-fluid" />
-                            <a href="#" onclick="toggleQuote(); return false;" class="h1-animation"><h1 class="homepage-h1">Ephemeral Wave</h1></a>
+                            <a href="#" onclick="toggleQuote(); return false;" class="h1-animation">
+                                <h1 class="homepage-h1">Ephemeral Wave</h1>
+                            </a>
                             <div id="home-page-quote" class="scroll-up d-none">
                                 <p>"You didn’t come into this world. You came out of it,
                                     like a wave from the ocean. <br />You are not a stranger here."</p>
@@ -51,7 +53,7 @@
                     <section id="side-nav-list" class="toggle options-menu-off">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-1">
-                                <a href="#" onclick="toggleOptions(); return false;"><h2 class="side-nav-list-heading"></h2></a>
+                                <!-- <a href="#" onclick="toggleOptions(); return false;"><h2 class="side-nav-list-heading"></h2></a> -->
                                 <section class="eagle-eye">
                                     <img class="bee1 toggle show-bee" src="images/icons/bee1.ico">
                                     <img class="bee2 toggle show-bee" src="images/icons/bee2.ico">
@@ -66,8 +68,8 @@
                                     <div class="col-6">
                                         <div class="playercard2">
                                             <div class="card__button">
-                                                <a id="play_button" class="seizure" href="#" next="#" value="PLAY" onclick="play()">    Attack!
-                                                    <audio id="audio" src="audio/slap.mp3" ></audio>
+                                                <a id="play_button" class="seizure" href="#" next="#" value="PLAY" onclick="play()"> Attack!
+                                                    <audio id="audio" src="audio/slap.mp3"></audio>
                                                 </a>
                                             </div>
                                         </div>
@@ -76,13 +78,20 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-6">Temp</div>
-
                                     <p id="demo"></p>
-                                    <div class="col-6 text-right">28&deg;F</div>
+                                    <div class="col-6 text-right">
+                                        <div id="temperature" class="info">
+                                            <span id="temperature-num"></span>
+                                            <span>°</span>
+                                            <span id="temperature-scale">C</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">Weather</div>
-                                    <div class="col-6 text-right">Snow</div>
+                                    <div class="col-6 text-right">
+                                        <div id="weather-condition" class="info"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -110,19 +119,32 @@
                 </div>
             </section>
         </div>
+        <div class="container">
+            <!--   <div class="title">Weather App</div>
+  <div class="subtitle">Free code camp</div> -->
+            <div class="weather-info">
+                <div id="location" class="info"></div>
+                <div id="temperature" class="info">
+                    <span id="temperature-num"></span>
+                    <!-- <span>°</span> -->
+                    <span id="temperature-scale">CSS</span>
+                </div>
+                <div id="weather-condition" class="info"></div>
+            </div>
+        </div>
     </div>
     <!-- ############################# SCRIPTS ################################# -->
     <script src="lib/jquery-3.2.1.min.js"></script>
     <script src="lib/popper.min.js"></script>
-    <!-- <script src="lib/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script> -->
     <script href="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="lib/parallax.min.js"></script>
     <script src="lib/waves.min.js"></script>
     <script src="js/cookie.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/weather.js"></script>
     <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-        ':35729/livereload.js?snipver=1"></' + 'script>')
+        ':35729/livereload.js?snipver=1"></' + 'script>') 
     </script>
 </body>
 

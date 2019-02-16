@@ -778,18 +778,19 @@ h2 {
                 top: 50%;
                 right: 50%;
             }
-        }
+        } 
     }
 
 
     &.options-menu-on {
-        .side-nav-list-heading {
-            &:before {
-                content: 'Options';
-            }
-        }
+        // .side-nav-list-heading {
+        //     &:before {
+        //         content: 'Options';
+        //     }
+        // }
 
         .eagle-eye {
+
             border-radius: 15px;
             background-size: cover;
             background-size: contain;
