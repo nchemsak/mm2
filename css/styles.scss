@@ -80,7 +80,6 @@ code {
 
 @keyframes blinker {
     50% {
-        // opacity: 0;
         color: rgba(170, 0, 0, 0.5);
     }
 }
@@ -107,9 +106,7 @@ code {
         width: 100px;
         height: 100px;
         background-color: white;
-        // background-color: red;
         z-index: 500;
-        // position: absolute;
         left: 44px;
         bottom: 663px;
         border-radius: 50%;
@@ -126,14 +123,10 @@ code {
 
 .overlay-content {
     position: relative;
-    // top: 82px;
     width: 100%;
     margin-top: 30px;
-    // text-align: right;
-    // bottom: -66%;
 
     @include media-breakpoint-up(md) {
-        // top: 82px;
         top: 0px;
         text-align: right;
         bottom: initial;
@@ -165,16 +158,15 @@ code {
 }
 
 .overlay .closebtn {
-    // position: absolute;
     top: 20px;
     left: 45px;
 
     text-align: right;
-    // font-size: 45px;
     font-size: 20px;
     color: $red;
     z-index: 5;
-    display:inline-block;
+    display: inline-block;
+
     @include media-breakpoint-up(sm) {
         top: initial;
         left: initial;
@@ -184,7 +176,6 @@ code {
     }
 
     @include media-breakpoint-up(md) {
-        // font-size: 122px;
         font-size: 49px;
         bottom: 381px;
         right: initial;
@@ -197,7 +188,6 @@ code {
     }
 
     @include media-breakpoint-up(xl) {
-        // font-size: 160px;
         font-size: 57px;
         bottom: 20px;
         right: 45px;
@@ -228,10 +218,6 @@ code {
         border: 7px solid $red;
     }
 
-    // @include media-breakpoint-up(xl) {
-    //     height: 908px;
-    // }
-    //
     @include media-breakpoint-up(lg) {
         margin-top: 25px;
     }
@@ -265,7 +251,6 @@ code {
 
 .main-bee1 {
     position: absolute;
-    // top: 50%;
     left: 55px;
     left: 165px;
     animation: blink1 1s, flutter 3s;
@@ -388,7 +373,6 @@ code {
     }
 
     @include media-breakpoint-up(md) {
-        // max-height: 600px;
         font-size: 16px;
         overflow: scroll;
         overflow-x: hidden;
@@ -419,13 +403,6 @@ code {
             height: 100%;
         }
 
-        // background-image: url("/images/icons/salt.gif");
-        // background-position: 50% 50%;
-        // background-size: cover;
-        // background-repeat: repeat;
-        // height: 100%;
-
-
         .weather-overlay {
             position: absolute;
             bottom: 0px;
@@ -435,7 +412,7 @@ code {
             &.clouds {
                 width: 450px;
                 height: auto;
-               top: -100px;
+                top: -100px;
                 bottom: initial;
             }
 
@@ -454,7 +431,8 @@ code {
                 right: 250px;
                 bottom: initial;
             }
-                   &.clouds4 {
+
+            &.clouds4 {
                 width: 250px;
                 height: auto;
                 top: 0px;
@@ -492,10 +470,8 @@ code {
 
         &.homepage-h1 {
             position: absolute;
-            // color: white;
             top: 30px;
             left: 20px;
-            // background-color: rgba(0, 0, 0, 0.5);
             text-align: left;
         }
     }
@@ -535,18 +511,7 @@ code {
     .page-content {
         word-break: break-word;
         padding: 0px;
-        // padding-right: 5px;
-        // padding-left: 5px;
         overflow: hidden;
-
-        @include media-breakpoint-up(sm) {
-            // padding: 10px;
-            // padding-right: 5px;
-        }
-
-        @include media-breakpoint-up(md) {
-            // padding: 15px;
-        }
 
         #materials {
             margin-bottom: 40px;
@@ -585,12 +550,9 @@ code {
         &.jalapeno,
         &.cilantro {
             width: 23px;
-            // height: 23px;
             margin-right: 1px;
-
             @include media-breakpoint-up(md) {
                 width: 32px;
-                // height: 32px;
             }
         }
 
@@ -652,9 +614,7 @@ code {
 }
 
 #homepage {
-
     &.flip {
-        // color: red;
         animation: spin 1s linear 1;
     }
 
@@ -667,10 +627,8 @@ code {
     }
 
     .scroll-up p {
-        // position: absolute;
         position: relative;
         width: 100%;
-        // height: 100%;
         margin: 0;
         line-height: 50px;
         text-align: center;
@@ -688,10 +646,7 @@ code {
 
     @keyframes scroll-up {
         0% {
-            // -moz-transform: translateY(256%);
-            // -webkit-transform: translateY(256%);
-            // transform: translateY(256%);
-
+           
             -moz-transform: translateY(290%);
             -webkit-transform: translateY(290%);
             transform: translateY(290%);
@@ -719,8 +674,9 @@ h2 {
 
     @include media-breakpoint-up(md) {
         font-size: 34px;
-        // font-size: 2vw;
         text-align: center;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
     }
 
     @include media-breakpoint-up(xl) {
@@ -748,18 +704,13 @@ h2 {
         color: black;
         text-align: center;
 
-
         @include media-breakpoint-up(sm) {
             font-size: 23px;
         }
 
-
-
-
         @include media-breakpoint-up(md) {
             font-size: 40px;
             font-size: 1.9vw;
-            // text-align: center;
         }
 
         @include media-breakpoint-up(xl) {
@@ -788,15 +739,10 @@ h2 {
             // background-position: 48% 71%;
             // background-position: 48% 49%;
             background-repeat: no-repeat;
-            // z-index: 7;
             position: relative;
 
             @include media-breakpoint-up(md) {
                 z-index: 7;
-            }
-
-            @include media-breakpoint-up(lg) {
-                // min-height: 152px;
             }
 
             @include media-breakpoint-up(xl) {
@@ -813,11 +759,7 @@ h2 {
 
 
     &.options-menu-on {
-        // .side-nav-list-heading {
-        //     &:before {
-        //         content: 'Options';
-        //     }
-        // }
+
 
         .eagle-eye {
 
@@ -883,18 +825,6 @@ h2 {
         }
     }
 
-    // section.eagle-eye img {
-    //     position: absolute;
-    //     right: 50%;
-    //     -webkit-filter: drop-shadow(3px 22px 8px #000);
-    //     filter: drop-shadow(3px 22px 8px #000);
-    // }
-
-    // section.eagle-eye .options-icon {
-    //     position: relative;
-    //     filter: none;
-    //     right: 0px;
-    // }
 
 
 
@@ -1153,7 +1083,7 @@ img.ewave-icon {
         }
 
         @include media-breakpoint-up(xl) {
-            margin-top: 80px;
+            margin-top: 36px;
         }
 
         &>div {
@@ -1218,76 +1148,10 @@ img.ewave-icon {
         margin-top: 10px;
     }
 
-    h1 {
-        font-size: 30px;
-        margin-bottom: 0px;
-    }
-
-    // .column-1 {
-    //     overflow-y: scroll;
-    //     overflow-x: scroll;
-
-
-    //     &::-webkit-scrollbar {
-    //         width: 15px;
-    //     }
-
-    //     &::-webkit-scrollbar-track {
-    //         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    //         border-radius: 10px;
-    //         color: red;
-    //         background-color: #330000;
-    //     }
-
-    //     &::-webkit-scrollbar-thumb {
-    //         border-radius: 10px;
-    //         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-    //         color: red;
-    //         background-color: pink;
-    //         background-color: #660000;
-    //         background-color: $gray;
-    //     }
-
-    //     &::-webkit-scrollbar-thumb:hover {
-    //         background-color: $gray;
-    //     }
-    // }
 }
 
 // rss page
 #RSSpage {
-    // .column-1 {
-    //     overflow-y: scroll;
-    //     overflow-x: hidden;
-
-    //     &::-webkit-scrollbar {
-    //         width: 35px;
-    //     }
-
-    //     &::-webkit-scrollbar-track {
-    //         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    //         border-radius: 10px;
-    //         color: red;
-    //         background-color: #330000;
-    //     }
-
-    //     &::-webkit-scrollbar-thumb {
-    //         border-radius: 10px;
-    //         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-    //         color: red;
-    //         background-color: pink;
-    //         background-color: #660000;
-    //         background-color: $gray;
-    //     }
-
-    //     &::-webkit-scrollbar-thumb:hover {
-    //         background-color: $gray;
-    //     }
-    // }
-
-    h4 {
-        // display: inline;
-    }
 
     h3 {
         margin-top: 30px;
@@ -1303,14 +1167,11 @@ img.ewave-icon {
         font-size: 18px;
         line-height: 25px;
     }
-
 }
 
 
 
 // ordering columns:
-//
-
 #main {
     order: 2;
 }

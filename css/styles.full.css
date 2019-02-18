@@ -1160,7 +1160,9 @@ h2 {
   @media (min-width: 768px) {
     h2 {
       font-size: 34px;
-      text-align: center; } }
+      text-align: center;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px; } }
   @media (min-width: 1200px) {
     h2 {
       font-size: 34px; } }
@@ -1422,7 +1424,7 @@ img.ewave-icon {
       font-size: 18px; } }
   @media (min-width: 1200px) {
     #characterpage .materials-list {
-      margin-top: 80px; } }
+      margin-top: 36px; } }
   #characterpage .materials-list > div {
     word-break: normal; }
 #characterpage .biopic {
@@ -1458,9 +1460,6 @@ img.ewave-icon {
   color: #FF5555;
   font-size: 10px;
   margin-top: 10px; }
-#katsura h1 {
-  font-size: 30px;
-  margin-bottom: 0px; }
 
 #RSSpage h3 {
   margin-top: 30px;
