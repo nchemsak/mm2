@@ -33,7 +33,7 @@ function updateDataToUI(location, weather, temp) {
     var weatherCondition = displayWeatherOverlay(weather[0].main)
 
 
-    console.log(weather);
+    // console.log(weather);
 
     weatherCon.innerHTML = weather[0].main;
     loc.innerHTML = location;
@@ -47,6 +47,8 @@ function updateDataToUI(location, weather, temp) {
         temScale.innerHTML = "C";
     }
 
+
+
 }
 
 
@@ -54,8 +56,11 @@ function displayWeatherOverlay(x) {
 
     if (x == "Clouds") {
         console.log("clouds");
+        $('.header-image, .eagle-eye').append('<img class="weather-overlay clouds" src="images/clouds.gif" /> <img class="weather-overlay clouds2" src="images/clouds.gif" /> <img class="weather-overlay clouds3" src="images/clouds.gif" /><img class="weather-overlay clouds4" src="images/clouds.gif" />');
+
     } else if (x == "Rain") {
         console.log("rain");
+        $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" />');
     } else if (x == "Snow") {
         console.log("snow");
     } else if (x == "Clear") {

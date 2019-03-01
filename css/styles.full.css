@@ -1041,7 +1041,8 @@ code {
       position: absolute;
       top: 30px;
       left: 20px;
-      text-align: left; }
+      text-align: left;
+      z-index: 6; }
   #main-content h3 {
     font-size: 18px;
     margin-bottom: 15px;
@@ -1239,6 +1240,9 @@ h2 {
       right: 50%;
       -webkit-filter: drop-shadow(3px 22px 8px #000);
       filter: drop-shadow(3px 22px 8px #000); }
+    #side-nav-list section.eagle-eye .weather-overlay {
+      right: -15px;
+      height: 100%; }
     #side-nav-list section.eagle-eye .options-icon {
       position: relative;
       filter: none;

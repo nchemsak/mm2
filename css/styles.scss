@@ -473,6 +473,7 @@ code {
             top: 30px;
             left: 20px;
             text-align: left;
+            z-index: 6;
         }
     }
 
@@ -646,7 +647,7 @@ code {
 
     @keyframes scroll-up {
         0% {
-           
+
             -moz-transform: translateY(290%);
             -webkit-transform: translateY(290%);
             transform: translateY(290%);
@@ -799,7 +800,10 @@ h2 {
                 -webkit-filter: drop-shadow(3px 22px 8px #000);
                 filter: drop-shadow(3px 22px 8px #000);
             }
-
+            .weather-overlay {
+             right: -15px;
+             height: 100%;
+            }
             .options-icon {
                 position: relative;
                 filter: none;
