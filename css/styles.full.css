@@ -990,6 +990,14 @@ code {
     @media (min-width: 992px) {
       #main-content .header-image {
         height: 100%; } }
+    #main-content .header-image .fa-arrow-down {
+      font-size: 70px;
+      position: absolute;
+      bottom: 8px;
+      right: 50%;
+      color: white; }
+      #main-content .header-image .fa-arrow-down:hover {
+        color: #007bff; }
     #main-content .header-image .weather-overlay {
       position: absolute;
       bottom: 0px;
@@ -1018,6 +1026,11 @@ code {
         top: 0px;
         right: 150px;
         bottom: initial; }
+      #main-content .header-image .weather-overlay.sun {
+        top: 0px;
+        right: 0px;
+        width: 129px;
+        height: auto; }
     #main-content .header-image blockquote {
       position: absolute;
       width: 50%;
@@ -1139,6 +1152,10 @@ code {
   animation: scroll-up 25s linear infinite;
   z-index: 50;
   font-size: 22px; }
+#homepage #home-page-quote {
+  text-shadow: 3px 3px 4px #000000;
+  -webkit-text-stroke: 1px #333;
+  -webkit-text-fill-color: white; }
 @keyframes scroll-up {
   0% {
     -moz-transform: translateY(290%);
@@ -1315,6 +1332,9 @@ h2 {
     border-radius: 17px;
     height: 100%;
     background-color: #000; }
+    @media (min-width: 1200px) {
+      #side-nav-list .column-2 {
+        height: 193px; } }
 
 #options-row {
   background-color: #AA0000;
@@ -1332,6 +1352,16 @@ h2 {
     overflow: hidden;
     padding-top: 5px;
     padding-bottom: 2px; }
+  #options-row .return-to-map {
+    text-align: center;
+    display: block; }
+    @media (min-width: 992px) {
+      #options-row .return-to-map {
+        font-size: 14px; } }
+    @media (min-width: 1200px) {
+      #options-row .return-to-map {
+        font-size: 19px;
+        padding-top: 8px; } }
 
 @media (min-width: 1200px) {
   #contact {
@@ -1384,7 +1414,7 @@ img.ewave-icon {
     background-color: blue;
     background-color: #55FFFF; }
 
-#recipe-popup {
+#fermentation #recipe-popup {
   opacity: 0;
   position: absolute;
   transform: translate3d(368px, 63px, 0px);
@@ -1393,6 +1423,8 @@ img.ewave-icon {
   left: 118px;
   left: 100px;
   will-change: transform; }
+#fermentation .weather-overlay {
+  display: none; }
 
 #keyboard-arrows {
   position: absolute;
@@ -1400,7 +1432,15 @@ img.ewave-icon {
   right: 10px; }
 
 #play_button {
-  text-decoration: none; }
+  text-decoration: none;
+  position: absolute;
+  bottom: 0px;
+  left: 9px;
+  color: white;
+  font-size: 29px;
+  text-shadow: 3px 3px 4px #000000;
+  -webkit-text-stroke: 1px #333;
+  -webkit-text-fill-color: white; }
   #play_button:hover {
     text-decoration: none; }
 
@@ -1464,6 +1504,8 @@ img.ewave-icon {
   color: #FF5555;
   font-size: 10px;
   margin-top: 10px; }
+#katsura #about {
+  padding-top: 15px; }
 
 #RSSpage h3 {
   margin-top: 30px;
@@ -1498,6 +1540,12 @@ img.ewave-icon {
   @media (min-width: 768px) {
     #temperature {
       font-size: 21px; } }
+
+#artpage #main-content img {
+  margin: 0 auto;
+  display: block; }
+  #artpage #main-content img.weather-overlay {
+    display: none; }
 
 #sequencer-content {
   /*BUTTON MOVE ON HOVER*/

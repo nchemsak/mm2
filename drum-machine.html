@@ -50,7 +50,7 @@
                                             <div class="row">
                                                 <div class="col-3 col-sm-4 col-lg-3 col-xl-4"><input id="tempo-input" type="number"></div>
                                                 <div class="col-2"><span id="decrease-tempo" class="btn btn-default tempo-btn">
-                                                    <i class="fas fa-minus"></i><span class='fontIncrease'>1</span>
+                                                        <i class="fas fa-minus"></i><span class='fontIncrease'>1</span>
                                                     </span></div>
                                                 <div class="col-2"><span id="increase-tempo" class="btn btn-default tempo-btn"><i class="fas fa-plus"></i><span class='fontIncrease'>1</span></span></div>
                                                 <div class="col-2"><span id="decrease-tempo-by-five" class="btn btn-default tempo-btn"><i class="fas fa-minus"></i><span class='fontIncrease'>5</span>
@@ -475,7 +475,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                 </div>
@@ -496,19 +495,23 @@
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-2">
                                 <div class="row">
-                                    <div class="col-12"><a href="/">Return to Map</a></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">Health</div>
-                                    <div class="col-6 text-right">191</div>
+                                    <div class="col-12">
+                                        <div id="location" class="info"></div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">Temp</div>
-                                    <div class="col-6 text-right">28&deg;F</div>
+                                    <div class="col-6 text-right">
+                                        <div id="temperature" class="info">
+                                            <span id="temperature-num"></span><span>°</span><span id="temperature-scale">C</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">Weather</div>
-                                    <div class="col-6 text-right">Snow</div>
+                                    <div class="col-6 text-right">
+                                        <div id="weather-condition" class="info"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -520,12 +523,12 @@
                     <div class="col-12 col-md-6 col-lg-3 col-xl-3">'<a href="#" onclick="firstVisit(); return false;">H</a>' Help</div>
                     <div class="col-12 col-md-6 col-lg-3 col-xl-3">Day= 332</div>
                     <div class="col-12 col-md-6 col-lg-3 col-xl-3">Year= 2019</div>
-                    <div class="col-12 col-md-6 col-lg-3 col-xl-3">Compass= <span class="direction north"></span></div>
+                    <div class="col-12 col-md-6 col-lg-3 col-xl-3"> <a href="/" class="return-to-map">Return to Map</a></div>
                 </div>
             </div>
             <section id="character-section">
                 <div class="row">
-                     <div class="col-xs-12 col-lg-6"><span class="name">1) <a href="/character">Character</a></span></div>
+                    <div class="col-xs-12 col-lg-6"><span class="name">1) <a href="/character">Character</a></span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">2) <a href="/drum-machine">Drum Machine</a></span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">3) <a href="/art">Art</a></span></div>
                     <div class="col-xs-12 col-lg-6"><span class="name">4) <a href="/fermentation">Fermentation</a></span></div>
@@ -548,7 +551,7 @@
     <script src="js/sequencer.js"></script>
     <script src="js/main.js"></script>
     <script src="js/theremin.js"></script>
-      <script src="js/weather.js"></script>
+    <script src="js/weather.js"></script>
     <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
         ':35729/livereload.js?snipver=1"></' + 'script>')

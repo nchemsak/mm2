@@ -31,10 +31,6 @@ function getWeather(lat, long) {
 // update the data from API to DOM
 function updateDataToUI(location, weather, temp) {
     var weatherCondition = displayWeatherOverlay(weather[0].main)
-
-
-    // console.log(weather);
-
     weatherCon.innerHTML = weather[0].main;
     loc.innerHTML = location;
     temNum.innerHTML = `${temp}`;
@@ -46,27 +42,22 @@ function updateDataToUI(location, weather, temp) {
         temNum.innerHTML = fToC(temNum.innerHTML).toFixed(2);
         temScale.innerHTML = "C";
     }
-
-
-
 }
 
 
 function displayWeatherOverlay(x) {
 
     if (x == "Clouds") {
-        console.log("clouds");
         $('.header-image, .eagle-eye').append('<img class="weather-overlay clouds" src="images/clouds.gif" /> <img class="weather-overlay clouds2" src="images/clouds.gif" /> <img class="weather-overlay clouds3" src="images/clouds.gif" /><img class="weather-overlay clouds4" src="images/clouds.gif" />');
-
     } else if (x == "Rain") {
-        console.log("rain");
         $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" />');
     } else if (x == "Snow") {
-        console.log("snow");
+        $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/salt.gif" />');
     } else if (x == "Clear") {
-        console.log("clear");
+        $('.header-image').append('<img class="weather-overlay sun" src="images/sun.gif" />');
     }
 }
+
 // helper function change from C to F
 function cToF(celsius) {
     return celsius * 9 / 5 + 32;

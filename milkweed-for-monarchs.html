@@ -37,7 +37,7 @@
                             <!-- <img src="/images/mm2.png" class="img-fluid" /> -->
                             <img src="/images/art/coaster3.jpg" class="img-fluid">
                             <img class="weather-overlay clouds" src="images/clouds.gif" /> <img class="weather-overlay clouds2" src="images/clouds.gif" /> <img class="weather-overlay clouds3" src="images/clouds.gif" /><img class="weather-overlay clouds4" src="images/clouds.gif" />
-                     <!--        <img class="weather-overlay" src="images/icons/rain.gif" /> -->
+                            <!--        <img class="weather-overlay" src="images/icons/rain.gif" /> -->
                             <a href="#" onclick="toggleQuote(); return false;" class="h1-animation">
                                 <h1 class="homepage-h1">Milkweed for Monarchs</h1>
                             </a>
@@ -67,24 +67,12 @@
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-2">
                                 <div class="row">
-                                    <div class="col-6">Health</div>
-                                    <div class="col-6 text-right">97%</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="playercard2">
-                                            <div class="card__button">
-                                                <a id="play_button" class="seizure" href="#" next="#" value="PLAY" onclick="play()"> Attack!
-                                                    <audio id="audio" src="audio/slap.mp3"></audio>
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <div class="col-12">
+                                        <div id="location" class="info"></div>
                                     </div>
-                                    <div class="col-6 text-right">0</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">Temp</div>
-                                    <!-- <p id="demo"></p> -->
                                     <div class="col-6 text-right">
                                         <div id="temperature" class="info">
                                             <span id="temperature-num"></span><span>°</span><span id="temperature-scale">C</span>
@@ -107,7 +95,8 @@
                     <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">'<a href="#" onclick="firstVisit(); return false;">H</a>' Help</div>
                     <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Day= 332</div>
                     <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Year= 2019</div>
-                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Compass= <span class="direction north"></span></div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3"> <a href="/" class="return-to-map">Return to Map</a>
+                    </div>
                 </div>
             </div>
             <section id="character-section">

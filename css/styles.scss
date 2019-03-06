@@ -47,8 +47,6 @@ $pink: #FF5555;
 
 
 
-
-
 body {
     background-color: #000000;
     color: #ffffff;
@@ -391,8 +389,6 @@ code {
     .header-image {
         position: relative;
         overflow: hidden;
-
-
         display: none;
 
         @include media-breakpoint-up(md) {
@@ -401,6 +397,17 @@ code {
 
         @include media-breakpoint-up(lg) {
             height: 100%;
+        }
+
+        .fa-arrow-down {
+            font-size: 70px;
+            position: absolute;
+            bottom: 8px;
+            right: 50%;
+            color: white;
+            &:hover {
+                color: #007bff;
+            }
         }
 
         .weather-overlay {
@@ -438,6 +445,13 @@ code {
                 top: 0px;
                 right: 150px;
                 bottom: initial;
+            }
+
+            &.sun {
+                top: 0px;
+                right: 0px;
+                width: 129px;
+                height: auto;
             }
         }
 
@@ -552,6 +566,7 @@ code {
         &.cilantro {
             width: 23px;
             margin-right: 1px;
+
             @include media-breakpoint-up(md) {
                 width: 32px;
             }
@@ -644,6 +659,11 @@ code {
         font-size: 22px;
     }
 
+    #home-page-quote {
+        text-shadow: 3px 3px 4px #000000;
+        -webkit-text-stroke: 1px #333;
+        -webkit-text-fill-color: white;
+    }
 
     @keyframes scroll-up {
         0% {
@@ -800,10 +820,12 @@ h2 {
                 -webkit-filter: drop-shadow(3px 22px 8px #000);
                 filter: drop-shadow(3px 22px 8px #000);
             }
+
             .weather-overlay {
-             right: -15px;
-             height: 100%;
+                right: -15px;
+                height: 100%;
             }
+
             .options-icon {
                 position: relative;
                 filter: none;
@@ -913,13 +935,17 @@ h2 {
         border-radius: 17px;
         height: 100%;
         background-color: #000;
+
+
+        @include media-breakpoint-up(xl) {
+            height: 193px;
+        }
     }
 
 }
 
 #options-row {
     background-color: $red;
-    // background-color: green;
     white-space: nowrap;
 
     @include media-breakpoint-up(lg) {
@@ -938,6 +964,20 @@ h2 {
             overflow: hidden;
             padding-top: 5px;
             padding-bottom: 2px
+        }
+    }
+
+    .return-to-map {
+        text-align: center;
+        display: block;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 14px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 19px;
+            padding-top: 8px;
         }
     }
 }
@@ -1016,17 +1056,23 @@ img.ewave-icon {
     }
 }
 
-// RECIPE BOOK PAGE
+// Fermentation PAGE
 //
-#recipe-popup {
-    opacity: 0;
-    position: absolute;
-    transform: translate3d(368px, 63px, 0px);
-    top: 124px;
-    top: 99px;
-    left: 118px;
-    left: 100px;
-    will-change: transform;
+#fermentation {
+    #recipe-popup {
+        opacity: 0;
+        position: absolute;
+        transform: translate3d(368px, 63px, 0px);
+        top: 124px;
+        top: 99px;
+        left: 118px;
+        left: 100px;
+        will-change: transform;
+    }
+
+    .weather-overlay {
+        display: none;
+    }
 }
 
 #keyboard-arrows {
@@ -1039,8 +1085,15 @@ img.ewave-icon {
 
 // audio buttons
 #play_button {
-    // transition: .5s ease;
     text-decoration: none;
+    position: absolute;
+    bottom: 0px;
+    left: 9px;
+    color: white;
+    font-size: 29px;
+    text-shadow: 3px 3px 4px #000000;
+    -webkit-text-stroke: 1px #333;
+    -webkit-text-fill-color: white;
 
     &:hover {
         text-decoration: none;
@@ -1151,6 +1204,9 @@ img.ewave-icon {
         font-size: 10px;
         margin-top: 10px;
     }
+    #about {
+        padding-top: 15px;
+    }
 
 }
 
@@ -1210,5 +1266,20 @@ img.ewave-icon {
         font-size: 21px;
     }
 }
+
+#artpage {
+    #main-content {
+        img {
+            margin: 0 auto;
+            display: block;
+
+            &.weather-overlay {
+                display: none;
+            }
+        }
+    }
+}
+
+
 
 @import "sequencer";

@@ -107,7 +107,7 @@ $(document).keydown(function(e) {
                 $(".main-bee2").css("left", (counterEastMain) + "px");
             }
             if (window.location.href.indexOf("fermentation") > -1) {
-        
+
             }
 
             if (counterEastMain === 550 && window.location.href.indexOf("fermentation") > -1) {
@@ -284,7 +284,6 @@ $(".h1-animation").click(function() {
 
 // FIRST VISIT
 function firstVisit() {
-    console.log("First Ever Visit");
     $("body").addClass('first-visit-body-overlay');
     $(".overlay").css("width", "100%");
 }
@@ -314,4 +313,4 @@ $('.seizure').on('click', function(e) {
     }, millisecondsToWait);
 
 });
- 
+
