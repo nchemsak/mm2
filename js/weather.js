@@ -48,7 +48,7 @@ function updateDataToUI(location, weather, temp) {
 function displayWeatherOverlay(x) {
 
     if (x == "Clouds") {
-        $('.header-image, .eagle-eye').append('<img class="weather-overlay clouds" src="images/clouds.gif" /> <img class="weather-overlay clouds2" src="images/clouds.gif" /> <img class="weather-overlay clouds3" src="images/clouds.gif" /><img class="weather-overlay clouds4" src="images/clouds.gif" />');
+        $('.header-image').append('<img class="weather-overlay clouds" src="images/clouds.gif" /> <img class="weather-overlay clouds2" src="images/clouds.gif" /> <img class="weather-overlay clouds3" src="images/clouds.gif" /><img class="weather-overlay clouds4" src="images/clouds.gif" />');
     } else if (x == "Rain") {
         $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" />');
     } else if (x == "Snow") {
