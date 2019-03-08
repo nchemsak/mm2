@@ -110,7 +110,9 @@ $(document).keydown(function(e) {
 
             }
 
-            if (counterEastMain === 550 && window.location.href.indexOf("fermentation") > -1) {
+            // if (counterEastMain === 550 && window.location.href.indexOf("fermentation") > -1) {
+                            if (counterEastMain === 495 && window.location.href.indexOf("fermentation") > -1) {
+
                 $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop! <br /> What recipe would you like to learn? <br />Please select a recipe from the menu on the right.</div></div>');
                 $("#recipe-popup").animate({ opacity: '0.8' });
             }

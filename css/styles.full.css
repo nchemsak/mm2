@@ -983,7 +983,7 @@ code {
   #main-content .header-image {
     position: relative;
     overflow: hidden;
-    display: none; }
+    border-radius: 17px; }
     @media (min-width: 768px) {
       #main-content .header-image {
         display: block; } }
@@ -995,7 +995,8 @@ code {
       position: absolute;
       bottom: 8px;
       right: 50%;
-      color: white; }
+      color: white;
+      z-index: 2000; }
       #main-content .header-image .fa-arrow-down:hover {
         color: #007bff; }
     #main-content .header-image .weather-overlay {
@@ -1006,26 +1007,38 @@ code {
       #main-content .header-image .weather-overlay.clouds {
         width: 450px;
         height: auto;
-        top: -100px;
+        top: -200px;
         bottom: initial; }
+        @media (min-width: 768px) {
+          #main-content .header-image .weather-overlay.clouds {
+            top: -100px; } }
       #main-content .header-image .weather-overlay.clouds2 {
         width: 450px;
         height: auto;
-        top: -100px;
+        top: -200px;
         right: 0px;
         bottom: initial; }
+        @media (min-width: 768px) {
+          #main-content .header-image .weather-overlay.clouds2 {
+            top: -100px; } }
       #main-content .header-image .weather-overlay.clouds3 {
         width: 450px;
         height: auto;
-        top: -100px;
+        top: -200px;
         right: 250px;
         bottom: initial; }
+        @media (min-width: 768px) {
+          #main-content .header-image .weather-overlay.clouds3 {
+            top: -100px; } }
       #main-content .header-image .weather-overlay.clouds4 {
         width: 250px;
         height: auto;
-        top: 0px;
+        top: -100px;
         right: 150px;
         bottom: initial; }
+        @media (min-width: 768px) {
+          #main-content .header-image .weather-overlay.clouds4 {
+            top: 0px; } }
       #main-content .header-image .weather-overlay.sun {
         top: 0px;
         right: 0px;
@@ -1131,6 +1144,10 @@ code {
     transform: rotate(360deg); } }
 #homepage.flip {
   animation: spin 1s linear 1; }
+#homepage #main-content {
+  height: initial; }
+#homepage .eagle-eye {
+  height: 275px; }
 #homepage .scroll-up {
   height: 500px;
   overflow: hidden;
@@ -1331,10 +1348,15 @@ h2 {
     border-top: 5px solid #AA0000;
     border-radius: 17px;
     height: 100%;
-    background-color: #000; }
+    background-color: #000;
+    border-bottom: 5px solid #a00; }
+    @media (min-width: 992px) {
+      #side-nav-list .column-2 {
+        border-bottom: 0px; } }
     @media (min-width: 1200px) {
       #side-nav-list .column-2 {
-        height: 193px; } }
+        height: 193px;
+        font-size: 25px; } }
 
 #options-row {
   background-color: #AA0000;
@@ -1455,6 +1477,8 @@ img.ewave-icon {
     background: black; }
   to {
     background: white; } }
+#characterpage .weather-overlay {
+  display: none; }
 #characterpage .fixit {
   max-width: 100px;
   max-height: 100px; }
@@ -1506,7 +1530,17 @@ img.ewave-icon {
   margin-top: 10px; }
 #katsura #about {
   padding-top: 15px; }
+#katsura .eagle-eye .weather-overlay {
+  display: none; }
 
+#codingpage .weather-overlay {
+  display: none; }
+
+#contactpage .eagle-eye .weather-overlay {
+  display: none; }
+
+#RSSpage .weather-overlay {
+  display: none; }
 #RSSpage h3 {
   margin-top: 30px;
   margin-bottom: 5px; }
@@ -1514,11 +1548,21 @@ img.ewave-icon {
   display: none; }
 #RSSpage .feed-item-title {
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 25px; }
+  @media (min-width: 576px) {
+    #RSSpage .feed-item-title {
+      font-size: 16px; } }
+  @media (min-width: 576px) {
+    #RSSpage .feed-item-title {
+      font-size: 18px; } }
 
 #main {
-  order: 2; }
+  order: 2;
+  border-top: 5px solid #a00; }
+  @media (min-width: 992px) {
+    #main {
+      border-top: 0px; } }
 
 #sidebar {
   order: 1; }
@@ -1541,6 +1585,8 @@ img.ewave-icon {
     #temperature {
       font-size: 21px; } }
 
+#artpage .weather-overlay {
+  display: none; }
 #artpage #main-content img {
   margin: 0 auto;
   display: block; }
@@ -1572,8 +1618,11 @@ img.ewave-icon {
    /****************************************************************************
                             SEQUENCER
 ****************************************************************************/ }
-  #sequencer-content .drum-machine-h2-heading {
-    margin-bottom: 75px; }
+  #sequencer-content .weather-overlay {
+    display: none; }
+  @media (min-width: 1200px) {
+    #sequencer-content .drum-machine-h2-heading {
+      margin-bottom: 75px; } }
   #sequencer-content .list-item {
     background: #000;
     text-align: center;

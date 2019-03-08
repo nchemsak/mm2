@@ -389,7 +389,8 @@ code {
     .header-image {
         position: relative;
         overflow: hidden;
-        display: none;
+        // display: none;
+        border-radius: 17px;
 
         @include media-breakpoint-up(md) {
             display: block;
@@ -405,6 +406,8 @@ code {
             bottom: 8px;
             right: 50%;
             color: white;
+            z-index: 2000;
+
             &:hover {
                 color: #007bff;
             }
@@ -419,32 +422,48 @@ code {
             &.clouds {
                 width: 450px;
                 height: auto;
-                top: -100px;
+                top: -200px;
                 bottom: initial;
+
+                @include media-breakpoint-up(md) {
+                    top: -100px;
+                }
             }
 
             &.clouds2 {
                 width: 450px;
                 height: auto;
-                top: -100px;
+                top: -200px;
                 right: 0px;
                 bottom: initial;
+
+                @include media-breakpoint-up(md) {
+                    top: -100px;
+                }
             }
 
             &.clouds3 {
                 width: 450px;
                 height: auto;
-                top: -100px;
+                top: -200px;
                 right: 250px;
                 bottom: initial;
+
+                @include media-breakpoint-up(md) {
+                    top: -100px;
+                }
             }
 
             &.clouds4 {
                 width: 250px;
                 height: auto;
-                top: 0px;
+                top: -100px;
                 right: 150px;
                 bottom: initial;
+
+                @include media-breakpoint-up(md) {
+                    top: 0px;
+                }
             }
 
             &.sun {
@@ -632,6 +651,14 @@ code {
 #homepage {
     &.flip {
         animation: spin 1s linear 1;
+    }
+
+    #main-content {
+        height: initial;
+    }
+
+    .eagle-eye {
+        height: 275px;
     }
 
     .scroll-up {
@@ -936,9 +963,16 @@ h2 {
         height: 100%;
         background-color: #000;
 
+        border-bottom: 5px solid #a00;
+
+        @include media-breakpoint-up(lg) {
+            border-bottom: 0px;
+        }
 
         @include media-breakpoint-up(xl) {
             height: 193px;
+            // font-size: 32px;
+            font-size: 25px;
         }
     }
 
@@ -1121,6 +1155,10 @@ img.ewave-icon {
 
 // character page
 #characterpage {
+    .weather-overlay {
+        display: none;
+    }
+
     .fixit {
         max-width: 100px;
         max-height: 100px;
@@ -1204,14 +1242,39 @@ img.ewave-icon {
         font-size: 10px;
         margin-top: 10px;
     }
+
     #about {
         padding-top: 15px;
     }
 
+    .eagle-eye {
+        .weather-overlay {
+            display: none;
+        }
+    }
+
+}
+
+// coding page
+#codingpage {
+    .weather-overlay {
+        display: none;
+    }
+}
+
+#contactpage {
+    .eagle-eye {
+        .weather-overlay {
+            display: none;
+        }
+    }
 }
 
 // rss page
 #RSSpage {
+    .weather-overlay {
+        display: none;
+    }
 
     h3 {
         margin-top: 30px;
@@ -1224,8 +1287,16 @@ img.ewave-icon {
 
     .feed-item-title {
         margin-top: 15px;
-        font-size: 18px;
+        font-size: 12px;
         line-height: 25px;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 16px;
+        }
+
+        @include media-breakpoint-up(sm) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -1234,6 +1305,13 @@ img.ewave-icon {
 // ordering columns:
 #main {
     order: 2;
+    border-top: 5px solid #a00;
+
+    @include media-breakpoint-up(lg) {
+        border-top: 0px;
+    }
+
+
 }
 
 #sidebar {
@@ -1268,6 +1346,10 @@ img.ewave-icon {
 }
 
 #artpage {
+    .weather-overlay {
+        display: none;
+    }
+
     #main-content {
         img {
             margin: 0 auto;

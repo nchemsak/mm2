@@ -1,7 +1,13 @@
 #sequencer-content {
 
+    .weather-overlay {
+        display: none;
+    }
+
     .drum-machine-h2-heading {
-        margin-bottom: 75px;
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 75px;
+        }
 
     }
 
