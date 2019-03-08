@@ -1093,6 +1093,18 @@ img.ewave-icon {
 // Fermentation PAGE
 //
 #fermentation {
+    .fermentation-image {
+
+        max-width: 100%;
+        height: auto;
+
+
+        @include media-breakpoint-up(xl) {
+            width: 979px;
+            max-width: initial;
+        }
+    }
+
     #recipe-popup {
         opacity: 0;
         position: absolute;

@@ -1436,6 +1436,13 @@ img.ewave-icon {
     background-color: blue;
     background-color: #55FFFF; }
 
+#fermentation .fermentation-image {
+  max-width: 100%;
+  height: auto; }
+  @media (min-width: 1200px) {
+    #fermentation .fermentation-image {
+      width: 979px;
+      max-width: initial; } }
 #fermentation #recipe-popup {
   opacity: 0;
   position: absolute;
