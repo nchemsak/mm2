@@ -1140,7 +1140,7 @@ img.ewave-icon {
     text-shadow: 3px 3px 4px #000000;
     -webkit-text-stroke: 1px #333;
     -webkit-text-fill-color: white;
-
+    z-index: 10;
     &:hover {
         text-decoration: none;
     }
