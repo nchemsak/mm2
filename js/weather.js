@@ -2,7 +2,15 @@ const loc = document.getElementById("location");
 const temNum = document.getElementById("temperature-num");
 const temScale = document.getElementById("temperature-scale");
 const weatherCon = document.getElementById("weather-condition");
-// console.log(temScale);
+
+var newDate = new Date();
+var hour24 = newDate.getHours();
+
+console.log(hour24);
+
+
+
+
 // get location
 function getLocation() {
     if (navigator.geolocation) {
@@ -53,10 +61,15 @@ function displayWeatherOverlay(x) {
         $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" />');
     } else if (x == "Snow") {
         $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/salt.gif" />');
-    } else if (x == "Clear") {
+    } else if (x == "Clear" && (hour24 < 18 && hour24 > 6)) {
         $('.header-image').append('<img class="weather-overlay sun" src="images/sun.gif" />');
+    } else if (x == "Clear") {
+        $('.header-image').append('<img class="weather-overlay sun" src="images/moon.gif" />');
+
     }
 }
+
+
 
 // helper function change from C to F
 function cToF(celsius) {
