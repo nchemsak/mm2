@@ -760,6 +760,9 @@ body {
       font-size: 1.5em;
       font-size: 2em; } }
 
+a:hover {
+  text-decoration: none; }
+
 code {
   vertical-align: bottom;
   font-size: 100%; }
@@ -1210,6 +1213,46 @@ h2 {
   padding-left: 15px;
   padding-right: 10px;
   border-top: 10px solid #AA0000; }
+  #side-nav-list #location {
+    text-align: center;
+    text-transform: uppercase;
+    color: #AA0000; }
+  #side-nav-list #location:before,
+  #side-nav-list #temp:before,
+  #side-nav-list #weather:before {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    white-space: pre;
+    position: absolute;
+    top: 5px;
+    top: 0px;
+    font-size: 18px;
+    color: #AA0000;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    height: 0px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+  #side-nav-list #location:hover:before,
+  #side-nav-list #temp:hover:before,
+  #side-nav-list #weather:hover:before {
+    background-color: #330000;
+    color: transparent;
+    text-shadow: 1px 1px 2px #c10000;
+    height: 100%; }
+  #side-nav-list #location:before {
+    content: "\f08d";
+    left: -22px; }
+  #side-nav-list #temp:before {
+    content: "\f2c8";
+    left: -20px; }
+  #side-nav-list #weather:before {
+    content: "\f185";
+    left: -24px; }
   #side-nav-list h1 {
     font-size: 16px;
     margin-bottom: 25px;
@@ -1357,7 +1400,9 @@ h2 {
       #side-nav-list .column-2 {
         height: 193px;
         font-size: 25px;
-        padding-top: 31px; } }
+        padding-top: 31px;
+        padding-top: 16px;
+        line-height: 52px; } }
 
 #options-row {
   background-color: #AA0000;
@@ -1475,6 +1520,20 @@ img.ewave-icon {
   #play_button:hover {
     text-decoration: none; }
 
+#play_button_buzz {
+  text-decoration: none;
+  position: absolute;
+  top: 0px;
+  right: 9px;
+  color: white;
+  font-size: 29px;
+  text-shadow: 3px 3px 4px #000000;
+  -webkit-text-stroke: 1px #333;
+  -webkit-text-fill-color: white;
+  z-index: 10; }
+  #play_button_buzz:hover {
+    text-decoration: none; }
+
 .nick {
   animation-name: nick;
   animation-duration: 100ms;
@@ -1544,6 +1603,8 @@ img.ewave-icon {
 
 #codingpage .weather-overlay {
   display: none; }
+#codingpage pre {
+  color: gray; }
 
 #contactpage .eagle-eye .weather-overlay {
   display: none; }

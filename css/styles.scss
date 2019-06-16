@@ -36,6 +36,8 @@
 
 //colors
 $red: #AA0000;
+$red-dark: #330000;
+$red-light: #c10000;
 $green-dark: #00AA00;
 $green-light: #55FF55;
 $blue-dark: #0000AA;
@@ -70,6 +72,9 @@ body {
     }
 }
 
+a:hover {
+    text-decoration: none;
+}
 
 code {
     vertical-align: bottom;
@@ -354,7 +359,7 @@ code {
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
         color: red;
-        background-color: #330000;
+        background-color: $red-dark;
     }
 
     &::-webkit-scrollbar-thumb {
@@ -743,6 +748,69 @@ h2 {
     padding-right: 10px;
     border-top: 10px solid $red;
 
+    #location {
+        text-align: center;
+        text-transform: uppercase;
+        color: $red;
+    }
+
+    #location:before,
+    #temp:before,
+    #weather:before {
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        white-space: pre;
+        position: absolute;
+        top: 5px;
+        top: 0px;
+        font-size: 18px;
+        color: $red;
+
+
+        // font: bold 200px arial, sans-serif;
+        // background-color: $red-dark;
+        // color: transparent;
+        // text-shadow: 1px 1px 2px $red-light;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+
+        height: 0px;
+
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
+    }
+
+    #location:hover:before,
+    #temp:hover:before,
+    #weather:hover:before {
+        background-color: $red-dark;
+        color: transparent;
+        text-shadow: 1px 1px 2px $red-light;
+        height: 100%;
+    }
+
+    #location:before {
+        content: "\f08d";
+        left: -22px;
+    }
+
+    #temp:before {
+        content: "\f2c8";
+        left: -20px;
+    }
+
+
+    #weather:before {
+        content: "\f185";
+        left: -24px;
+    }
+
     h1 {
         font-size: 16px;
         margin-bottom: 25px;
@@ -914,6 +982,7 @@ h2 {
         #location {
             font-size: 3.5vw;
 
+
             @include media-breakpoint-up(sm) {
                 font-size: 34px;
             }
@@ -921,6 +990,8 @@ h2 {
             @include media-breakpoint-up(lg) {
                 font-size: 1.5vw;
             }
+
+
         }
     }
 
@@ -940,7 +1011,7 @@ h2 {
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             color: red;
-            background-color: #330000;
+            background-color: $red-dark;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -973,7 +1044,9 @@ h2 {
             height: 193px;
             // font-size: 32px;
             font-size: 25px;
-            padding-top:31px;
+            padding-top: 31px;
+            padding-top: 16px;
+            line-height: 52px
         }
     }
 
@@ -1142,6 +1215,25 @@ img.ewave-icon {
     -webkit-text-stroke: 1px #333;
     -webkit-text-fill-color: white;
     z-index: 10;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+#play_button_buzz {
+    text-decoration: none;
+    position: absolute;
+    top: 0px;
+    right: 9px;
+    color: white;
+    font-size: 29px;
+    text-shadow: 3px 3px 4px #000000;
+    -webkit-text-stroke: 1px #333;
+    -webkit-text-fill-color: white;
+    z-index: 10;
+
     &:hover {
         text-decoration: none;
     }
@@ -1272,6 +1364,9 @@ img.ewave-icon {
 #codingpage {
     .weather-overlay {
         display: none;
+    }
+    pre {
+        color: gray;
     }
 }
 

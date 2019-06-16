@@ -9,7 +9,8 @@
     <title>Ephemeral Wave</title>
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+    <!--    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="lib/fontawesome-5.6.3-web/css/all.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
@@ -22,7 +23,7 @@
                 <br /> <br />
                 <span class="d-none d-md-block">Use your computer<br />keyboard "arrow keys"<img src="images/icons/arrowkey.png" class="arrow-key" alt="keyboard arrow key" /><br />to control the bee.<br />
                     <br />
-                    </span><br /><br />Or click the navigation links below <i class="fa fa-toggle-down"></i>
+                </span><br /><br />Or use the navigation links below <i class="fa fa-toggle-down"></i>
                 <a href="javascript:void(0)" class="closebtn blink" onclick="closeNav()">Close Help</a>
             </div>
         </div>
@@ -56,23 +57,24 @@
                                 <section class="eagle-eye">
                                     <img class="bee1 toggle show-bee" src="images/icons/bee1.ico">
                                     <img class="bee2 toggle show-bee" src="images/icons/bee2.ico">
-                                    <a id="play_button" class="seizure" href="#" next="#" value="PLAY" onclick="play()"> Attack!
+                                    <a id="play_button" class="seizure" href="#" next="#" value="ATTACK" onclick="attack()"> Attack!
                                         <audio id="audio" src="audio/slap.mp3"></audio>
+                                    </a>
+                                       <a id="play_button_buzz" href="#" next="#" value="buzz" onclick="buzz()">Buzz!
+                                        <audio id="buzz" src="audio/buzz.mp3"></audio>
                                     </a>
                                 </section>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-2">
                                 <div class="row">
-                                    <div class="col-6">
-                                        <div id="location" class="info"></div>
+                                    <div class="col-6 col-md-12">
+                                        <div id="location" class="info">&nbsp;</div>
                                     </div>
                                 </div>
-                                <!--       <div class="row">
-                                    <div class="col-6">Health</div>
-                                    <div class="col-6 text-right">97%</div>
-                                </div> -->
                                 <div class="row">
-                                    <div class="col-6">Temp</div>
+                                    <div class="col-6">
+                                        <div id="temp" class="info">Temp</div>
+                                    </div>
                                     <div class="col-6 text-right">
                                         <div id="temperature" class="info">
                                             <span id="temperature-num"></span><span>°</span><span id="temperature-scale">C</span>
@@ -80,7 +82,9 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-6">Weather</div>
+                                    <div class="col-6">
+                                        <div id="weather" class="info">Weather</div>
+                                    </div>
                                     <div class="col-6 text-right">
                                         <div id="weather-condition" class="info"></div>
                                     </div>
@@ -93,9 +97,9 @@
             <div id="options-row">
                 <div class="row">
                     <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">'<a href="#" onclick="firstVisit(); return false;">H</a>' Help</div>
-                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Day= 332</div>
-                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Year= 2019</div>
-                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Compass= <span class="direction north"></span></div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Day = 332</div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Year = 2019</div>
+                    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">Compass = <span class="direction north"></span></div>
                 </div>
             </div>
             <section id="character-section">

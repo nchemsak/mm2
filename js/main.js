@@ -302,10 +302,18 @@ function recipeShopVisit() {
 
 
 // ATTACK button
-var play = function() {
+var attack = function() {
     var audio = document.getElementById("audio");
     audio.play("/audio/slap.mp3");
 }
+
+//BUZZ button
+var buzz = function() {
+    var buzz = document.getElementById("buzz");
+    buzz.play("/audio/buzz.mp3");
+    console.log("buzz");
+}
+
 
 $('.seizure').on('click', function(e) {
     $('.eagle-eye, body').addClass('nick');
