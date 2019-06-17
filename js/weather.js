@@ -56,15 +56,18 @@ function updateDataToUI(location, weather, temp) {
 function displayWeatherOverlay(x) {
 
     if (x == "Clouds") {
-        $('.header-image').append('<img class="weather-overlay clouds" src="images/clouds.gif" /> <img class="weather-overlay clouds2" src="images/clouds.gif" /> <img class="weather-overlay clouds3" src="images/clouds.gif" /><img class="weather-overlay clouds4" src="images/clouds.gif" />');
+        $('.header-image').append('<img class="weather-overlay clouds" src="images/clouds.gif" alt="clouds"/> <img class="weather-overlay clouds2" src="images/clouds.gif" alt="clouds" /> <img class="weather-overlay clouds3" src="images/clouds.gif" alt="clouds" /><img class="weather-overlay clouds4" src="images/clouds.gif" alt="clouds" />');
     } else if (x == "Rain") {
-        $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" />');
+        $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" alt="rain" />');
     } else if (x == "Snow") {
-        $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/salt.gif" />');
+        $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/salt.gif" alt="snow" />');
     } else if (x == "Clear" && (hour24 < 18 && hour24 > 6)) {
-        $('.header-image').append('<img class="weather-overlay sun" src="images/sun.gif" />');
+        $('.header-image').append('<img class="weather-overlay sun" src="images/sun.gif" alt="sun" />');
     } else if (x == "Clear") {
-        $('.header-image').append('<img class="weather-overlay sun" src="images/moon.gif" />');
+        $('.header-image').append('<img class="weather-overlay sun" src="images/moon.gif" alt="moon" />');
+
+    } else if (x == "Haze") {
+        $('.header-image').append('<img class="weather-overlay haze" src="images/fog01.png" alt="haze" />');
 
     }
 }

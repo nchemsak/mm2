@@ -1047,6 +1047,8 @@ code {
         right: 0px;
         width: 129px;
         height: auto; }
+      #main-content .header-image .weather-overlay.haze {
+        width: 100%; }
     #main-content .header-image blockquote {
       position: absolute;
       width: 50%;
