@@ -2042,7 +2042,7 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     z-index: 3;
     margin-top: 30px; }
   #sequencer-content .liveInput {
-    margin-left: 140px; }
+    display: inline; }
   #sequencer-content button#recordStop,
   #sequencer-content button#pausePlay,
   #sequencer-content button#downloadButton {
@@ -2085,7 +2085,11 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     position: relative; }
   #sequencer-content .form2 {
     padding: 0;
-    position: relative; }
+    position: relative;
+    line-height: initial; }
+  #sequencer-content .source-wrapper {
+    position: relative;
+    height: 48px; }
   #sequencer-content .optin {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -2118,15 +2122,11 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     outline: 0;
     border: 1px solid rgba(255, 255, 255, 0.8);
     background-color: rgba(255, 255, 255, 0.2);
-    width: 65%;
-    margin: auto;
-    display: block;
-    margin-bottom: 10px;
     border-radius: 3px;
     padding: 10px 15px;
     text-align: left;
-    font-size: 18px;
-    color: RGBA(95, 186, 255, 1);
+    font-size: 12px;
+    color: #5fbaff;
     -webkit-transition-duration: 0.25s;
     transition-duration: 0.25s;
     font-weight: 300;
@@ -2629,7 +2629,8 @@ box-shadow: 10px 11px 25px 0px rgba(0, 0, 0, 0.75);*/ }
     margin-bottom: 20px;
     margin-top: 0px; }
   #sequencer-content #audioinput {
-    width: 200px; }
+    width: 200px;
+    position: absolute; }
   #sequencer-content #effect {
     width: 200px; }
   #sequencer-content img #controls {

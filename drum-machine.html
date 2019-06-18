@@ -32,7 +32,7 @@
                 <div id="main" class="col-12 col-lg-8">
                     <section id="main-content" class="scroll">
                         <div class="page-content">
-                                <h2 class="drum-machine-h2-heading">Drum Machine</h2>
+                            <h2 class="drum-machine-h2-heading">Drum Machine</h2>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-7 col-md-4">
@@ -487,32 +487,92 @@
                                         <h1>Theremin</h1>
                                     </div>
                                     <canvas class="thereminCanvas" id="thereminCanvas">
-                                        <div class="animated bounceInUp" id="circle">
+                                        <!--  <div class="animated bounceInUp" id="circle">
                                         </div>
-                                        <h3 id="subtitle">"You are a function of what the whole universe is doing in the same way that a wave is a function of what the whole ocean is doing."</h3>
+                                        <h3 id="subtitle">"You are a function of what the whole universe is doing in the same way that a wave is a function of what the whole ocean is doing."</h3> -->
                                     </canvas>
                                 </section>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 column-2">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div id="location" class="info"></div>
+                                <!-- live input -->
+                                <form class="form2">
+                                    <div class="source-wrapper">
+                                        <div class="liveInput">
+                                            SOURCE:
+                                        </div>
+                                        <select class="optin2" id="audioinput">
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">Temp</div>
-                                    <div class="col-6 text-right">
-                                        <div id="temperature" class="info">
-                                            <span id="temperature-num"></span><span>°</span><span id="temperature-scale">C</span>
+                                    <div class="source-wrapper">
+                                        <div class="liveInput">EFFECT:
+                                        </div>
+                                        <select class="optin2" id="effect">
+                                            <option>Delay</option>
+                                            <option>LFO</option>
+                                            <option>Stereo Flanger</option>
+                                            <option>Telephone EQ Filter </option>
+                                        </select>
+                                        <div class="source-wrapper">
+                                            <div class="liveInput">MIX:
+                                            </div>
+                                            <div class="optin4">
+                                                <input type="range" min="0.0" max="1.0" step="0.01">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">Weather</div>
-                                    <div class="col-6 text-right">
-                                        <div id="weather-condition" class="info"></div>
+                                </form>
+                                <!--        <div id="controls" class="optin3">
+                                  
+                                    <div id="delayControls">
+                                        <br>BPM: 
+                                        <input id="dtime" type="range" min="0.2" max="1.0" step="0.01">
+                                        <br>Feedback
+                                        <input id="dregen" type="range" min="0.1" max="1.0" step="0.01">
                                     </div>
-                                </div>
+                                
+                                    <div id="gainLFOControls">
+                                        LFO Shape:
+                                        <select id="lfotype webmenu" name="webmenu" class="optin">
+                                            <option value="sine" data-image="/lib/node_modules/msdropdown/icons/sine1.png">SINE</option>
+                                            <option value="square" data-image="./lib/node_modules/msdropdown/icons/sine1.png">SQUARE</option>
+                                            <option value="sawtooth" data-image="../lib/node_modules/msdropdown/icons/sine1.png">SAWTOOTH</option>
+                                            <option value="triangle" data-image="lib/node_modules/msdropdown/icons/sine1.png">TRIANGLE</option>
+                                        </select>
+                                        BPM:
+                                        <input id="lfo" type="range" min="0.25" max="20" step="0.25" value="3">
+                                    </div>
+                                 
+                                    <div id="stFlangeControls">
+                                        <br>
+                                        <option id="sflspeed" min="0.05" max="2" step="0.05" value="0.15">
+                                            <br>
+                                        <option id="sfldelay" min="0.001" max="0.02" step="0.001" value="0.003">
+                                            <br>
+                                        <option id="sfldepth" min="0.0005" max="0.02" step="0.00025" value="0.005">
+                                            <br>
+                                        <option id="sflfb" min="0" max="1" step="0.01" value="0.9">
+                                    </div>
+                                 
+                                    <div id="telephoneControls">
+                                    </div>
+                                    <div class="optin8">LOOP STATION:
+                                        <input type='range' min='0' max='1' step='0.01' value='0.75' id='liveVolume' class="seqOptin glyphicon glyphicon-volume-up">
+                                        <button id="recordStop" type="button" class="btn btn-default btn- noselect">
+                                            <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                        </button>
+                                        <button id="pausePlay" type="button" class="btn btn-default btn- noselect" disabled>
+                                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                                        </button>
+                                        <button id="downloadButton" type="button" class="btn btn-default btn- noselect" disabled>
+                                            <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                                        </button>
+                                        <div>
+                                            <canvas id="wavedisplay"></canvas>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <video id="recorded" autoplay loop></video>
+                                </div> -->
                             </div>
                         </div>
                     </section>
@@ -551,7 +611,8 @@
     <script src="js/sequencer.js"></script>
     <script src="js/main.js"></script>
     <script src="js/theremin.js"></script>
-    <script src="js/weather.js"></script>
+    <!-- <script src="js/liveinput.js"></script> -->
+    <!-- <script src="js/weather.js"></script> -->
     <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
         ':35729/livereload.js?snipver=1"></' + 'script>')
