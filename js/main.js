@@ -57,6 +57,42 @@ $(document).keydown(function(e) {
         firstVisit();
     }
 
+    if (event === 49 || event === 97) {
+
+        location.replace("/character");
+    }
+    if (event === 50 || event === 98) {
+
+        location.replace("/drum-machine");
+    }
+    if (event === 51 || event === 99) {
+
+        location.replace("/art");
+    }
+    if (event === 52 || event === 100) {
+
+        location.replace("/fermentation");
+    }
+    if (event === 53 || event === 101) {
+
+        location.replace("/rss");
+    }
+    if (event === 54 || event === 102) {
+
+        location.replace("/katsura");
+    }
+    if (event === 55 || event === 103) {
+
+        location.replace("/coding");
+    }
+    if (event === 56 || event === 104) {
+
+        location.replace("/ducks");
+    }
+       if (event === 77 ) {
+
+        location.replace("/");
+    }
     // Change direction and arrow direction with arrow presses
 
 
@@ -111,7 +147,7 @@ $(document).keydown(function(e) {
             }
 
             // if (counterEastMain === 550 && window.location.href.indexOf("fermentation") > -1) {
-                            if (counterEastMain === 495 && window.location.href.indexOf("fermentation") > -1) {
+            if (counterEastMain === 495 && window.location.href.indexOf("fermentation") > -1) {
 
                 $(".header-image").append('<div id="recipe-popup" class="popover fade show bs-popover-top" role="tooltip" x-placement="top"><div class="arrow" style="right: 26px;"></div><div class="popover-body">Hi, Welcome to my shop! <br /> What recipe would you like to learn? <br />Please select a recipe from the menu on the right.</div></div>');
                 $("#recipe-popup").animate({ opacity: '0.8' });
@@ -323,4 +359,3 @@ $('.seizure').on('click', function(e) {
     }, millisecondsToWait);
 
 });
-

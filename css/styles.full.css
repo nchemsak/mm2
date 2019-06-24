@@ -1048,7 +1048,16 @@ code {
         width: 129px;
         height: auto; }
       #main-content .header-image .weather-overlay.haze {
-        width: 100%; }
+        width: 100%;
+        -webkit-animation: zoomy 15s linear infinite;
+        animation: zoomy 15s linear infinite; }
+@keyframes zoomy {
+  50% {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2); } }
     #main-content .header-image blockquote {
       position: absolute;
       width: 50%;
@@ -1242,10 +1251,7 @@ h2 {
   #side-nav-list #location:hover:before,
   #side-nav-list #temp:hover:before,
   #side-nav-list #weather:hover:before {
-    background-color: #330000;
-    color: transparent;
-    text-shadow: 1px 1px 2px #c10000;
-    height: 100%; }
+    color: red; }
   #side-nav-list #location:before {
     content: "\f08d";
     left: -22px; }

@@ -477,10 +477,28 @@ code {
                 width: 129px;
                 height: auto;
             }
+
             &.haze {
                 width: 100%;
+                -webkit-animation: zoomy 15s linear infinite;
+                animation: zoomy 15s linear infinite;
+  
             }
         }
+
+        @keyframes zoomy {
+            50% {
+                -webkit-transform: scale(2);
+                -moz-transform: scale(2);
+                -ms-transform: scale(2);
+                -o-transform: scale(2);
+                transform: scale(2);
+          
+
+            }
+
+        }
+
 
         blockquote {
             position: absolute;
@@ -792,10 +810,11 @@ h2 {
     #location:hover:before,
     #temp:hover:before,
     #weather:hover:before {
-        background-color: $red-dark;
-        color: transparent;
-        text-shadow: 1px 1px 2px $red-light;
-        height: 100%;
+        // background-color: $red-dark;
+        // color: transparent;
+        // text-shadow: 1px 1px 2px $red-light;
+        // height: 100%;
+        color: red;
     }
 
     #location:before {
@@ -1368,6 +1387,7 @@ img.ewave-icon {
     .weather-overlay {
         display: none;
     }
+
     pre {
         color: gray;
     }
