@@ -1284,6 +1284,10 @@ h2 {
       border: none; } }
   #side-nav-list.options-menu-off .side-nav-list-heading:before {
     content: 'Map'; }
+  #side-nav-list.options-menu-off #weather-condition,
+  #side-nav-list.options-menu-off #temperature-num,
+  #side-nav-list.options-menu-off #temperature-scale {
+    font-size: 16px; }
   #side-nav-list.options-menu-off .eagle-eye {
     border-radius: 15px;
     background-image: url("/images/map-edit9.png");
@@ -1428,16 +1432,27 @@ h2 {
     overflow: hidden;
     padding-top: 5px;
     padding-bottom: 2px; }
-  #options-row .return-to-map {
-    text-align: center;
-    display: block; }
+  #options-row .map-wrapper {
+    font-size: 16px;
+    padding-top: 3px !important; }
+    @media (min-width: 768px) {
+      #options-row .map-wrapper {
+        padding-top: 8px !important; } }
     @media (min-width: 992px) {
-      #options-row .return-to-map {
-        font-size: 14px; } }
+      #options-row .map-wrapper {
+        padding-top: 2px !important; } }
     @media (min-width: 1200px) {
-      #options-row .return-to-map {
-        font-size: 19px;
-        padding-top: 8px; } }
+      #options-row .map-wrapper {
+        padding-top: 12px !important; } }
+    #options-row .map-wrapper .return-to-map {
+      text-align: center; }
+      @media (min-width: 992px) {
+        #options-row .map-wrapper .return-to-map {
+          font-size: 14px; } }
+      @media (min-width: 1200px) {
+        #options-row .map-wrapper .return-to-map {
+          font-size: 19px;
+          padding-top: 8px; } }
 
 @media (min-width: 1200px) {
   #contact {
