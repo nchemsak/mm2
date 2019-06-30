@@ -89,12 +89,22 @@ $(document).keydown(function(e) {
 
         location.replace("/ducks");
     }
-       if (event === 77 ) {
+    if (event === 77) {
 
         location.replace("/");
     }
-    // Change direction and arrow direction with arrow presses
+    if (event === 66) {
+        buzz();
+    }
+    if (event === 65) {
 
+        attack()
+            $('.eagle-eye, body').addClass('nick');
+    var millisecondsToWait = 1000;
+    setTimeout(function() {
+        $('.eagle-eye, body, .header-image').removeClass('nick');
+    }, millisecondsToWait);
+    }
 
     //////////////////////////// NORTH ///////////////////////////////////
     else if (event === 38) {
@@ -347,8 +357,21 @@ var attack = function() {
 var buzz = function() {
     var buzz = document.getElementById("buzz");
     buzz.play("/audio/buzz.mp3");
-    console.log("buzz");
+
+    $(".bee2").addClass('bee-flutter');
+    $(".bee1").addClass('bee-flutter');
+
+    setTimeout(function() {
+        $(".bee1").removeClass("bee-flutter");
+    }, 3000);
+    setTimeout(function() {
+        $(".bee2").removeClass("bee-flutter");
+    }, 3000);
 }
+
+
+
+
 
 
 $('.seizure').on('click', function(e) {

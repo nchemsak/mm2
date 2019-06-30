@@ -888,6 +888,10 @@ code {
   animation: blink2 1s, flutter 3s;
   animation-iteration-count: infinite; }
 
+.bee-flutter {
+  animation: buzz-flutter 3s;
+  animation-iteration-count: 1; }
+
 .hide-bee {
   display: none; }
 
@@ -932,6 +936,25 @@ code {
     bottom: 40%; }
   50% {
     bottom: 44%; } }
+@keyframes buzz-flutter {
+  0%,
+    100% {
+    bottom: 100%; }
+  10% {
+    bottom: 10%;
+    right: 66%; }
+  30% {
+    bottom: 55%;
+    right: 36%; }
+  50% {
+    bottom: 44%;
+    right: 99%; }
+  70% {
+    bottom: 82%;
+    right: 12%; }
+  80% {
+    bottom: 22%;
+    right: 36%; } }
 @keyframes blink1 {
   0% {
     opacity: 1; }
@@ -1043,6 +1066,11 @@ code {
           #main-content .header-image .weather-overlay.clouds4 {
             top: 0px; } }
       #main-content .header-image .weather-overlay.sun {
+        top: 0px;
+        right: 0px;
+        width: 129px;
+        height: auto; }
+      #main-content .header-image .weather-overlay.moon {
         top: 0px;
         right: 0px;
         width: 129px;
@@ -1306,6 +1334,15 @@ h2 {
       position: absolute;
       top: 50%;
       right: 50%; }
+    #side-nav-list.options-menu-off .eagle-eye .haze {
+      width: 150%;
+      -webkit-animation: zoomy 15s linear infinite;
+      animation: zoomy 15s linear infinite; }
+    #side-nav-list.options-menu-off .eagle-eye .moon {
+      top: 0px;
+      left: 0px;
+      width: auto;
+      height: 50px; }
   #side-nav-list.options-menu-on .eagle-eye {
     border-radius: 15px;
     background-size: cover;
@@ -1323,7 +1360,8 @@ h2 {
       right: 50%;
       display: none; }
   #side-nav-list section.eagle-eye {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     #side-nav-list section.eagle-eye img {
       position: absolute;
       right: 50%;

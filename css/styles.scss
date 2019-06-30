@@ -239,6 +239,13 @@ code {
     animation-iteration-count: infinite;
 }
 
+.bee-flutter {
+    // position: absolute;
+    animation: buzz-flutter 3s;
+    animation-iteration-count: 1;
+
+}
+
 .hide-bee {
     display: none;
 }
@@ -305,6 +312,43 @@ code {
         bottom: 44%;
     }
 }
+
+@keyframes buzz-flutter {
+
+    0%,
+    100% {
+        bottom: 100%;
+
+    }
+
+    10% {
+        bottom: 10%;
+        right: 66%;
+    }
+
+    30% {
+        bottom: 55%;
+        right: 36%;
+    }
+
+    50% {
+        bottom: 44%;
+        right: 99%;
+    }
+
+    70% {
+        bottom: 82%;
+        right: 12%;
+    }
+
+    80% {
+        bottom: 22%;
+        right: 36%;
+    }
+
+
+}
+
 
 @keyframes blink1 {
     0% {
@@ -472,6 +516,12 @@ code {
             }
 
             &.sun {
+                top: 0px;
+                right: 0px;
+                width: 129px;
+                height: auto;
+            }
+             &.moon {
                 top: 0px;
                 right: 0px;
                 width: 129px;
@@ -898,6 +948,19 @@ h2 {
                 top: 50%;
                 right: 50%;
             }
+                        .haze {
+    width: 150%;
+    -webkit-animation: zoomy 15s linear infinite;
+    animation: zoomy 15s linear infinite;
+
+}
+
+    .moon {
+                top: 0px;
+                left: 0px;
+                width: auto;
+                height: 50px;
+            }
         }
     }
 
@@ -930,12 +993,15 @@ h2 {
                 right: 50%;
                 display: none;
             }
+
+
         }
     }
 
     section {
         &.eagle-eye {
             position: relative;
+            overflow: hidden;
 
             img {
                 position: absolute;
@@ -1515,6 +1581,7 @@ img.ewave-icon {
         }
     }
 }
+
 
 
 
