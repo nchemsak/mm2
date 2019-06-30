@@ -1343,6 +1343,11 @@ h2 {
       left: 0px;
       width: auto;
       height: 50px; }
+    #side-nav-list.options-menu-off .eagle-eye .sun {
+      top: 0px;
+      left: 0px;
+      width: auto;
+      height: 50px; }
   #side-nav-list.options-menu-on .eagle-eye {
     border-radius: 15px;
     background-size: cover;
