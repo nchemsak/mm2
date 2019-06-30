@@ -1348,6 +1348,12 @@ h2 {
       left: 0px;
       width: auto;
       height: 50px; }
+  #side-nav-list .clouds, #side-nav-list .clouds2, #side-nav-list .clouds3, #side-nav-list .clouds3, #side-nav-list .clouds4 {
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: 50px !important;
+    filter: none !important; }
   #side-nav-list.options-menu-on .eagle-eye {
     border-radius: 15px;
     background-size: cover;

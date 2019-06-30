@@ -975,7 +975,13 @@ h2 {
         }
     }
 
-
+.clouds, .clouds2, .clouds3, .clouds3, .clouds4 {
+    top: 0px;
+                left: 0px;
+                width: auto;
+                height: 50px!important;
+                filter: none!important;
+}
     &.options-menu-on {
 
 
