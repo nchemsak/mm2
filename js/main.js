@@ -99,11 +99,11 @@ $(document).keydown(function(e) {
     if (event === 65) {
 
         attack()
-            $('.eagle-eye, body').addClass('nick');
-    var millisecondsToWait = 1000;
-    setTimeout(function() {
-        $('.eagle-eye, body, .header-image').removeClass('nick');
-    }, millisecondsToWait);
+        $('.eagle-eye, body').addClass('nick');
+        var millisecondsToWait = 1000;
+        setTimeout(function() {
+            $('.eagle-eye, body, .header-image').removeClass('nick');
+        }, millisecondsToWait);
     }
 
     //////////////////////////// NORTH ///////////////////////////////////

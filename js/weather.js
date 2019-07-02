@@ -69,10 +69,12 @@ function displayWeatherOverlay(x) {
     } else if (x == "Haze") {
         $('.header-image, .eagle-eye').append('<img class="weather-overlay haze" src="images/fog01.png" alt="haze" />');
 
-    }
-    else if (x == "Mist") {
+    } else if (x == "Mist") {
         $('.header-image, .eagle-eye').append('<img class="weather-overlay haze" src="images/fog01.png" alt="mist" />');
 
+    } else if (x == "Thunderstorm") {
+        $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" alt="rain" />');
+   $('body').addClass('lightning');
     }
 }
 

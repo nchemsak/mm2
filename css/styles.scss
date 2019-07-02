@@ -1386,6 +1386,29 @@ img.ewave-icon {
 }
 
 
+@keyframes lightning {
+  20%, 100% {
+    background: black; 
+  }
+  0% {
+    background: white;
+  }
+  10% {
+    background: white;
+  }
+}
+
+
+
+.lightning {
+    // animation-name: nick;
+    // animation-duration: 100ms;
+    // animation-iteration-count: infinite;
+    z-index: 10000;
+    animation: lightning 1000ms infinite linear;
+}
+
+
 // character page
 #characterpage {
     .weather-overlay {
