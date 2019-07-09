@@ -382,3 +382,8 @@ $('.seizure').on('click', function(e) {
     }, millisecondsToWait);
 
 });
+
+// ascii art here
+
+console.log(`%c 
+    put ascii art here    `, "font-family:monospace")
