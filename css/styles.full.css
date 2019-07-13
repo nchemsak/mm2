@@ -997,7 +997,6 @@ code {
   @media (min-width: 768px) {
     #main-content {
       font-size: 16px;
-      overflow: scroll;
       overflow-x: hidden; } }
   @media (min-width: 992px) {
     #main-content {
@@ -1186,8 +1185,6 @@ code {
     transform: rotate(360deg); } }
 #homepage.flip {
   animation: spin 1s linear 1; }
-#homepage #main-content {
-  height: initial; }
 #homepage .eagle-eye {
   height: 275px; }
 #homepage .scroll-up {
@@ -1429,9 +1426,7 @@ h2 {
     border-bottom: 5px solid #AA0000;
     border-radius: 17px;
     background-color: #000;
-    padding-bottom: 15px;
-    overflow-y: scroll;
-    overflow-x: hidden; }
+    padding-bottom: 15px; }
     #side-nav-list .column-1::-webkit-scrollbar {
       width: 35px; }
     #side-nav-list .column-1::-webkit-scrollbar-track {

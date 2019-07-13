@@ -421,7 +421,7 @@ code {
 
     @include media-breakpoint-up(md) {
         font-size: 16px;
-        overflow: scroll;
+        // overflow: scroll;
         overflow-x: hidden;
     }
 
@@ -730,7 +730,7 @@ code {
     }
 
     #main-content {
-        height: initial;
+        // height: initial;
     }
 
     .eagle-eye {
@@ -1111,8 +1111,8 @@ h2 {
         border-radius: 17px;
         background-color: #000;
         padding-bottom: 15px;
-        overflow-y: scroll;
-        overflow-x: hidden;
+        // overflow-y: scroll;
+        // overflow-x: hidden;
 
         &::-webkit-scrollbar {
             width: 35px;
