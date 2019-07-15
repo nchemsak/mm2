@@ -1672,7 +1672,7 @@ img.ewave-icon {
 #katsura div.coordinates {
   color: #e83e8c;
   color: #FF5555;
-  font-size: 10px;
+  font-size: 9px;
   margin-top: 10px; }
 #katsura #about {
   padding-top: 15px; }
@@ -1735,6 +1735,8 @@ img.ewave-icon {
 
 #artpage .weather-overlay {
   display: none; }
+#artpage .coaster-art {
+  right: 0% !important; }
 #artpage #main-content img {
   margin: 0 auto;
   display: block; }

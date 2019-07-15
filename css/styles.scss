@@ -1495,7 +1495,7 @@ img.ewave-icon {
     div.coordinates {
         color: #e83e8c;
         color: $pink;
-        font-size: 10px;
+        font-size: 9px;
         margin-top: 10px;
     }
 
@@ -1609,7 +1609,9 @@ img.ewave-icon {
     .weather-overlay {
         display: none;
     }
-
+.coaster-art {
+    right: 0%!important;
+}
     #main-content {
         img {
             margin: 0 auto;
