@@ -455,7 +455,7 @@ code {
             bottom: 8px;
             right: 50%;
             color: white;
-            z-index: 2000;
+            z-index: 6;
 
             &:hover {
                 color: #007bff;
@@ -1624,7 +1624,11 @@ img.ewave-icon {
     }
 }
 
-
+.modal-dialog {
+@include media-breakpoint-up(md) {
+max-width: 750px;
+}
+}
 
 
 @import "sequencer";

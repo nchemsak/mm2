@@ -6,9 +6,7 @@ const weatherCon = document.getElementById("weather-condition");
 var newDate = new Date();
 var hour24 = newDate.getHours();
 
-console.log(hour24);
-
-
+// console.log(hour24);
 
 
 // get location

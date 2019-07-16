@@ -284,28 +284,21 @@ $(document).keydown(function(e) {
     }
     // cave - contact
     if (counterEast === 13 && counterNorth === 21) {
-        window.location.href = "/contact";
+        window.location.href = "/ducks";
     }
 
     // Sprial
     if (counterEast === 62 && counterNorth === 56) {
-        // window.location.href = "/contact";
-        console.log("spriral!");
+       
         $("body").addClass("flip");
     }
 
     if (counterEast != 62 || counterNorth != 56) {
-        // window.location.href = "/contact";
-        console.log("no spriral!");
+     
         $("body").removeClass("flip");
     }
 
-    // var mainBeeCounter = 5;
-    // if (event === 39) {
-    //     var mainBeeCounter = mainBeeCounter + 20;
-    //     $(".main-bee").css("left", mainBeeCounter + 20 + "px");
-    //     // $(".eagle-eye").css("background-position", counterEast + "%" + -7 + counterNorth + "%");
-    // }
+
 
 
 
@@ -387,3 +380,5 @@ $('.seizure').on('click', function(e) {
 
 console.log(`%c 
     put ascii art here    `, "font-family:monospace")
+
+
