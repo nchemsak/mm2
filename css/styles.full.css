@@ -1345,7 +1345,11 @@ h2 {
       left: 0px;
       width: auto;
       height: 50px; }
-  #side-nav-list .clouds, #side-nav-list .clouds2, #side-nav-list .clouds3, #side-nav-list .clouds3, #side-nav-list .clouds4 {
+  #side-nav-list .clouds,
+  #side-nav-list .clouds2,
+  #side-nav-list .clouds3,
+  #side-nav-list .clouds3,
+  #side-nav-list .clouds4 {
     top: 0px;
     left: 0px;
     width: auto;
@@ -1613,15 +1617,46 @@ img.ewave-icon {
   to {
     background: white; } }
 @keyframes lightning {
-  20%, 100% {
-    background: black; }
   0% {
+    background: black; }
+  17% {
+    background: black; }
+  18% {
     background: white; }
-  10% {
-    background: white; } }
+  19% {
+    background: black; } }
 .lightning {
   z-index: 10000;
-  animation: lightning 1000ms infinite linear; }
+  animation: lightning 7s infinite linear; }
+
+@keyframes lightning2 {
+  1% {
+    background: transparent; }
+  2% {
+    background: white; }
+  3% {
+    background: transparent; }
+  50% {
+    background: transparent; }
+  51% {
+    background: white; }
+  52% {
+    background: transparent; }
+  55% {
+    background: transparent; }
+  56% {
+    background: white; }
+  57% {
+    background: transparent; } }
+.lightning2 {
+  webkit-animation-name: lightning2;
+  -moz-animation-name: lightning2;
+  -o-animation-name: lightning2;
+  animation-name: lightning2;
+  animation: lightning2 10s infinite;
+  -webkit-animation: lightning2 10s infinite;
+  animation-delay: 7s;
+  -webkit-animation-delay: 7s; }
 
 #characterpage .weather-overlay {
   display: none; }

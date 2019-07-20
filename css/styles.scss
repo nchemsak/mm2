@@ -521,7 +521,8 @@ code {
                 width: 129px;
                 height: auto;
             }
-             &.moon {
+
+            &.moon {
                 top: 0px;
                 right: 0px;
                 width: 129px;
@@ -948,14 +949,15 @@ h2 {
                 top: 50%;
                 right: 50%;
             }
-                        .haze {
-    width: 150%;
-    -webkit-animation: zoomy 15s linear infinite;
-    animation: zoomy 15s linear infinite;
 
-}
+            .haze {
+                width: 150%;
+                -webkit-animation: zoomy 15s linear infinite;
+                animation: zoomy 15s linear infinite;
 
-    .moon {
+            }
+
+            .moon {
                 top: 0px;
                 left: 0px;
                 width: auto;
@@ -964,7 +966,7 @@ h2 {
 
 
 
- .sun {
+            .sun {
                 top: 0px;
                 left: 0px;
                 width: auto;
@@ -975,13 +977,18 @@ h2 {
         }
     }
 
-.clouds, .clouds2, .clouds3, .clouds3, .clouds4 {
-    top: 0px;
-                left: 0px;
-                width: auto;
-                height: 50px!important;
-                filter: none!important;
-}
+    .clouds,
+    .clouds2,
+    .clouds3,
+    .clouds3,
+    .clouds4 {
+        top: 0px;
+        left: 0px;
+        width: auto;
+        height: 50px !important;
+        filter: none !important;
+    }
+
     &.options-menu-on {
 
 
@@ -1387,15 +1394,22 @@ img.ewave-icon {
 
 
 @keyframes lightning {
-  20%, 100% {
-    background: black; 
-  }
-  0% {
-    background: white;
-  }
-  10% {
-    background: white;
-  }
+
+  
+
+    0% {
+        background: black;
+    }
+
+    17% {
+        background: black;
+    }
+    18% {
+        background: white;
+    }
+    19% {
+        background: black;
+    }
 }
 
 
@@ -1405,7 +1419,80 @@ img.ewave-icon {
     // animation-duration: 100ms;
     // animation-iteration-count: infinite;
     z-index: 10000;
-    animation: lightning 1000ms infinite linear;
+    animation: lightning 7s infinite linear;
+}
+
+@keyframes lightning2 {
+
+    1% {
+        background: transparent;
+    }
+
+    2% {
+        background: white;
+    }
+
+    3% {
+        background: transparent;
+    }
+
+    50% {
+        background: transparent;
+    }
+
+    51% {
+        background: white;
+
+    }
+
+    52% {
+        background: transparent;
+
+    }
+
+    55% {
+        background: transparent;
+    }
+
+    56% {
+        background: white;
+    }
+
+    57% {
+        background: transparent;
+    }
+}
+
+
+
+.lightning2 {
+    // animation-name: nick;
+    // animation-duration: 100ms;
+    // animation-iteration-count: infinite;
+//     z-index: 10000;
+//     animation: lightning2 10s infinite linear;
+// animation: lightning2 lightning2;
+// animation-duration: infinite;
+
+//  animation: yellow, yellow, yellow;
+//   animation-delay: 1s, 5s, 10s;
+//   animation-duration: 1s;
+
+
+
+
+webkit-animation-name: lightning2;
+-moz-animation-name: lightning2;
+-o-animation-name: lightning2;
+animation-name: lightning2;
+animation:lightning2 10s infinite;
+-webkit-animation:lightning2 10s infinite;
+// animation-duration:7s;
+// -webkit-animation-duration:7s;
+animation-delay:7s;
+-webkit-animation-delay:7s;
+
+
 }
 
 
@@ -1609,9 +1696,11 @@ img.ewave-icon {
     .weather-overlay {
         display: none;
     }
-.coaster-art {
-    right: 0%!important;
-}
+
+    .coaster-art {
+        right: 0% !important;
+    }
+
     #main-content {
         img {
             margin: 0 auto;
@@ -1625,9 +1714,9 @@ img.ewave-icon {
 }
 
 .modal-dialog {
-@include media-breakpoint-up(md) {
-max-width: 750px;
-}
+    @include media-breakpoint-up(md) {
+        max-width: 750px;
+    }
 }
 
 

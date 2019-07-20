@@ -54,7 +54,10 @@ function updateDataToUI(location, weather, temp) {
 function displayWeatherOverlay(x) {
 
     if (x == "Clouds") {
-        $('.header-image, .eagle-eye').append('<img class="weather-overlay clouds" src="images/clouds.gif" alt="clouds"/> <img class="weather-overlay clouds2" src="images/clouds.gif" alt="clouds" /> <img class="weather-overlay clouds3" src="images/clouds.gif" alt="clouds" /><img class="weather-overlay clouds4" src="images/clouds.gif" alt="clouds" />');
+        // $('.header-image, .eagle-eye').append('<img class="weather-overlay clouds" src="images/clouds.gif" alt="clouds"/> <img class="weather-overlay clouds2" src="images/clouds.gif" alt="clouds" /> <img class="weather-overlay clouds3" src="images/clouds.gif" alt="clouds" /><img class="weather-overlay clouds4" src="images/clouds.gif" alt="clouds" />');
+          $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" alt="rain" />');
+        $('body').addClass('lightning');
+        $('.weather-overlay').addClass('lightning2');
     } else if (x == "Rain") {
         $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" alt="rain" />');
     } else if (x == "Snow") {
@@ -72,7 +75,8 @@ function displayWeatherOverlay(x) {
 
     } else if (x == "Thunderstorm") {
         $('.header-image, .eagle-eye').append('<img class="weather-overlay" src="images/icons/rain.gif" alt="rain" />');
-   $('body').addClass('lightning');
+        $('body').addClass('lightning');
+        $('.weather-overlay').addClass('lightning2');
     }
 }
 
