@@ -1008,8 +1008,7 @@ code {
       height: 571px; } }
   #main-content .header-image {
     position: relative;
-    overflow: hidden;
-    border-radius: 17px; }
+    overflow: hidden; }
     @media (min-width: 768px) {
       #main-content .header-image {
         display: block; } }
@@ -1091,8 +1090,6 @@ code {
       width: 50%;
       top: 125px;
       left: 20px; }
-  #main-content img {
-    border-radius: 17px; }
   #main-content h1 {
     font-size: 23px;
     margin-bottom: 25px;

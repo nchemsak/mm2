@@ -440,7 +440,7 @@ code {
         position: relative;
         overflow: hidden;
         // display: none;
-        border-radius: 17px;
+        // border-radius: 17px;
 
         @include media-breakpoint-up(md) {
             display: block;
@@ -562,7 +562,7 @@ code {
     }
 
     img {
-        border-radius: 17px;
+        // border-radius: 17px;
     }
 
     h1 {
