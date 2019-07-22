@@ -450,6 +450,21 @@ code {
             height: 100%;
         }
 
+
+        @keyframes blink {
+            50% {
+                     color: #007bff;
+            }
+        }
+
+        @-webkit-keyframes blink {
+            50% {
+                     color: #007bff;
+            }
+        }
+
+
+
         .fa-arrow-down {
             font-size: 70px;
             position: absolute;
@@ -457,6 +472,8 @@ code {
             right: 50%;
             color: white;
             z-index: 6;
+            animation: blink 2s step-start 0s infinite;
+            -webkit-animation: blink 2s step-start 0s infinite;
 
             &:hover {
                 color: #007bff;
@@ -764,19 +781,22 @@ code {
         z-index: 50;
         font-size: 22px;
     }
-#side-nav-list {
-    h2 {
-        border-radius: 15px 15px 0px 0px;
-        margin-bottom: 0px;
+
+    #side-nav-list {
+        h2 {
+            border-radius: 15px 15px 0px 0px;
+            margin-bottom: 0px;
+        }
+
+        .eagle-eye {
+            border-radius: 0px 0px 15px 15px;
+            height: 311px;
+        }
+
+        .column-1 {
+            padding-bottom: 0px;
+        }
     }
-    .eagle-eye {
-         border-radius: 0px 0px 15px 15px;
-         height: 311px;
-    }
-    .column-1 {
-    padding-bottom: 0px;
-}
-}
 
 
     #home-page-quote {
@@ -1133,7 +1153,7 @@ h2 {
         border-bottom: 5px solid $red;
         border-radius: 17px;
         background-color: #000;
-padding: 0px;
+        padding: 0px;
         padding-bottom: 15px;
         // overflow-y: scroll;
         // overflow-x: hidden;
@@ -1319,6 +1339,15 @@ img.ewave-icon {
 // Fermentation PAGE
 //
 #fermentation {
+    .arrow-key {
+        width: 90px;
+        position: absolute;
+        height: auto;
+        display: inline;
+        bottom: 9px;
+        right: 29px;
+    }
+
     .fermentation-image {
 
         max-width: 100%;
@@ -1412,7 +1441,7 @@ img.ewave-icon {
 
 @keyframes lightning {
 
-  
+
 
     0% {
         background: black;
@@ -1421,9 +1450,11 @@ img.ewave-icon {
     17% {
         background: black;
     }
+
     18% {
         background: white;
     }
+
     19% {
         background: black;
     }
@@ -1486,28 +1517,28 @@ img.ewave-icon {
     // animation-name: nick;
     // animation-duration: 100ms;
     // animation-iteration-count: infinite;
-//     z-index: 10000;
-//     animation: lightning2 10s infinite linear;
-// animation: lightning2 lightning2;
-// animation-duration: infinite;
+    //     z-index: 10000;
+    //     animation: lightning2 10s infinite linear;
+    // animation: lightning2 lightning2;
+    // animation-duration: infinite;
 
-//  animation: yellow, yellow, yellow;
-//   animation-delay: 1s, 5s, 10s;
-//   animation-duration: 1s;
-
-
+    //  animation: yellow, yellow, yellow;
+    //   animation-delay: 1s, 5s, 10s;
+    //   animation-duration: 1s;
 
 
-webkit-animation-name: lightning2;
--moz-animation-name: lightning2;
--o-animation-name: lightning2;
-animation-name: lightning2;
-animation:lightning2 10s infinite;
--webkit-animation:lightning2 10s infinite;
-// animation-duration:7s;
-// -webkit-animation-duration:7s;
-animation-delay:7s;
--webkit-animation-delay:7s;
+
+
+    webkit-animation-name: lightning2;
+    -moz-animation-name: lightning2;
+    -o-animation-name: lightning2;
+    animation-name: lightning2;
+    animation: lightning2 10s infinite;
+    -webkit-animation: lightning2 10s infinite;
+    // animation-duration:7s;
+    // -webkit-animation-duration:7s;
+    animation-delay: 7s;
+    -webkit-animation-delay: 7s;
 
 
 }
@@ -1518,7 +1549,26 @@ animation-delay:7s;
     .weather-overlay {
         display: none;
     }
+    .fa-arrow-down {
+            font-size: 70px;
+            // position: absolute;
+            bottom: 8px;
+            right: 50%;
+            color: white;
+            z-index: 6;
+            animation: blink 2s step-start 0s infinite;
+            -webkit-animation: blink 2s step-start 0s infinite;
+            text-align: center;
+    display: block;
 
+            &:hover {
+                color: #007bff;
+            }
+        }
+.top-character-section-container {
+     @include media-breakpoint-up(xl) {
+    height: 470px;
+}}
     .fixit {
         max-width: 100px;
         max-height: 100px;

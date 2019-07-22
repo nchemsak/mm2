@@ -1015,13 +1015,21 @@ code {
     @media (min-width: 992px) {
       #main-content .header-image {
         height: 100%; } }
+@keyframes blink {
+  50% {
+    color: #007bff; } }
+@-webkit-keyframes blink {
+  50% {
+    color: #007bff; } }
     #main-content .header-image .fa-arrow-down {
       font-size: 70px;
       position: absolute;
       bottom: 8px;
       right: 50%;
       color: white;
-      z-index: 6; }
+      z-index: 6;
+      animation: blink 2s step-start 0s infinite;
+      -webkit-animation: blink 2s step-start 0s infinite; }
       #main-content .header-image .fa-arrow-down:hover {
         color: #007bff; }
     #main-content .header-image .weather-overlay {
@@ -1560,6 +1568,13 @@ img.ewave-icon {
     background-color: blue;
     background-color: #55FFFF; }
 
+#fermentation .arrow-key {
+  width: 90px;
+  position: absolute;
+  height: auto;
+  display: inline;
+  bottom: 9px;
+  right: 29px; }
 #fermentation .fermentation-image {
   max-width: 100%;
   height: auto; }
@@ -1667,6 +1682,21 @@ img.ewave-icon {
 
 #characterpage .weather-overlay {
   display: none; }
+#characterpage .fa-arrow-down {
+  font-size: 70px;
+  bottom: 8px;
+  right: 50%;
+  color: white;
+  z-index: 6;
+  animation: blink 2s step-start 0s infinite;
+  -webkit-animation: blink 2s step-start 0s infinite;
+  text-align: center;
+  display: block; }
+  #characterpage .fa-arrow-down:hover {
+    color: #007bff; }
+@media (min-width: 1200px) {
+  #characterpage .top-character-section-container {
+    height: 470px; } }
 #characterpage .fixit {
   max-width: 100px;
   max-height: 100px; }
